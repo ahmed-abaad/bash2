@@ -1,443 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Bash Hauliers Ltd</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>Bash Hauliers Ltd - Your Trusted Partner in Transport and Logistics</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="transport, logistics, container haulage, East Africa, Kenya, Uganda, Rwanda, Burundi, Tanzania, DRC, South Sudan, bulk cargo, dry container transit, shunting operations" name="keywords">
+    <meta content="Bash Hauliers Ltd - Leading transport and logistics company in East Africa since 2002. Specializing in dry container transit, bulk cargo tippers, and local shunting operations with 300+ modern trucks." name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Bash Hauliers Ltd",
+        "url": "https://www.bashhauliers.co.ke",
+        "logo": "https://www.bashhauliers.co.ke/img/bashlogo.png",
+        "description": "Leading transport and logistics company in East Africa since 2002",
+        "foundingDate": "2002",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "P.O. Box 83658",
+            "addressLocality": "Mombasa",
+            "addressCountry": "Kenya"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+254723339000",
+            "contactType": "customer service",
+            "email": "info@bashhauliers.co.ke"
+        },
+        "sameAs": [
+            "https://www.facebook.com/bashhauliers",
+            "https://www.linkedin.com/company/bashhauliers"
+        ]
+    }
+    </script>
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap-custom.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
 
-    <body>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+    <!-- Custom Styles for Enhanced Features -->
+    <style>
+        :root {
+            --primary: #fec107;
+            --dark: #3949ab;
+            --primary-light: #fff3d7;
+            --dark-light: #eaeaf5;
+            --primary-dark: #e0a800;
+            --dark-dark: #303178;
+        }
+
+        /* Override Bootstrap classes */
+        .text-primary {
+            color: var(--primary) !important;
+        }
+        
+        .text-dark {
+            color: var(--dark) !important;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+        
+        .bg-dark {
+            background-color: var(--dark) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--dark) !important;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: var(--dark) !important;
+        }
+        
+        .btn-dark {
+            background-color: var(--dark);
+            border-color: var(--dark);
+            color: white !important;
+        }
+        
+        .btn-dark:hover {
+            background-color: var(--dark-dark);
+            border-color: var(--dark-dark);
+        }
+        
+        /* Enhanced Fleet Statistics */
+        .fleet-stats {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            border-radius: 15px;
+            color: white;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .fleet-stats:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .fleet-stats .counter-value {
+            color: var(--primary);
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        
+        .fleet-stats h5 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        
+        /* Enhanced Service Cards */
+        .service-item {
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .service-item:hover .service-icon {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            transform: scale(1.1);
+        }
+        
+        .service-item:hover h4 {
+            color: var(--dark);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        /* Enhanced Regional Map */
+        .regional-map {
+            background: linear-gradient(135deg, var(--dark-light) 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .regional-map .bg-primary {
+            background-color: var(--primary) !important;
+        }
+        
+        .regional-map .bg-success {
+            background-color: var(--dark) !important;
+        }
+        
+        /* Enhanced Tracking Section */
+        .tracking-section {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tracking-section .btn-light:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+            border-color: var(--primary);
+        }
+        
+        /* Enhanced Client Logo Section */
+        .client-logo {
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            opacity: 0.7;
+            border: 1px solid #eee;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+            border-color: var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Enhanced Testimonials */
+        .testimonial-item {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-item .fas.fa-quote-left {
+            color: var(--primary) !important;
+        }
+        
+        /* Enhanced WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            left: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            color: #FFF;
+        }
+        
+        /* Enhanced Accordion */
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-light);
+            color: var(--dark) !important;
+        }
+        
+        .accordion-button:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(254, 193, 7, 0.25);
+        }
+        
+        /* Enhanced Footer */
+        .footer {
+            background-color: var(--dark);
+        }
+        
+        .footer .btn-light:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        /* Enhanced Navbar */
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: var(--primary) !important;
+        }
+        
+        /* Enhanced Back to Top Button */
+        .back-to-top {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        /* Enhanced Form Elements */
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(254, 193, 7, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
+    </div>
+    <!-- Spinner End -->
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254723339000?text=Hello%20Bash%20Hauliers,%20I%20would%20like%20to%20inquire%20about%20your%20services" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar px-0 d-none d-lg-block">
-            <div class="container px-0">
-                <div class="row gx-0 align-items-center" style="height: 45px;">
-                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                        <div class="d-flex flex-wrap">
-                            <a href="https://g.co/kgs/9BRL3cs" class="text-white me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Our Location</a>
-                            <a href="#" class="text-white me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+254723339000</a>
-                            <a href="#" class="text-white me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bashhauliers.co.ke</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 text-center text-lg-end">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
-                        </div>
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 d-none d-lg-block">
+        <div class="container px-0">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="https://g.co/kgs/9BRL3cs" class="text-white me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Mombasa, Kenya</a>
+                        <a href="tel:+254723339000" class="text-white me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+254 723 339 000</a>
+                        <a href="mailto:info@bashhauliers.co.ke" class="text-white me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bashhauliers.co.ke</a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Topbar End -->
-
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid sticky-top px-0">
-            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
-            </div>
-            <div class="container px-0">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
-                    <a href="index.html" class="navbar-brand p-0">
-                        <!-- <h1 class="text-primary m-0"><i class="fas fa-donate me-3"></i>Investa</h1>  -->
-                        <img class="brand-image" src="img/bashlogo.png" alt="Brand Image">
-                        <!-- <img src="img/logo.png" alt="Logo"> -->
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav ms-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a href="project.html" class="nav-item nav-link">Projects</a>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Get Quote</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Search End -->
-
-        <!-- Carousel Start -->
-        <div class="header-carousel owl-carousel">
-            <div class="header-carousel-item">
-                <div class="header-carousel-item-img-1">
-                    <img src="img/truck2.jpg" class="img-fluid carousel-img w-100" alt="Image">
-                </div>
-                <div class="carousel-caption">
-                    <div class="carousel-caption-inner text-start p-3">
-                        <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;">Reliable Container Haulage Across East Africa</h1>
-                        <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">Unmatched Reliability and Efficiency in Every Shipment.
-                        </p>
-                        <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#">Enquire Now</a>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="header-carousel-item mx-auto">
-                <div class="header-carousel-item-img-2">
-                    <img src="img/dozzer.jpg" class="img-fluid carousel-img w-100" alt="Image">
-                </div>
-                <div class="carousel-caption">
-                    <div class="carousel-caption-inner text-center p-3">
-                        <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;">Premium Earth-Moving Equipment for Hire</h1>
-                        <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">Bash Contractors Ltd offers a wide range of top-notch earth-moving machines to meet all your construction needs.</p>
-                        <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#">Enquire Now</a>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="header-carousel-item">
-                <div class="header-carousel-item-img-3">
-                    <img src="img/port.jpg" class="img-fluid carousel-img w-100" alt="Image">
-                </div>
-                <div class="carousel-caption">
-                    <div class="carousel-caption-inner text-end p-3">
-                        <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s" style="animation-delay: 1.3s;">Seamless Container Transportation from the Port City of Mombasa</h1>
-                        <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">Connecting East Africa with efficient and reliable transport solutions from the Mombasa port hub.</p>
-                        <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#">Enquire Now</a>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Carousel End -->
-
-
-        <!-- About Start -->
-        <div class="container-fluid about bg-light py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="about-img">
-                            <img src="img/actros.jpeg" class="img-fluid w-100 rounded-top bg-white" alt="Image">
-                            <img src="img/grader.webp" class="img-fluid w-100 rounded-bottom" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                        <h4 class="text-primary">About Us</h4>
-                        <h1 class="display-5 mb-4">Efficient and Reliable Cargo Transportation Services.</h1>
-                        <p class="text ps-4 mb-4">Bash Hauliers Ltd specializes in transporting containerized cargo to all major towns in Kenya and East Africa. We operate a modern fleet of vehicles and are committed to providing efficient, reliable, and round-the-clock services. Our sister company, Bash Contractors Ltd, excels in the hire of top-notch earth-moving machines, ensuring the best solutions for your construction needs.
-                        </p>
-                        <div class="row g-4 justify-content-between mb-5">
-                            <div class="col-lg-6 col-xl-5">
-                                <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Strategic Transport Solutions</p>
-                                <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Modern Fleet & Equipment</p>
-                            </div>
-                            <div class="col-lg-6 col-xl-7">
-                                <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Comprehensive Service Coverage</p>
-                                <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Partnerships</p>
-                            </div>
-                        </div>
-                        <div class="row g-4 justify-content-between mb-5">
-                            <div class="col-xl-5"><a href="#" class="btn btn-primary rounded-pill py-3 px-5">Discover More</a></div>
-                            <div class="col-xl-7 mb-5">
-                                <div class="about-customer d-flex position-relative">
-                                    <img src="img/customer-img-1.jpg" class="img-fluid btn-xl-square position-absolute" style="left: 0; top: 0;"  alt="Image">
-                                    <img src="img/customer-img-2.jpg" class="img-fluid btn-xl-square position-absolute" style="left: 45px; top: 0;" alt="Image">
-                                    <img src="img/customer-img-3.jpg" class="img-fluid btn-xl-square position-absolute" style="left: 90px; top: 0;" alt="Image">
-                                    <img src="img/customer-img-1.jpg" class="img-fluid btn-xl-square position-absolute" style="left: 135px; top: 0;" alt="Image">
-                                    <div class="position-absolute text-dark" style="left: 220px; top: 10px;">
-                                        <p class="mb-0">500+ Trusted</p>
-                                        <p class="mb-0">Global Customers</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row g-4 text-center align-items-center justify-content-center">
-                            <div class="col-sm-4">
-                                <div class="bg-primary rounded p-4">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">200</span>
-                                        <h4 class="text-dark fs-1 mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-center">
-                                        <p class="text-white mb-0">Modern Fleets</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="bg-dark rounded p-4">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <span class="counter-value fs-1 fw-bold text-white" data-toggle="counter-up">21</span>
-                                        <h4 class="text-white fs-1 mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-center">
-                                        <p class="text-white mb-0">Years Of Experience</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="bg-primary rounded p-4">
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">15</span>
-                                        <h4 class="text-dark fs-1 mb-0" style="font-weight: 600; font-size: 25px;">K+</h4>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-center">
-                                        <p class="text-white mb-0">Completed Trips</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-
-        <!-- Services Start -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Services</h4>
-                    <h1 class="display-4">Explore Our Services</h1>
-                </div>
-                <div class="row g-4 justify-content-center text-center">
-                    <div class="col-md-6 col-lg-4 col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item bg-light rounded">
-                            <div class="service-img">
-                                <img src="img/axor.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content text-start p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-truck fa-2x me-2"></i> Container Hauliage</a>
-                                    <p class="mb-4">Reliable and efficient transport solutions for containerized cargo across East Africa.
-                                    </p>
-                                    <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item bg-light rounded">
-                            <div class="service-img">
-                                <img src="img/grader2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content text-start p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-tractor  fa-2x me-2"></i>Earth-Moving Machine Hire</a>
-                                    <p class="mb-4">Premium machinery for construction projects, including bulldozers, trucks, graders, and shovels.
-                                    </p>
-                                    <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <!-- Services End -->
-
-
-        <!-- Project Start -->
-        <div class="container-fluid project">
-            <div class="container">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Projects</h4>
-                    <h1 class="display-4">Explore Our Latest Projects and Success Stories</h1>
-                </div>
-                <div class="project-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="project-img">
-                            <img src="img/projects-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="project-content bg-light rounded p-4">
-                            <div class="project-content-inner">
-                                <div class="project-icon mb-3"><i class="fas fa-chart-line fa-4x text-primary"></i></div>
-                                <p class="text-dark fs-5 mb-3">Business Growth</p>
-                                <a href="#" class="h4">Business Strategy And Investment Planning Growth Consulting</a>
-                                <div class="pt-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-5" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="project-img">
-                            <img src="img/projects-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="project-content bg-light rounded p-4">
-                            <div class="project-content-inner">
-                                <div class="project-icon mb-3"><i class="fas fa-signal fa-4x text-primary"></i></div>
-                                <p class="text-dark fs-5 mb-3">Marketing Strategy</p>
-                                <a href="#" class="h4">Product Sailing Marketing Strategy For Improve Business</a>
-                                <div class="pt-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-5" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="img/projects-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="project-content bg-light rounded p-4">
-                            <div class="project-content-inner">
-                                <div class="project-icon mb-3"><i class="fas fa-signal fa-4x text-primary"></i></div>
-                                <p class="text-dark fs-5 mb-3">Marketing Strategy</p>
-                                <a href="#" class="h4">Product Sailing Marketing Strategy For Improve Business</a>
-                                <div class="pt-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-5" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Project End -->
+    </div>
+    <!-- Topbar End -->
 
-
-        <!-- Team Start -->
-        <div class="container-fluid team pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Team</h4>
-                    <h1 class="display-4">Meet Our Dedicated Team Members</h1>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+        <div class="container px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img class="brand-image" src="img/bashlogo.png" alt="Bash Hauliers Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="#tracking" class="nav-item nav-link">Track Shipment</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                        <a href="#quote" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Request Quote</a>
+                    </div>
                 </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item rounded">
-                            <div class="team-img">
-                                <img src="img/team-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fas fa-share-alt"></i></a>
-                                    <div class="team-icon-share">
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-content bg-dark text-center rounded-bottom p-4">
-                                <div class="team-content-inner rounded-bottom">
-                                    <h4 class="text-white">Mark D. Brock</h4>
-                                    <p class="text-muted mb-0">CEO & Founder</p>
-                                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Carousel Start -->
+    <div class="header-carousel owl-carousel">
+        <div class="header-carousel-item">
+            <div class="header-carousel-item-img-1">
+                <img src="img/truck2.jpg" class="img-fluid carousel-img w-100" alt="Bash Hauliers Container Trucks">
+            </div>
+            <div class="carousel-caption">
+                <div class="carousel-caption-inner text-start p-3">
+                    <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s">Your Trusted Partner in Transport & Logistics</h1>
+                    <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s">Over 20 years of excellence in East African transport solutions with 300+ modern trucks serving 6 countries.</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated" href="#quote">Request Quote</a>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated" href="#tracking">Track Shipment</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-carousel-item mx-auto">
+            <div class="header-carousel-item-img-2">
+                <img src="img/dozzer.jpg" class="img-fluid carousel-img w-100" alt="Bash Contractors Earth Moving Equipment">
+            </div>
+            <div class="carousel-caption">
+                <div class="carousel-caption-inner text-center p-3">
+                    <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated">200+ Dry Container Transit Trucks</h1>
+                    <p class="mb-5 fs-5 fadeInUp animate__animated">State-of-the-art fleet dedicated to secure and timely dry container transportation across East Africa.</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#services">Our Services</a>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="tel:+254723339000">Call Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-carousel-item">
+            <div class="header-carousel-item-img-3">
+                <img src="img/port.jpg" class="img-fluid carousel-img w-100" alt="Mombasa Port Container Operations">
+            </div>
+            <div class="carousel-caption">
+                <div class="carousel-caption-inner text-end p-3">
+                    <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated">Seamless Port-to-Destination Solutions</h1>
+                    <p class="mb-5 fs-5 fadeInUp animate__animated">Connecting Mombasa Port to all major destinations across Kenya, Uganda, Rwanda, Burundi, Tanzania, DRC, and South Sudan.</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#coverage">View Coverage</a>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#contact">Talk to Our Team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Fleet Statistics Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="fleet-stats">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <span class="counter-value fs-1 fw-bold" data-toggle="counter-up">300</span>
+                            <h4 class="text-white fs-1 mb-0">+</h4>
+                        </div>
+                        <h5 class="text-white">Modern Trucks</h5>
+                        <p class="text-light mb-0">State-of-the-art fleet</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="fleet-stats">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <span class="counter-value fs-1 fw-bold" data-toggle="counter-up">22</span>
+                            <h4 class="text-white fs-1 mb-0">+</h4>
+                        </div>
+                        <h5 class="text-white">Years Experience</h5>
+                        <p class="text-light mb-0">Since 2002</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="fleet-stats">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <span class="counter-value fs-1 fw-bold" data-toggle="counter-up">6</span>
+                            <h4 class="fs-1 mb-0"></h4>
+                        </div>
+                        <h5 class="text-white">Countries Served</h5>
+                        <p class="text-light mb-0">East & Central Africa</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="fleet-stats">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <span class="counter-value fs-1 fw-bold" data-toggle="counter-up">25</span>
+                            <h4 class="text-white fs-1 mb-0">K+</h4>
+                        </div>
+                        <h5 class="text-white">Successful Deliveries</h5>
+                        <p class="text-light mb-0">On-time, every time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fleet Statistics End -->
+
+    <!-- About Start -->
+    <div class="container-fluid about bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img src="img/actros.jpeg" class="img-fluid w-100 rounded-top bg-white" alt="Bash Hauliers Mercedes Actros Truck">
+                        <img src="img/grader.webp" class="img-fluid w-100 rounded-bottom" alt="Bash Contractors Grader Equipment">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                    <h4 class="text-primary">About Bash Hauliers</h4>
+                    <h1 class="display-5 mb-4">East Africa's Leading Transport & Logistics Partner Since 2002</h1>
+                    <p class="ps-4 mb-4">From our humble beginnings as a family-owned business, Bash Hauliers has evolved into a regional powerhouse in transport and logistics. We specialize in comprehensive cargo transportation solutions across East and Central Africa, operating a modern fleet of 300+ trucks with unwavering commitment to reliability, efficiency, and customer satisfaction.</p>
+                    
+                    <!-- Vision & Mission -->
+                    <div class="mb-4">
+                        <h5 class="text-primary mb-3">Our Vision & Mission</h5>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <p class="text-dark mb-2"><i class="fas fa-eye text-primary me-2"></i><strong>Vision:</strong> To be the preferred and most reliable logistics partner in East and Central Africa.</p>
+                                <p class="text-dark"><i class="fas fa-bullseye text-primary me-2"></i><strong>Mission:</strong> To deliver efficient, secure, and timely transportation solutions leveraging our modern fleet and dedicated team.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded">
-                            <div class="team-img">
-                                <img src="img/team-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fas fa-share-alt"></i></a>
-                                    <div class="team-icon-share">
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-content bg-dark text-center rounded-bottom p-4">
-                                <div class="team-content-inner rounded-bottom">
-                                    <h4 class="text-white">Mark D. Brock</h4>
-                                    <p class="text-muted mb-0">CEO & Founder</p>
-                                </div>
-                            </div>
+
+                    <div class="row g-4 justify-content-between mb-4">
+                        <div class="col-lg-6 col-xl-5">
+                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> 24/7 Real-time Tracking</p>
+                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Guaranteed On-time Delivery</p>
+                        </div>
+                        <div class="col-lg-6 col-xl-7">
+                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Modern Fleet & Equipment</p>
+                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Comprehensive Coverage</p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item rounded">
-                            <div class="team-img">
-                                <img src="img/team-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fas fa-share-alt"></i></a>
-                                    <div class="team-icon-share">
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-content bg-dark text-center rounded-bottom p-4">
-                                <div class="team-content-inner rounded-bottom">
-                                    <h4 class="text-white">Mark D. Brock</h4>
-                                    <p class="text-muted mb-0">CEO & Founder</p>
-                                </div>
-                            </div>
+                    
+                    <div class="row g-4 justify-content-between">
+                        <div class="col-xl-5">
+                            <a href="#services" class="btn btn-primary rounded-pill py-3 px-5">Discover Our Services</a>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-item rounded">
-                            <div class="team-img">
-                                <img src="img/team-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fas fa-share-alt"></i></a>
-                                    <div class="team-icon-share">
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-3" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-primary btn-sm-square text-white rounded-circle mb-0" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-content bg-dark text-center rounded-bottom p-4">
-                                <div class="team-content-inner rounded-bottom">
-                                    <h4 class="text-white">Mark D. Brock</h4>
-                                    <p class="text-muted mb-0">CEO & Founder</p>
+                        <div class="col-xl-7">
+                            <div class="about-customer d-flex position-relative">
+                                <img src="img/customer-img-1.jpg" class="img-fluid btn-xl-square position-absolute" style="left: 0; top: 0;" alt="Satisfied Customer">
+                                <img src="img/customer-img-2.jpg" class="img-fluid btn-xl-square position-absolute" style="left: 45px; top: 0;" alt="Satisfied Customer">
+                                <img src="img/customer-img-3.jpg" class="img-fluid btn-xl-square position-absolute" style="left: 90px; top: 0;" alt="Satisfied Customer">
+                                <img src="img/customer-img-1.jpg" class="img-fluid btn-xl-square position-absolute" style="left: 135px; top: 0;" alt="Satisfied Customer">
+                                <div class="position-absolute text-dark" style="left: 220px; top: 10px;">
+                                    <p class="mb-0">500+ Trusted</p>
+                                    <p class="mb-0">Regional Partners</p>
                                 </div>
                             </div>
                         </div>
@@ -445,69 +526,365 @@
                 </div>
             </div>
         </div>
-        <!-- Team End -->
+    </div>
+    <!-- About End -->
 
-
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial bg-light py-5">
-            <div class="container py-5">
-                <div class="row g-4 align-items-center">
-                    <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="h-100 rounded">
-                            <h4 class="text-primary">Our Feedbacks </h4>
-                            <h1 class="display-4 mb-4">Clients are Talking</h1>
-                            <p class="mb-4">What Our Clients Are Saying "Excellent service and reliable transport solutions. Highly recommend Bash Hauliers Ltd for their professionalism and efficiency."                            </p>
-                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read All Reviews <i class="fas fa-arrow-right ms-2"></i></a>
+    <!-- Services Start -->
+    <div class="container-fluid service py-5" id="services">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Specialized Services</h4>
+                <h1 class="display-4">Comprehensive Fleet Solutions</h1>
+                <p>Three specialized service categories designed to meet all your transport and logistics needs across East and Central Africa.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-white rounded shadow-sm h-100">
+                        <div class="service-img">
+                            <img src="img/axor.jpeg" class="img-fluid w-100 rounded-top" alt="Dry Container Transit Trucks">
+                        </div>
+                        <div class="service-content text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-shipping-fast fa-2x text-white"></i>
+                            </div>
+                            <h4 class="mb-3">Dry Container Transit</h4>
+                            <p class="mb-4">200+ state-of-the-art trucks exclusively dedicated to secure and timely dry container transportation across the region.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="fas fa-check text-primary me-2"></i>Modern Mercedes & Volvo trucks</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>GPS tracking on all vehicles</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>24/7 monitoring</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Insurance coverage</li>
+                            </ul>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#quote">Get Quote</a>
                         </div>
                     </div>
-                    <div class="col-xl-8">
-                        <div class="testimonial-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
-                                    </p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="my-auto text-end">
-                                        <h5>Person Name</h5>
-                                        <p class="mb-0">Profession</p>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item bg-white rounded shadow-sm h-100">
+                        <div class="service-img">
+                            <img src="img/grader2.jpg" class="img-fluid w-100 rounded-top" alt="Bulk Cargo Tippers">
+                        </div>
+                        <div class="service-content text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-truck fa-2x text-white"></i>
+                            </div>
+                            <h4 class="mb-3">Bulk Cargo Tippers</h4>
+                            <p class="mb-4">100+ specially engineered tippers for efficient transportation of bulk cargo, serving both local and transit routes.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="fas fa-check text-primary me-2"></i>High-capacity tippers</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Specialized bulk handling</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Experienced operators</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Flexible scheduling</li>
+                            </ul>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#quote">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item bg-white rounded shadow-sm h-100">
+                        <div class="service-img">
+                            <img src="img/port.jpg" class="img-fluid w-100 rounded-top" alt="Local Shunting Operations">
+                        </div>
+                        <div class="service-content text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-warehouse fa-2x text-white"></i>
+                            </div>
+                            <h4 class="mb-3">Local Shunting Operations</h4>
+                            <p class="mb-4">40 dedicated trucks on standby for swift container movement from Container Freight Stations (CFS) to secure yards.</p>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li><i class="fas fa-check text-primary me-2"></i>Rapid response times</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>CFS to yard transfers</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Secure handling</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Port coordination</li>
+                            </ul>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#quote">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Tracking Section Start -->
+    <div class="container-fluid py-5" id="tracking">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="tracking-section text-center">
+                        <h2 class="mb-4">Track Your Shipment</h2>
+                        <p class="mb-4">Get real-time updates on your cargo with our advanced tracking system. Enter your tracking number below for instant status updates.</p>
+                        <div class="row g-3 justify-content-center">
+                            <div class="col-md-8">
+                                <input type="text" class="form-control form-control-lg" placeholder="Enter your tracking number" id="trackingNumber">
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-light btn-lg w-100" onclick="trackShipment()">Track Now</button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <small>For assistance, call us at <a href="tel:+254723339000" class="text-light"><strong>+254 723 339 000</strong></a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tracking Section End -->
+
+    <!-- Regional Coverage Start -->
+    <div class="container-fluid py-5 bg-light" id="coverage">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Regional Network</h4>
+                <h1 class="display-4">Extensive Coverage Across East & Central Africa</h1>
+                <p>Connecting major economic hubs and destinations across 6 countries with reliable transport solutions.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="regional-map">
+                        <h3 class="mb-4">Countries We Serve</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
                                     </div>
-                                    <div class="bg-white rounded-circle ms-3">
-                                        <img src="img/testimonial-1.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
+                                    <div>
+                                        <h5 class="mb-1">Kenya</h5>
+                                        <p class="mb-0 text-muted">All destinations</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
-                                    </p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="my-auto text-end">
-                                        <h5>Person Name</h5>
-                                        <p class="mb-0">Profession</p>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
                                     </div>
-                                    <div class="bg-white rounded-circle ms-3">
-                                        <img src="img/testimonial-2.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
+                                    <div>
+                                        <h5 class="mb-1">Uganda</h5>
+                                        <p class="mb-0 text-muted">All destinations</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
-                                <div class="d-flex">
-                                    <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                    <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eos impedit eveniet dolorem culpa ullam incidunt vero quo recusandae nemo? Molestiae doloribus iure,
-                                    </p>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Rwanda</h5>
+                                        <p class="mb-0 text-muted">All destinations</p>
+                                    </div>
                                 </div>
-                                <div class="d-flex justify-content-end">
-                                    <div class="my-auto text-end">
-                                        <h5>Person Name</h5>
-                                        <p class="mb-0">Profession</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
                                     </div>
-                                    <div class="bg-white rounded-circle ms-3">
-                                        <img src="img/testimonial-3.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="">
+                                    <div>
+                                        <h5 class="mb-1">Burundi</h5>
+                                        <p class="mb-0 text-muted">All destinations</p>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Tanzania</h5>
+                                        <p class="mb-0 text-muted">All destinations</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">DRC</h5>
+                                        <p class="mb-0 text-muted">Butembo, Beni, Bunia, Kibali</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary rounded-circle p-2 me-3">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">South Sudan</h5>
+                                    <p class="mb-0 text-muted">Juba</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-white rounded p-4 shadow-sm">
+                        <h4 class="mb-4">Why Choose Our Network?</h4>
+                        <div class="mb-3">
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            <strong>Reliable Transit Times</strong>
+                            <p class="mb-0 ms-4 text-muted">Consistent delivery schedules across all routes</p>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fas fa-shield-alt text-primary me-2"></i>
+                            <strong>Secure Transportation</strong>
+                            <p class="mb-0 ms-4 text-muted">Advanced security measures and insurance coverage</p>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fas fa-headset text-primary me-2"></i>
+                            <strong>24/7 Support</strong>
+                            <p class="mb-0 ms-4 text-muted">Round-the-clock customer service and tracking</p>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fas fa-handshake text-primary me-2"></i>
+                            <strong>Local Partnerships</strong>
+                            <p class="mb-0 ms-4 text-muted">Strong relationships with regional partners</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Regional Coverage End -->
+
+    <!-- Trusted Clients Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Valued Partners</h4>
+                <h1 class="display-4">Trusted by Leading Companies</h1>
+                <p>We are proud to serve a diverse portfolio of reputable companies across East Africa, building strong partnerships based on trust and exceptional service delivery.</p>
+            </div>
+            <div class="row g-4 align-items-center justify-content-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">BAMBURI SHIP CHANDLERS</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">TRUELINE AFRICA</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">YAMANY LOGISTICS</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">INTRASPEED AFRICA</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">GREENFREIGHT LOGISTICS</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">TERMCO TANK SA</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">MAGELLAN</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">INTERFACE AFRICA</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">SABAGIFCO</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">UNIMAR</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">HUAYE</h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
+                        <h6 class="mb-0">CONKEN LOGISTICS</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Trusted Clients End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="h-100 rounded">
+                        <h4 class="text-primary">Client Testimonials</h4>
+                        <h1 class="display-4 mb-4">What Our Partners Say</h1>
+                        <p class="mb-4">Over two decades of excellence has earned us the trust and loyalty of hundreds of satisfied clients across East and Central Africa. Here's what they say about our services.</p>
+                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#contact">Partner With Us <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="testimonial-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-3x text-primary me-3"></i></div>
+                                <p class="mt-4">"Bash Hauliers has been our trusted logistics partner for over 5 years. Their reliability, professionalism, and commitment to on-time delivery has been exceptional. We highly recommend their services to anyone looking for dependable transport solutions in East Africa."</p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                    <h5>Sarah Kimani</h5>
+                                    <p class="mb-0">Operations Manager, Trueline Africa</p>
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <img src="img/testimonial-1.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="Sarah Kimani">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-3x text-primary me-3"></i></div>
+                                <p class="mt-4">"The tracking system and customer service at Bash Hauliers is outstanding. We always know exactly where our cargo is, and their team is always available to address any concerns. Their modern fleet and professional drivers give us complete peace of mind."</p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                    <h5>James Mwangi</h5>
+                                    <p class="mb-0">Logistics Director, Greenfreight Logistics</p>
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <img src="img/testimonial-2.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="James Mwangi">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-3x text-primary me-3"></i></div>
+                                <p class="mt-4">"Bash Hauliers' extensive network across East Africa has been crucial for our regional operations. Their ability to handle complex multi-country shipments with such efficiency and care is truly impressive. They are more than a service provider - they are a strategic partner."</p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                    <h5>Patricia Wanjiku</h5>
+                                    <p class="mb-0">Supply Chain Manager, Interface Africa</p>
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <img src="img/testimonial-3.jpg" class="rounded-circle p-2" style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);" alt="Patricia Wanjiku">
                                 </div>
                             </div>
                         </div>
@@ -515,272 +892,351 @@
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
+    </div>
+    <!-- Testimonial End -->
 
+    <!-- FAQ Start -->
+    <div class="container-fluid faq py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="pb-5">
+                        <h4 class="text-primary">Frequently Asked Questions</h4>
+                        <h1 class="display-4">Get Answers to Common Questions</h1>
+                        <p>Find quick answers to the most common questions about our transport and logistics services.</p>
+                    </div>
+                   <div class="accordion bg-light rounded p-4" id="accordionExample">
+                        <div class="accordion-item border-0 mb-4">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What services does Bash Hauliers offer?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body my-2">
+                                    <h5>We offer three specialized transport services across East and Central Africa.</h5>
+                                    <p>Our services include: Dry Container Transit (200+ trucks), Bulk Cargo Tippers (100+ trucks), and Local Shunting Operations (40 trucks). We serve Kenya, Uganda, Rwanda, Burundi, Tanzania, DRC, and South Sudan with our modern fleet of 300+ vehicles.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-4">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How can I track my shipment?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body my-2">
+                                    <h5>We provide 24/7 real-time tracking for all shipments.</h5>
+                                    <p>You can track your shipment using our online tracking system by entering your tracking number. Our advanced GPS technology provides real-time updates on your cargo's location and estimated delivery time. You can also call our customer service team at +254 723 339 000 for assistance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-4">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What makes Bash Hauliers different from competitors?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body my-2">
+                                    <h5>Over 20 years of experience with guaranteed on-time delivery and modern fleet.</h5>
+                                    <p>Since 2002, we've built a reputation for reliability and excellence. Our advantages include: 300+ modern trucks, 24/7 tracking, comprehensive insurance coverage, experienced drivers, flexible payment options, and strong partnerships across the region. We guarantee on-time delivery and provide round-the-clock customer support.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-4">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    How do I request a quote for my shipment?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body my-2">
+                                    <h5>Getting a quote is quick and easy through multiple channels.</h5>
+                                    <p>You can request a quote by: filling out our online quote form, calling us at +254 723 339 000, emailing info@bashhauliers.co.ke, or using our WhatsApp service. Provide details about your cargo type, pickup location, destination, and preferred delivery date for an accurate quote.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-4">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Do you provide insurance coverage for shipments?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body my-2">
+                                    <h5>Yes, all our shipments are covered by comprehensive insurance.</h5>
+                                    <p>We provide full insurance coverage for all cargo transported by our fleet. Our insurance covers damage, theft, and loss during transit. We also maintain strict safety protocols, regular vehicle maintenance, and employ experienced, trained drivers to minimize risks and ensure your cargo arrives safely.</p>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="faq-img RotateMoveRight rounded">
+                        <img src="img/faq-img.jpg" class="img-fluid rounded w-100" alt="Bash Hauliers FAQ">
+                        <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="#contact">Still Have Questions? <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ End -->
 
-        <!-- FAQ Start -->
-        <div class="container-fluid faq py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+    <!-- Contact Start -->
+    <div class="container-fluid contact bg-light py-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="contact-item">
                         <div class="pb-5">
-                            <h4 class="text-primary">FAQs</h4>
-                            <h1 class="display-4">Get the Answers to Common Questions</h1>
+                            <h4 class="text-primary">Get In Touch</h4>
+                            <h1 class="display-4 mb-4">Ready to Move Your Cargo?</h1>
+                            <p class="mb-4">Contact Bash Hauliers today for reliable, efficient, and professional transport solutions across East and Central Africa. Our team is ready to handle your logistics needs with the expertise and care you deserve.</p>
                         </div>
-                       <div class="accordion bg-light rounded p-4" id="accordionExample">
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What services do you offer?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>We specialize in container haulage and earth-moving machine hire.</h5>
-                                        <p>Bash Hauliers Ltd provides reliable container transportation services across East Africa, ensuring your cargo reaches its destination safely and on time. Our sister company, Bash Contractors Ltd, offers top-notch earth-moving equipment for hire, including bulldozers, trucks, shovels, and graders.</p>
-                                    </div>
-                                </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-4"><i class="fa fa-home text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>Head Office</h4>
+                                <p class="mb-0">P.O. Box 83658, Mombasa, Kenya</p>
                             </div>
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Which regions do you cover?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>We serve all major towns in Kenya and East Africa.</h5>
-                                        <p>Our extensive network allows us to provide efficient haulage services to various locations throughout Kenya and East Africa. No matter where your cargo needs to go, we ensure timely and secure delivery.</p>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-phone-alt text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>Call Us</h4>
+                                <p class="mb-0">+254 723 339 000</p>
                             </div>
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        How can I get a quote?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Requesting a quote is simple and quick.</h5>
-                                        <p>You can get a quote by visiting our website and filling out the quote request form. Alternatively, you can contact us directly via phone or email, and our team will assist you with your specific requirements and provide a detailed quote.</p>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-envelope-open text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>Email Us</h4>
+                                <p class="mb-0">info@bashhauliers.co.ke</p>
                             </div>
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        What makes your services unique?
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Our commitment to reliability, efficiency, and customer satisfaction sets us apart.</h5>
-                                        <p>We take pride in our modern fleet of vehicles and our team of experienced professionals who ensure that every shipment is handled with the utmost care. Our 24/7 customer support and comprehensive logistics solutions make us the preferred choice for container haulage and equipment hire in East Africa.</p>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fab fa-whatsapp text-white"></i></div>
+                            <div class="ms-4">
+                                <h4>WhatsApp</h4>
+                                <p class="mb-0">+254 723 339 000</p>
                             </div>
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                        How do you ensure the safety of my cargo?
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>We prioritize the safety of your cargo at every step.</h5>
-                                        <p>Our vehicles are equipped with advanced tracking systems, and our drivers are highly trained to handle all types of cargo. We adhere to strict safety protocols and conduct regular maintenance on our fleet to ensure that your cargo is transported securely and arrives in perfect condition.</p>
-                                    </div>
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="faq-img RotateMoveRight rounded">
-                            <img src="img/faq-img.jpg" class="img-fluid rounded w-100" alt="Image">
-                            <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="#">Read More Q & A <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                        <div class="mt-4">
+                            <h5>Industry Associations</h5>
+                            <p class="mb-1"><i class="fas fa-check text-primary me-2"></i>Kenya Transport Association Member</p>
+                            <p class="mb-0"><i class="fas fa-check text-primary me-2"></i>Kenya Shippers Council Member</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- FAQ End -->
-
-        <!-- Contact Start -->
-        <div class="container-fluid contact bg-light py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="contact-item">
-                            <div class="pb-5">
-                                <h4 class="text-primary">Contact Us</h4>
-                                <h1 class="display-4 mb-4">Get In Touch With Us</h1>
-                                <p class="mb-0">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a class="text-primary fw-bold" href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary btn-lg-square rounded-circle p-4"><i class="fa fa-home text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Addresses</h4>
-                                    <p class="mb-0">P.O. Box 83658, Mombasa, Mombasa, KE</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-phone-alt text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Mobile</h4>
-                                    <p class="mb-0">+254723339000</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-envelope-open text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Email</h4>
-                                    <p class="mb-0">info@bashhauliers.co.ke</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s" id="quote">
+                    <div class="bg-white rounded p-4 shadow-sm">
+                        <h3 class="mb-4">Request a Quote</h3>
                         <form>
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name *</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email *</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="phone" class="form-control" id="phone" placeholder="Phone">
-                                        <label for="phone">Your Phone</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                                        <label for="phone">Your Phone *</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <select class="form-select" id="project" aria-label="Select a service">
+                                        <select class="form-select" id="service" aria-label="Select a service" required>
                                             <option selected disabled>Select a service</option>
-                                            <option value="Container Haulage">Container Haulage</option>
-                                            <option value="Earth-moving machine hiring">Earth-moving machine hiring</option>
+                                            <option value="Dry Container Transit">Dry Container Transit</option>
+                                            <option value="Bulk Cargo Tippers">Bulk Cargo Tippers</option>
+                                            <option value="Local Shunting Operations">Local Shunting Operations</option>
+                                            <option value="Multiple Services">Multiple Services</option>
                                         </select>
-                                        <label for="project">Your Project</label>
+                                        <label for="service">Service Required *</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="pickup" placeholder="Pickup Location">
+                                        <label for="pickup">Pickup Location</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="destination" placeholder="Destination">
+                                        <label for="destination">Destination</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
-                                        <label for="message">Special Note</label>
+                                        <textarea class="form-control" placeholder="Describe your cargo and requirements" id="message" style="height: 120px"></textarea>
+                                        <label for="message">Cargo Details & Special Requirements</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Request Quote</button>
                                 </div>
                             </div>
                         </form>
-                        
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+    </div>
+    <!-- Contact End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Contact Info</h4>
-                            <a class="text-white" href=""><i class="fa fa-map-marker-alt me-2"></i>P.O. Box 83658, Mombasa, Mombasa, KE</a>
-                            <a class="text-white" href=""><i class="fas fa-envelope me-2"></i> info@bashhauliers.co.ke</a>
-                            <a class="text-white" href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a class="text-white" href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex align-items-center">
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="mb-4">
+                            <img src="img/bashlogo.png" alt="Bash Hauliers Logo" style="max-height: 60px;">
+                        </div>
+                        <p class="text-white mb-3">Your trusted partner in transport and logistics across East and Central Africa since 2002.</p>
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <a class="text-white mb-2" href="https://g.co/kgs/9BRL3cs"><i class="fa fa-map-marker-alt me-2"></i>P.O. Box 83658, Mombasa, Kenya</a>
+                        <a class="text-white mb-2" href="mailto:info@bashhauliers.co.ke"><i class="fas fa-envelope me-2"></i>info@bashhauliers.co.ke</a>
+                        <a class="text-white mb-3" href="tel:+254723339000"><i class="fas fa-phone me-2"></i>+254 723 339 000</a>
+                        <div class="d-flex align-items-center">
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-light btn-md-square me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Quick Links</h4>
-                            <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i> Home</a>
-                            <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
-                            <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i> Latest Projects</a>
-                            <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-white" href="#tracking"><i class="fas fa-angle-right me-2"></i>Track Shipment</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Coverage Area</a>
+                        <a class="text-white" href="#contact"><i class="fas fa-angle-right me-2"></i>Contact Us</a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Services</h4>
-                            <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i> Contanier Haulage</a>
-                            <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Our Services</h4>
+                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Dry Container Transit</a>
+                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Bulk Cargo Tippers</a>
+                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Local Shunting Operations</a>
+                        <a class="text-white" href="#quote"><i class="fas fa-angle-right me-2"></i>Request Quote</a>
+                        <a class="text-white" href="#tracking"><i class="fas fa-angle-right me-2"></i>Track Shipment</a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item-post d-flex flex-column">
-                            <h4 class="text-white mb-4">Popular Post</h4>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Investment</p>
-                                <a href="#" class="text-white">Revisiting Your Investment & Distribution Goals</a>
-                            </div>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Business</p>
-                                <a href="#" class="text-white">Dimensional Fund Advisors Interview with Director</a>
-                            </div>
-                            <div class="footer-btn text-start">
-                                <a href="#" class="btn btn-light rounded-pill px-4">View All Post <i class="fa fa-arrow-right ms-1"></i></a>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Coverage Areas</h4>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Kenya - All Destinations</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Uganda - All Destinations</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Rwanda - All Destinations</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Tanzania - All Destinations</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>DRC - Butembo, Beni, Bunia</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>South Sudan - Juba</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </div>
+    <!-- Footer End -->
 
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-1"></i>Bash Hauliers(K) Ltd</a>,  All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        Designed By <a class="border-bottom text-primary" href="https://ahmed-abaad.github.io/Portfolio/">Ahmed Abaad</a>
-                    </div>
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white">
+                        <a href="#" class="border-bottom text-primary">
+                            <i class="fas fa-copyright text-light me-1"></i>Bash Hauliers Ltd
+                        </a>, All rights reserved.
+                    </span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    <span>Member of Kenya Transport Association & Kenya Shippers Council</span>
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
+    </div>
+    <!-- Copyright End -->
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
-        
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script async src="https://s.widgetwhats.com/wwwa.js" data-wwwa="26452"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Counter Animation
+        $(document).ready(function() {
+            $('.counter-value').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        });
+
+        // Tracking Function
+        function trackShipment() {
+            const trackingNumber = document.getElementById('trackingNumber').value;
+            if (trackingNumber.trim() === '') {
+                alert('Please enter a tracking number');
+                return;
+            }
+            // In a real implementation, this would make an API call
+            alert('Tracking feature will be implemented with backend integration. For now, please call +254 723 339 000 for tracking assistance.');
+        }
+
+        // Form Submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your quote request! Our team will contact you within 24 hours. For immediate assistance, please call +254 723 339 000 or WhatsApp us.');
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    </body>
+</body>
 
 </html>
