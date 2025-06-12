@@ -140,41 +140,7 @@
             margin-top: 0.5rem;
         }
         
-        /* Enhanced Service Cards */
-        .service-item {
-            transition: all 0.3s ease;
-            border: 1px solid #eee;
-            overflow: hidden;
-        }
-        
-        .service-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        .service-item:hover .service-icon {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            transform: scale(1.1);
-        }
-        
-        .service-item:hover h4 {
-            color: var(--dark);
-        }
-        
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            transition: all 0.3s ease;
-        }
-        
+
         /* Enhanced Regional Map */
         .regional-map {
             background: linear-gradient(135deg, var(--dark-light) 0%, #f8f9fa 100%);
@@ -206,21 +172,99 @@
             border-color: var(--primary);
         }
         
-        /* Enhanced Client Logo Section */
-        .client-logo {
-            filter: grayscale(100%);
-            transition: all 0.3s ease;
-            opacity: 0.7;
-            border: 1px solid #eee;
-        }
-        
-        .client-logo:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: scale(1.05);
-            border-color: var(--primary);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+        /* Pure Logo Carousel - No Backgrounds */
+/* Enhanced Logo Carousel with Edge Fade */
+.client-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.client-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.client-logo-track {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Increased gap */
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.client-logo-item {
+    flex-shrink: 0;
+    height: 70px; /* Increased size */
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.client-logo-item img {
+    height: 100%;
+    width: auto;
+    max-width: 180px; /* Limit maximum width */
+    object-fit: contain;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.client-logo-item:hover img {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* Edge fade effects */
+.carousel-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.carousel-fade.left {
+    left: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.carousel-fade.right {
+    right: 0;
+    background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 40px)); }
+}
+
+/* Pause on hover */
+.client-carousel-container:hover .client-logo-track {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .client-logo-track { gap: 60px; }
+    .client-logo-item { height: 60px; }
+    .carousel-fade { width: 100px; }
+}
+
+@media (max-width: 768px) {
+    .client-logo-track { gap: 40px; }
+    .client-logo-item { height: 50px; }
+    .carousel-fade { width: 70px; }
+    @keyframes scroll { 100% { transform: translateX(calc(-50% - 20px)); } }
+}
+
+@media (max-width: 576px) {
+    .client-logo-track { gap: 30px; }
+    .client-logo-item { height: 40px; }
+    .carousel-fade { width: 50px; }
+}
         
         /* Enhanced Testimonials */
         .testimonial-item {
@@ -562,7 +606,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-white rounded shadow-sm h-100">
                         <div class="service-img">
-                            <img src="img/grader2.jpg" class="img-fluid w-100 rounded-top" alt="Bulk Cargo Tippers">
+                            <img src="img/axor.jpeg" class="img-fluid w-100 rounded-top" alt="Bulk Cargo Tippers">
                         </div>
                         <div class="service-content text-center p-4">
                             <div class="service-icon">
@@ -583,7 +627,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-white rounded shadow-sm h-100">
                         <div class="service-img">
-                            <img src="img/port.jpg" class="img-fluid w-100 rounded-top" alt="Local Shunting Operations">
+                            <img src="img/axor.jpeg" class="img-fluid w-100 rounded-top" alt="Local Shunting Operations">
                         </div>
                         <div class="service-content text-center p-4">
                             <div class="service-icon">
@@ -612,7 +656,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="tracking-section text-center">
-                        <h2 class="mb-4">Track Your Shipment</h2>
+                        <h2 class="mb-4 text-primary">Track Your Shipment</h2>
                         <p class="mb-4">Get real-time updates on your cargo with our advanced tracking system. Enter your tracking number below for instant status updates.</p>
                         <div class="row g-3 justify-content-center">
                             <div class="col-md-8">
@@ -756,75 +800,81 @@
     <!-- Regional Coverage End -->
 
     <!-- Trusted Clients Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5 overflow-hidden">
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                 <h4 class="text-primary">Our Valued Partners</h4>
                 <h1 class="display-4">Trusted by Leading Companies</h1>
                 <p>We are proud to serve a diverse portfolio of reputable companies across East Africa, building strong partnerships based on trust and exceptional service delivery.</p>
             </div>
-            <div class="row g-4 align-items-center justify-content-center">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">BAMBURI SHIP CHANDLERS</h6>
+
+            <!-- Trusted Clients - Logo Carousel with Edge Fade -->
+            <div class="client-carousel-wrapper">
+                <div class="client-carousel-container">
+                    <div class="client-logo-track">
+                        <!-- First set of logos -->
+                        <div class="client-logo-item">
+                            <img src="img/clients/bamburi-ship-chandlers.jpg" alt="BAMBURI SHIP CHANDLERS">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/trueline.png" alt="TRUELINE AFRICA">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/yamany.jpg" alt="YAMANY LOGISTICS">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/intraspeed.png" alt="INTRASPEED AFRICA">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/greenfreight.png" alt="GREEN FREIGHT LOGISTICS">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/termcotank.png" alt="TERMCO TANK SA">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/magellan.png" alt="MAGELLAN LOGISTICS">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/interface.png" alt="INTERFACE AFRICA">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/sabagifco.png" alt="SABAGIFCO">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/unimar.jpg" alt="UNIMAR">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/huaye.png" alt="HUAYE">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/conken.png" alt="CONKEN LOGISTICS">
+                        </div>
+                        
+                        <!-- Duplicate set for infinite loop -->
+                        <div class="client-logo-item">
+                            <img src="img/clients/bamburi-ship-chandlers.jpg" alt="BAMBURI SHIP CHANDLERS">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/trueline.png" alt="TRUELINE AFRICA">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/yamany.jpg" alt="YAMANY LOGISTICS">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/intraspeed.png" alt="INTRASPEED AFRICA">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/greenfreight.png" alt="GREEN FREIGHT LOGISTICS">
+                        </div>
+                        <div class="client-logo-item">
+                            <img src="img/clients/termcotank.png" alt="TERMCO TANK SA">
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">TRUELINE AFRICA</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">YAMANY LOGISTICS</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">INTRASPEED AFRICA</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">GREENFREIGHT LOGISTICS</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">TERMCO TANK SA</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">MAGELLAN</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">INTERFACE AFRICA</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">SABAGIFCO</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">UNIMAR</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">HUAYE</h6>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="client-logo bg-white rounded p-3 text-center shadow-sm">
-                        <h6 class="mb-0">CONKEN LOGISTICS</h6>
-                    </div>
-                </div>
+                <div class="carousel-fade left"></div>
+                <div class="carousel-fade right"></div>
             </div>
+            
         </div>
     </div>
     <!-- Trusted Clients End -->
