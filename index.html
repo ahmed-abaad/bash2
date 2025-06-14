@@ -172,99 +172,225 @@
             border-color: var(--primary);
         }
         
-        /* Pure Logo Carousel - No Backgrounds */
-/* Enhanced Logo Carousel with Edge Fade */
-.client-carousel-wrapper {
-    position: relative;
-    width: 100%;
-    padding: 40px 0;
-}
+        /*** Service Start ***/
+        .service-item {
+            position: relative;
+            transition: all 0.5s ease;
+            border: 1px solid #eee;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-.client-carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
+        /* Service Image Styles */
+        .service-item .service-img {
+            position: relative;
+            overflow: hidden;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            flex-shrink: 0; /* Prevent image from shrinking */
+        }
 
-.client-logo-track {
-    display: flex;
-    align-items: center;
-    gap: 80px; /* Increased gap */
-    width: max-content;
-    animation: scroll 30s linear infinite;
-}
+        .service-item .service-img img {
+            transition: 0.5s;
+            width: 100%;
+            display: block;
+        }
 
-.client-logo-item {
-    flex-shrink: 0;
-    height: 70px; /* Increased size */
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
+        /* Service Content Styles */
+        .service-item .service-content {
+            position: relative;
+            padding: 1.5rem;
+            background: white;
+            flex-grow: 1; /* Make content area grow to fill space */
+            display: flex;
+            flex-direction: column;
+        }
 
-.client-logo-item img {
-    height: 100%;
-    width: auto;
-    max-width: 180px; /* Limit maximum width */
-    object-fit: contain;
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
+        .service-item .service-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            opacity: 0;
+            transition: 0.5s;
+            z-index: 1;
+            border-radius: 0 0 10px 10px;
+        }
 
-.client-logo-item:hover img {
-    opacity: 1;
-    transform: scale(1.15);
-}
+        /* Service Icon Styles */
+        .service-item .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -40px auto 1rem;
+            position: relative;
+            z-index: 2;
+            transition: all 0.5s ease;
+        }
 
-/* Edge fade effects */
-.carousel-fade {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 150px;
-    pointer-events: none;
-    z-index: 2;
-}
+        /* Hover Effects */
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary);
+        }
 
-.carousel-fade.left {
-    left: 0;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-}
+        .service-item:hover .service-img img {
+            transform: scale(1.1);
+        }
 
-.carousel-fade.right {
-    right: 0;
-    background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-}
+        .service-item:hover .service-content::before {
+            opacity: 1;
+        }
 
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 40px)); }
-}
+        .service-item:hover .service-icon {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            transform: scale(1.1);
+        }
 
-/* Pause on hover */
-.client-carousel-container:hover .client-logo-track {
-    animation-play-state: paused;
-}
+        /* Content Text Styles on Hover */
+        .service-item .service-content > *:not(.service-icon) {
+            position: relative;
+            z-index: 2;
+        }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .client-logo-track { gap: 60px; }
-    .client-logo-item { height: 60px; }
-    .carousel-fade { width: 100px; }
-}
+        .service-item:hover .service-content *:not(.btn-primary) {
+            color: white !important;
+        }
 
-@media (max-width: 768px) {
-    .client-logo-track { gap: 40px; }
-    .client-logo-item { height: 50px; }
-    .carousel-fade { width: 70px; }
-    @keyframes scroll { 100% { transform: translateX(calc(-50% - 20px)); } }
-}
+        .service-item:hover .service-content h4 {
+            color: var(--primary) !important;
+        }
 
-@media (max-width: 576px) {
-    .client-logo-track { gap: 30px; }
-    .client-logo-item { height: 40px; }
-    .carousel-fade { width: 50px; }
-}
+        .service-item:hover .service-content .text-primary {
+            color: white !important;
+        }
+
+        .service-item:hover .service-content .btn-primary {
+            background-color: white !important;
+            color: var(--dark) !important;
+            border-color: white !important;
+        }
+
+        .service-item:hover .service-content .btn-primary:hover {
+            background-color: var(--primary-light) !important;
+            border-color: var(--primary-light) !important;
+        }
+
+        /* Fix for check icons in list items */
+        .service-item:hover .service-content .fa-check {
+            color: white !important;
+        }
+
+        /* Ensure content stays properly aligned */
+        .service-item .service-content .list-unstyled {
+            margin-bottom: auto; /* Push button to bottom */
+        }
+        /*** Service End ***/
+
+        /* Enhanced Logo Carousel with Edge Fade */
+        .client-carousel-wrapper {
+            position: relative;
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .client-carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .client-logo-track {
+            display: flex;
+            align-items: center;
+            gap: 80px; /* Increased gap */
+            width: max-content;
+            animation: scroll 25s linear infinite;
+        }
+
+        .client-logo-item {
+            flex-shrink: 0;
+            height: 70px; /* Increased size */
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo-item img {
+            height: 100%;
+            width: auto;
+            max-width: 180px; /* Limit maximum width */
+            object-fit: contain;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo-item:hover img {
+            opacity: 1;
+            transform: scale(1.15);
+        }
+
+        /* Edge fade effects */
+        .carousel-fade {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .carousel-fade.left {
+            left: 0;
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        .carousel-fade.right {
+            right: 0;
+            background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50% - 40px)); }
+        }
+
+        /* Pause on hover */
+        .client-carousel-container:hover .client-logo-track {
+            animation-play-state: paused;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .client-logo-track { gap: 60px; }
+            .client-logo-item { height: 60px; }
+            .carousel-fade { width: 100px; }
+        }
+
+        @media (max-width: 768px) {
+            .client-logo-track { gap: 40px; }
+            .client-logo-item { height: 50px; }
+            .carousel-fade { width: 70px; }
+            @keyframes scroll { 100% { transform: translateX(calc(-50% - 20px)); } }
+        }
+
+        @media (max-width: 576px) {
+            .client-logo-track { gap: 30px; }
+            .client-logo-item { height: 40px; }
+            .carousel-fade { width: 50px; }
+        }
         
         /* Enhanced Testimonials */
         .testimonial-item {
@@ -363,11 +489,6 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/254723339000?text=Hello%20Bash%20Hauliers,%20I%20would%20like%20to%20inquire%20about%20your%20services" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <!-- Topbar Start -->
     <div class="container-fluid topbar px-0 d-none d-lg-block">
         <div class="container px-0">
@@ -406,9 +527,11 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="about.html" class="nav-item nav-link">About Us</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="#tracking" class="nav-item nav-link">Track Shipment</a>
+                        <a href="fleet.html" class="nav-item nav-link">Fleet</a>
+                        <a href="coverage.html" class="nav-item nav-link">Coverage</a>
+                        <a href="clients.html" class="nav-item nav-link">Clients</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="d-flex align-items-center flex-nowrap pt-xl-0">
@@ -437,7 +560,7 @@
         </div>
         <div class="header-carousel-item mx-auto">
             <div class="header-carousel-item-img-2">
-                <img src="img/dozzer.jpg" class="img-fluid carousel-img w-100" alt="Bash Contractors Earth Moving Equipment">
+                <img src="img/bg.jpg" class="img-fluid carousel-img w-100" alt="Bash Contractors Earth Moving Equipment">
             </div>
             <div class="carousel-caption">
                 <div class="carousel-caption-inner text-center p-3">
@@ -520,7 +643,7 @@
                 <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="about-img">
                         <img src="img/actros.jpeg" class="img-fluid w-100 rounded-top bg-white" alt="Bash Hauliers Mercedes Actros Truck">
-                        <img src="img/grader.webp" class="img-fluid w-100 rounded-bottom" alt="Bash Contractors Grader Equipment">
+                        <img src="img/bg1.jpg" class="img-fluid w-100 rounded-bottom" alt="Bash Contractors Grader Equipment">
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
@@ -848,26 +971,6 @@
                         </div>
                         <div class="client-logo-item">
                             <img src="img/clients/conken.png" alt="CONKEN LOGISTICS">
-                        </div>
-                        
-                        <!-- Duplicate set for infinite loop -->
-                        <div class="client-logo-item">
-                            <img src="img/clients/bamburi-ship-chandlers.jpg" alt="BAMBURI SHIP CHANDLERS">
-                        </div>
-                        <div class="client-logo-item">
-                            <img src="img/clients/trueline.png" alt="TRUELINE AFRICA">
-                        </div>
-                        <div class="client-logo-item">
-                            <img src="img/clients/yamany.jpg" alt="YAMANY LOGISTICS">
-                        </div>
-                        <div class="client-logo-item">
-                            <img src="img/clients/intraspeed.png" alt="INTRASPEED AFRICA">
-                        </div>
-                        <div class="client-logo-item">
-                            <img src="img/clients/greenfreight.png" alt="GREEN FREIGHT LOGISTICS">
-                        </div>
-                        <div class="client-logo-item">
-                            <img src="img/clients/termcotank.png" alt="TERMCO TANK SA">
                         </div>
                     </div>
                 </div>
