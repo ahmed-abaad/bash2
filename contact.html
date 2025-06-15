@@ -1,236 +1,1130 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Investa - Investment Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us - Bash Hauliers Ltd | Get Your Transport Quote Today</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="contact Bash Hauliers, transport quote, logistics quote Kenya, Mombasa transport company, East Africa logistics contact, shipping quote, freight quote" name="keywords">
+    <meta content="Contact Bash Hauliers for professional transport and logistics services across East Africa. Get instant quotes, speak with our experts, and discover how we can optimize your supply chain." name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Bash Hauliers Ltd",
+        "url": "https://www.bashhauliers.co.ke",
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+254-723-339-000",
+                "contactType": "customer service",
+                "areaServed": ["KE", "UG", "RW", "BI", "TZ", "CD", "SS"],
+                "availableLanguage": ["English", "Swahili"]
+            },
+            {
+                "@type": "ContactPoint",
+                "email": "info@bashhauliers.co.ke",
+                "contactType": "customer service"
+            }
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "P.O. Box 83658",
+            "addressLocality": "Mombasa",
+            "addressCountry": "KE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -4.0435,
+            "longitude": 39.6682
+        }
+    }
+    </script>
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap-custom.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
-    <body>
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary: #fec107;
+            --dark: #3949ab;
+            --primary-light: #fff3d7;
+            --dark-light: #eaeaf5;
+            --primary-dark: #e0a800;
+            --dark-dark: #303178;
+        }
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+        /* Override Bootstrap classes */
+        .text-primary { color: var(--primary) !important; }
+        .text-dark { color: var(--dark) !important; }
+        .bg-primary { background-color: var(--primary) !important; }
+        .bg-dark { background-color: var(--dark) !important; }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--dark) !important;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: var(--dark) !important;
+        }
+        
+        .btn-dark {
+            background-color: var(--dark);
+            border-color: var(--dark);
+            color: white !important;
+        }
+        
+        .btn-dark:hover {
+            background-color: var(--dark-dark);
+            border-color: var(--dark-dark);
+        }
+
+        /* Hero Section */
+        .contact-hero {
+            background: 
+                linear-gradient(rgba(57, 73, 171, 0.8), rgba(57, 73, 171, 0.8)),
+                url('img/blog-3.jpg') center/cover no-repeat;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .contact-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Phone Link Styling */
+        .contact-hero .btn-outline-light:hover {
+            color: var(--dark) !important;
+            background-color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .contact-hero {
+                min-height: 50vh;
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero {
+                min-height: 40vh;
+                padding: 60px 0;
+                text-align: center;
+            }
+            .contact-hero .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .contact-hero .me-3 {
+                margin-right: 0 !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact-hero .btn-outline-light {
+                white-space: normal;
+            }
+        }
+
+        /* Contact Cards */
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--dark) 100%);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .contact-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: var(--primary);
+            font-size: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover .contact-icon {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--dark);
+            transform: scale(1.1);
+        }
+
+        /* Quote Form */
+        .quote-form {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(254, 193, 7, 0.25);
+        }
+
+        .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(254, 193, 7, 0.25);
+        }
+
+        /* Office Locations */
+        .office-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .office-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .office-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .office-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+
+        /* Map Container */
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 400px;
+        }
+
+        .map-placeholder {
+            background: linear-gradient(135deg, var(--dark-light) 0%, #f8f9fa 100%);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--dark);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .faq-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+        }
+
+        .faq-header h6 {
+            margin: 0;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .faq-content {
+            padding: 1.5rem;
+            color: #666;
+        }
+
+        /* Business Hours */
+        .hours-card {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .hours-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--dark);
+            font-size: 2rem;
+        }
+
+        .hours-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Emergency Contact */
+        .emergency-card {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .emergency-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(220, 53, 69, 0.3);
+        }
+
+        .emergency-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+
+        /* Social Media */
+        .social-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon.facebook { background: #3b5998; }
+        .social-icon.twitter { background: #1da1f2; }
+        .social-icon.instagram { background: #e4405f; }
+        .social-icon.linkedin { background: #0077b5; }
+        .social-icon.whatsapp { background: #25d366; }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* Response Time */
+        .response-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .response-time {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Enhanced Navbar */
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        /* Enhanced Back to Top Button */
+        .back-to-top {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--dark);
+            color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-hero { min-height: 40vh; }
+            .quote-form { padding: 2rem 1.5rem; }
+            .social-icons { flex-wrap: wrap; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 d-none d-lg-block">
+        <div class="container px-0">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="https://g.co/kgs/9BRL3cs" class="text-white me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Mombasa, Kenya</a>
+                        <a href="tel:+254723339000" class="text-white me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+254 723 339 000</a>
+                        <a href="mailto:info@bashhauliers.co.ke" class="text-white me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bashhauliers.co.ke</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Spinner End -->
+    </div>
+    <!-- Topbar End -->
 
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+        <div class="container px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img class="brand-image" src="img/bashlogo.png" alt="Bash Hauliers Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="services.html" class="nav-item nav-link">Services</a>
+                        <a href="fleet.html" class="nav-item nav-link">Fleet</a>
+                        <a href="coverage.html" class="nav-item nav-link">Coverage</a>
+                        <a href="clients.html" class="nav-item nav-link">Clients</a>
+                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                        <a href="#quote" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Request Quote</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
 
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar px-0 d-none d-lg-block">
-            <div class="container px-0">
-                <div class="row gx-0 align-items-center" style="height: 45px;">
-                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                        <div class="d-flex flex-wrap">
-                            <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
-                            <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
-                            <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+    <!-- Hero Section Start -->
+    <div class="contact-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-3 text-white mb-4 animate__animated animate__fadeInUp">Contact Us</h1>
+                    <p class="fs-5 text-white mb-4 animate__animated animate__fadeInUp" data-wow-delay="0.2s">Ready to optimize your logistics operations? Get in touch with our expert team for personalized transport solutions, instant quotes, and professional consultation across East and Central Africa.</p>
+                    <div class="animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <a href="#quote" class="btn btn-primary rounded-pill py-3 px-5 me-3">Get Quote Now</a>
+                        <a href="tel:+254723339000" class="btn btn-outline-light rounded-pill py-3 px-5">Call +254 723 339 000</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+    <!-- Contact Methods Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Get In Touch</h4>
+                <h1 class="display-4">Multiple Ways to Reach Us</h1>
+                <p>Choose your preferred method of communication. Our team is ready to assist you with all your transport and logistics needs.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Call Us</h4>
+                        <div class="text-center">
+                            <p class="mb-2"><strong>Main Line:</strong></p>
+                            <a href="tel:+254723339000" class="text-primary fs-5 fw-bold">+254 723 339 000</a>
+                            <p class="mt-3 mb-2"><strong>Alternative:</strong></p>
+                            <a href="tel:+254722339000" class="text-dark">+254 722 339 000</a>
+                            <p class="mt-3 text-muted">Available 24/7 for emergencies</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 text-center text-lg-end">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Email Us</h4>
+                        <div class="text-center">
+                            <p class="mb-2"><strong>General Inquiries:</strong></p>
+                            <a href="mailto:info@bashhauliers.co.ke" class="text-primary fw-bold">info@bashhauliers.co.ke</a>
+                            <p class="mt-3 mb-2"><strong>Quotes:</strong></p>
+                            <a href="mailto:quotes@bashhauliers.co.ke" class="text-dark">quotes@bashhauliers.co.ke</a>
+                            <p class="mt-3 text-muted">Response within 2 hours</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4 class="text-center mb-3">WhatsApp</h4>
+                        <div class="text-center">
+                            <p class="mb-2"><strong>Instant Messaging:</strong></p>
+                            <a href="https://wa.me/254723339000" class="text-primary fs-5 fw-bold" target="_blank">+254 723 339 000</a>
+                            <p class="mt-3 mb-2"><strong>Business Hours:</strong></p>
+                            <span class="text-dark">Mon-Fri: 8AM-6PM</span>
+                            <p class="mt-3 text-muted">Quick responses guaranteed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Visit Us</h4>
+                        <div class="text-center">
+                            <p class="mb-2"><strong>Head Office:</strong></p>
+                            <address class="text-dark mb-3">
+                                P.O. Box 83658<br>
+                                Mombasa, Kenya<br>
+                                Shimanzi Area
+                            </address>
+                            <a href="https://g.co/kgs/9BRL3cs" class="btn btn-outline-primary btn-sm" target="_blank">Get Directions</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Topbar End -->
+    </div>
+    <!-- Contact Methods End -->
 
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid sticky-top px-0">
-            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
+    <!-- Quote Request Form Start -->
+    <div class="container-fluid bg-light py-5" id="quote">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Request Quote</h4>
+                <h1 class="display-4">Get Your Custom Transport Quote</h1>
+                <p>Fill out the form below and receive a detailed quote within 2 hours. Our experts will analyze your requirements and provide the best solution for your needs.</p>
             </div>
-            <div class="container px-0">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
-                    <a href="index.html" class="navbar-brand p-0">
-                        <h1 class="text-primary m-0"><i class="fas fa-donate me-3"></i>Investa</h1>
-                        <!-- <img src="img/logo.png" alt="Logo"> -->
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav ms-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a href="project.html" class="nav-item nav-link">Projects</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu m-0">
-                                    <a href="blog.html" class="dropdown-item">Our Blog</a>
-                                    <a href="team.html" class="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="faqs.html" class="dropdown-item">FAQs</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-                            <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Start Investa</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Search End -->
-
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="bg-breadcrumb-single"></div>
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h4>
-                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">Contact</li>
-                </ol>    
-            </div>
-        </div>
-        <!-- Header End -->
-
-        <!-- Contact Start -->
-        <div class="container-fluid contact bg-light py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="contact-item">
-                            <div class="pb-5">
-                                <h4 class="text-primary">Contact Us</h4>
-                                <h1 class="display-4 mb-4">Get In Touch With Us</h1>
-                                <p class="mb-0">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a class="text-primary fw-bold" href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary btn-lg-square rounded-circle p-4"><i class="fa fa-home text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Addresses</h4>
-                                    <p class="mb-0">123 ranking Street, New York, USA</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-phone-alt text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Mobile</h4>
-                                    <p class="mb-0">+012 345 67890</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-envelope-open text-white"></i></div>
-                                <div class="ms-4">
-                                    <h4>Email</h4>
-                                    <p class="mb-0">info@example.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="phone" class="form-control" id="phone" placeholder="Phone">
-                                        <label for="phone">Your Phone</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="project" placeholder="Project">
-                                        <label for="project">Your Project</label>
-                                    </div>
-                                </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="quote-form wow fadeInUp" data-wow-delay="0.3s">
+                        <form id="quoteForm">
+                            <div class="row g-4">
+                                <!-- Personal Information -->
                                 <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
+                                    <h5 class="text-primary mb-3">Contact Information</h5>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="company" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                
+                                <!-- Shipment Details -->
+                                <div class="col-12 mt-4">
+                                    <h5 class="text-primary mb-3">Shipment Details</h5>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="serviceType" class="form-label">Service Type *</label>
+                                    <select class="form-select" id="serviceType" required>
+                                        <option value="">Select Service</option>
+                                        <option value="container-transit">Container Transit</option>
+                                        <option value="bulk-cargo">Bulk Cargo Transport</option>
+                                        <option value="local-shunting">Local Shunting</option>
+                                        <option value="cross-border">Cross-Border Transport</option>
+                                        <option value="project-logistics">Project Logistics</option>
+                                        <option value="warehousing">Warehousing & Distribution</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="cargoType" class="form-label">Cargo Type *</label>
+                                    <select class="form-select" id="cargoType" required>
+                                        <option value="">Select Cargo Type</option>
+                                        <option value="general-cargo">General Cargo</option>
+                                        <option value="containers">Containers (20ft/40ft)</option>
+                                        <option value="bulk-materials">Bulk Materials</option>
+                                        <option value="heavy-equipment">Heavy Equipment</option>
+                                        <option value="perishables">Perishables</option>
+                                        <option value="hazardous">Hazardous Materials</option>
+                                        <option value="vehicles">Vehicles</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="origin" class="form-label">Origin *</label>
+                                    <input type="text" class="form-control" id="origin" placeholder="Pickup location" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="destination" class="form-label">Destination *</label>
+                                    <input type="text" class="form-control" id="destination" placeholder="Delivery location" required>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <label for="weight" class="form-label">Weight (Tons)</label>
+                                    <input type="number" class="form-control" id="weight" step="0.1" min="0">
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <label for="volume" class="form-label">Volume (CBM)</label>
+                                    <input type="number" class="form-control" id="volume" step="0.1" min="0">
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <label for="pieces" class="form-label">Number of Pieces</label>
+                                    <input type="number" class="form-control" id="pieces" min="1">
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="pickupDate" class="form-label">Preferred Pickup Date</label>
+                                    <input type="date" class="form-control" id="pickupDate">
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="urgency" class="form-label">Urgency Level</label>
+                                    <select class="form-select" id="urgency">
+                                        <option value="standard">Standard (5-7 days)</option>
+                                        <option value="express">Express (2-3 days)</option>
+                                        <option value="urgent">Urgent (Next day)</option>
+                                        <option value="emergency">Emergency (Same day)</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Additional Services -->
+                                <div class="col-12 mt-4">
+                                    <h5 class="text-primary mb-3">Additional Services</h5>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="insurance">
+                                                <label class="form-check-label" for="insurance">
+                                                    Cargo Insurance
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="tracking">
+                                                <label class="form-check-label" for="tracking">
+                                                    GPS Tracking
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="packaging">
+                                                <label class="form-check-label" for="packaging">
+                                                    Packaging Services
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="customs">
+                                                <label class="form-check-label" for="customs">
+                                                    Customs Clearance
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="storage">
+                                                <label class="form-check-label" for="storage">
+                                                    Temporary Storage
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="loading">
+                                                <label class="form-check-label" for="loading">
+                                                    Loading/Unloading
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                
                                 <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
+                                    <label for="specialRequirements" class="form-label">Special Requirements</label>
+                                    <textarea class="form-control" id="specialRequirements" rows="4" placeholder="Please describe any special handling requirements, delivery instructions, or additional information..."></textarea>
                                 </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3">Send Message</button>
+                                
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary rounded-pill py-3 px-5 me-3">
+                                        <i class="fas fa-paper-plane me-2"></i>Request Quote
+                                    </button>
+                                    <button type="reset" class="btn btn-outline-secondary rounded-pill py-3 px-5">
+                                        <i class="fas fa-redo me-2"></i>Reset Form
+                                    </button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded h-100">
-                            <iframe class="rounded-top w-100" 
-                            style="height: 500px; margin-bottom: -6px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd" 
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-bottom p-4">
-                                <div class="d-flex">
-                                    <a class="btn btn-dark btn-lg-square rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-dark btn-lg-square rounded-circle mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote Request Form End -->
+
+    <!-- Office Locations Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Locations</h4>
+                <h1 class="display-4">Regional Office Network</h1>
+                <p>Visit our offices across East and Central Africa or contact our regional representatives for localized support and services.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="office-card">
+                        <img src="https://t4.ftcdn.net/jpg/03/84/55/29/360_F_384552930_zPoe9zgmCF7qgt8fqSedcyJ6C6Ye3dFs.jpg" alt="Mombasa Head Office" class="office-image">
+                        <div class="office-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h5 class="mb-3">Head Office - Mombasa</h5>
+                        <p class="mb-3">Our main headquarters and primary operations center located in the heart of Kenya's coastal logistics hub.</p>
+                        
+                        <div class="mb-3">
+                            <p class="mb-1"><i class="fas fa-map-marker-alt text-primary me-2"></i>P.O. Box 83658, Mombasa</p>
+                            <p class="mb-1"><i class="fas fa-phone text-primary me-2"></i>+254 723 339 000</p>
+                            <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i>mombasa@bashhauliers.co.ke</p>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">Main Hub</span>
+                            <a href="https://g.co/kgs/9BRL3cs" class="btn btn-outline-primary btn-sm" target="_blank">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="office-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCmUqEGnw70LLRP8igZ5aTOnlmR3ITvPwLbA&s" alt="Nairobi Branch" class="office-image">
+                        <div class="office-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h5 class="mb-3">Nairobi Branch</h5>
+                        <p class="mb-3">Strategic location in Kenya's capital serving the central region and coordinating inland operations.</p>
+                        
+                        <div class="mb-3">
+                            <p class="mb-1"><i class="fas fa-map-marker-alt text-primary me-2"></i>Industrial Area, Nairobi</p>
+                            <p class="mb-1"><i class="fas fa-phone text-primary me-2"></i>+254 722 339 001</p>
+                            <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i>nairobi@bashhauliers.co.ke</p>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Regional Hub</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="office-card">
+                        <img src="https://t4.ftcdn.net/jpg/05/14/20/47/360_F_514204772_mT0EpTdZkScyiRPn2PInaKaqd88QGrzE.jpg" alt="Kampala Representative" class="office-image">
+                        <div class="office-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="mb-3">Kampala Representative</h5>
+                        <p class="mb-3">Local representative office serving Uganda and coordinating regional cross-border operations.</p>
+                        
+                        <div class="mb-3">
+                            <p class="mb-1"><i class="fas fa-map-marker-alt text-primary me-2"></i>Kampala, Uganda</p>
+                            <p class="mb-1"><i class="fas fa-phone text-primary me-2"></i>+256 700 123 456</p>
+                            <p class="mb-1"><i class="fas fa-envelope text-primary me-2"></i>kampala@bashhauliers.co.ke</p>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-info text-white">Representative</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Get Directions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Office Locations End -->
+
+    <!-- Map and Business Hours Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-8 wow fadeInLeft" data-wow-delay="0.1s">
+                    <h4 class="text-primary mb-3">Find Us on Map</h4>
+                    <h2 class="mb-4">Mombasa Head Office Location</h2>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt fs-1 mb-3"></i>
+                            <h5>Interactive Map</h5>
+                            <p class="text-center">P.O. Box 83658, Shimanzi Area<br>Mombasa, Kenya</p>
+                            <a href="https://maps.app.goo.gl/vfmpFMvNYeSspfWj6" class="btn btn-primary mt-3" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i>Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="hours-card mb-4">
+                        <div class="hours-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="mb-3 text-primary">Business Hours</h4>
+                        <ul class="hours-list">
+                            <li>
+                                <span>Monday - Friday</span>
+                                <span>8:00 AM - 6:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Saturday</span>
+                                <span>8:00 AM - 2:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Sunday</span>
+                                <span>Emergency Only</span>
+                            </li>
+                            <li>
+                                <span>Public Holidays</span>
+                                <span>By Appointment</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="emergency-card">
+                        <div class="emergency-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h5 class="mb-3">24/7 Emergency</h5>
+                        <p class="mb-3">For urgent transport needs and emergencies, our team is available around the clock.</p>
+                        <a href="tel:+254723339000" class="btn btn-light rounded-pill">
+                            <i class="fas fa-phone me-2"></i>Emergency Line
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Map and Business Hours End -->
+
+    <!-- Response Time and Social Media Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="response-card">
+                        <h3 class="mb-3">Our Response Commitment</h3>
+                        <div class="response-time">2</div>
+                        <h5 class="mb-3">Hours Average Response Time</h5>
+                        <p class="mb-4">We pride ourselves on quick response times. Most inquiries are answered within 2 hours during business hours.</p>
+                        
+                        <div class="row g-3 text-center">
+                            <div class="col-4">
+                                <div class="fw-bold">Phone Calls</div>
+                                <small>Immediate</small>
+                            </div>
+                            <div class="col-4">
+                                <div class="fw-bold">WhatsApp</div>
+                                <small>15 minutes</small>
+                            </div>
+                            <div class="col-4">
+                                <div class="fw-bold">Email</div>
+                                <small>2 hours</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="social-card">
+                        <h4 class="mb-3">Connect With Us</h4>
+                        <p class="mb-4">Follow us on social media for updates, industry news, and insights into our operations across East and Central Africa.</p>
+                        
+                        <div class="social-icons">
+                            <a href="#" class="social-icon facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/254723339000" class="social-icon whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6 class="text-primary">Stay Updated</h6>
+                            <p class="mb-0">Get the latest news about our services, industry insights, and company updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Response Time and Social Media End -->
+
+    <!-- FAQ Section Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Frequently Asked Questions</h4>
+                <h1 class="display-4">Quick Answers</h1>
+                <p>Find answers to commonly asked questions about our services, processes, and policies.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <h6>How quickly can you provide a transport quote?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div id="faq1" class="collapse show">
+                                <div class="faq-content">
+                                    We provide detailed quotes within 2 hours during business hours. For urgent requests, call us directly at +254 723 339 000 for immediate assistance. Our online quote form ensures we have all necessary details to provide accurate pricing.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <h6>What countries do you serve?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div id="faq2" class="collapse">
+                                <div class="faq-content">
+                                    We provide transport services across 6 countries: Kenya, Uganda, Rwanda, Burundi, Tanzania, Democratic Republic of Congo (DRC), and South Sudan. Our extensive network covers all major cities and destinations in these regions.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <h6>Do you provide cargo insurance?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div id="faq3" class="collapse">
+                                <div class="faq-content">
+                                    Yes, we offer comprehensive cargo insurance coverage for all shipments. Insurance can be arranged at competitive rates and provides protection against loss, damage, or theft during transit. This service can be added to your quote request.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <h6>Can I track my shipment in real-time?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div id="faq4" class="collapse">
+                                <div class="faq-content">
+                                    All our vehicles are equipped with GPS tracking systems. Clients receive tracking access through our client portal and can monitor their shipments in real-time, including location updates and estimated arrival times.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                <h6>What payment methods do you accept?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div id="faq5" class="collapse">
+                                <div class="faq-content">
+                                    We accept various payment methods including bank transfers, mobile money (M-Pesa, Airtel Money), cash payments, and for established clients, we offer credit terms. Payment terms are typically 30 days for corporate clients with approved credit facilities.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                <h6>Do you handle customs clearance?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div id="faq6" class="collapse">
+                                <div class="faq-content">
+                                    Yes, we provide complete customs clearance services for cross-border shipments. Our experienced team handles all documentation, duty payments, and regulatory compliance requirements across all the countries we serve.
                                 </div>
                             </div>
                         </div>
@@ -238,97 +1132,89 @@
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+    </div>
+    <!-- FAQ Section End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <div class="footer-item">
-                                <h4 class="text-white mb-4">Newsletter</h4>
-                                <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
-                                <div class="position-relative mx-auto rounded-pill">
-                                    <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                    <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                                </div>
-                            </div>
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="mb-4">
+                            <img src="img/bashlogo.png" alt="Bash Hauliers Logo" style="max-height: 60px;">
+                        </div>
+                        <p class="text-white mb-3">Your trusted partner in transport and logistics across East and Central Africa since 2002.</p>
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <a class="text-white mb-2" href="https://g.co/kgs/9BRL3cs"><i class="fa fa-map-marker-alt me-2"></i>P.O. Box 83658, Mombasa, Kenya</a>
+                        <a class="text-white mb-2" href="mailto:info@bashhauliers.co.ke"><i class="fas fa-envelope me-2"></i>info@bashhauliers.co.ke</a>
+                        <a class="text-white mb-3" href="tel:+254723339000"><i class="fas fa-phone me-2"></i>+254 723 339 000</a>
+                        <div class="d-flex align-items-center">
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-light btn-md-square me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Explore</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Home</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Latest Projects</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> testimonial</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Our Team</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a class="text-white" href="index.html"><i class="fas fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white" href="about.html"><i class="fas fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white" href="services.html"><i class="fas fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-white" href="fleet.html"><i class="fas fa-angle-right me-2"></i>Our Fleet</a>
+                        <a class="text-white" href="coverage.html"><i class="fas fa-angle-right me-2"></i>Coverage Area</a>
+                        <a class="text-white" href="clients.html"><i class="fas fa-angle-right me-2"></i>Our Clients</a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex align-items-center">
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-light btn-md-square me-2" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Contact Methods</h4>
+                        <a class="text-white" href="tel:+254723339000"><i class="fas fa-angle-right me-2"></i>Call +254 723 339 000</a>
+                        <a class="text-white" href="mailto:info@bashhauliers.co.ke"><i class="fas fa-angle-right me-2"></i>Email Us</a>
+                        <a class="text-white" href="https://wa.me/254723339000"><i class="fas fa-angle-right me-2"></i>WhatsApp Chat</a>
+                        <a class="text-white" href="#quote"><i class="fas fa-angle-right me-2"></i>Request Quote</a>
+                        <a class="text-white" href="https://g.co/kgs/9BRL3cs"><i class="fas fa-angle-right me-2"></i>Visit Our Office</a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item-post d-flex flex-column">
-                            <h4 class="text-white mb-4">Popular Post</h4>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Investment</p>
-                                <a href="#" class="text-body">Revisiting Your Investment & Distribution Goals</a>
-                            </div>
-                            <div class="d-flex flex-column mb-3">
-                                <p class="text-uppercase text-primary mb-2">Business</p>
-                                <a href="#" class="text-body">Dimensional Fund Advisors Interview with Director</a>
-                            </div>
-                            <div class="footer-btn text-start">
-                                <a href="#" class="btn btn-light rounded-pill px-4">View All Post <i class="fa fa-arrow-right ms-1"></i></a>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Business Hours</h4>
+                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>Mon-Fri: 8AM-6PM</a>
+                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>Saturday: 8AM-2PM</a>
+                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>Sunday: Emergency Only</a>
+                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>24/7 Emergency Line</a>
+                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>2 Hour Response Time</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </div>
+    <!-- Footer End -->
 
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white">
+                        <a href="#" class="border-bottom text-primary">
+                            <i class="fas fa-copyright text-light me-1"></i>Bash Hauliers Ltd
+                        </a>, All rights reserved.
+                    </span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    <span>Member of Kenya Transport Association & Kenya Shippers Council</span>
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
+    </div>
+    <!-- Copyright End -->
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
-        
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -338,10 +1224,224 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize WOW.js
+        new WOW().init();
+
+        // Contact card hover effects
+        document.querySelectorAll('.contact-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Office card hover effects
+        document.querySelectorAll('.office-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Quote form submission
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message (in real implementation, this would send to server)
+            alert('Thank you for your quote request! We will respond within 2 hours during business hours.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                
+                // Toggle icon rotation
+                if (isExpanded) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Form validation
+        function validateForm() {
+            const requiredFields = ['fullName', 'email', 'phone', 'serviceType', 'cargoType', 'origin', 'destination'];
+            let isValid = true;
+            
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (!field.value.trim()) {
+                    field.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+            
+            return isValid;
+        }
+
+        // Email validation
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Phone validation
+        function validatePhone(phone) {
+            const re = /^[\+]?[1-9][\d]{0,15}$/;
+            return re.test(phone.replace(/\s/g, ''));
+        }
+
+        // Enhanced form validation
+        document.getElementById('email').addEventListener('blur', function() {
+            if (this.value && !validateEmail(this.value)) {
+                this.classList.add('is-invalid');
+            } else {
+                this.classList.remove('is-invalid');
+            }
+        });
+
+        document.getElementById('phone').addEventListener('blur', function() {
+            if (this.value && !validatePhone(this.value)) {
+                this.classList.add('is-invalid');
+            } else {
+                this.classList.remove('is-invalid');
+            }
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Spinner Hide
+        $(window).on('load', function() {
+            $('#spinner').removeClass('show');
+        });
+
+        // Set minimum date for pickup date field
+        document.getElementById('pickupDate').min = new Date().toISOString().split('T')[0];
+
+        // Dynamic form updates based on service type
+        document.getElementById('serviceType').addEventListener('change', function() {
+            const cargoTypeSelect = document.getElementById('cargoType');
+            const selectedService = this.value;
+            
+            // Clear current options
+            cargoTypeSelect.innerHTML = '<option value="">Select Cargo Type</option>';
+            
+            // Add relevant options based on service type
+            let options = [];
+            switch(selectedService) {
+                case 'container-transit':
+                    options = [
+                        {value: 'containers-20ft', text: '20ft Containers'},
+                        {value: 'containers-40ft', text: '40ft Containers'},
+                        {value: 'general-cargo', text: 'General Cargo'},
+                        {value: 'perishables', text: 'Perishables'}
+                    ];
+                    break;
+                case 'bulk-cargo':
+                    options = [
+                        {value: 'bulk-materials', text: 'Bulk Materials'},
+                        {value: 'construction-materials', text: 'Construction Materials'},
+                        {value: 'agricultural-products', text: 'Agricultural Products'},
+                        {value: 'mining-materials', text: 'Mining Materials'}
+                    ];
+                    break;
+                case 'local-shunting':
+                    options = [
+                        {value: 'containers', text: 'Containers'},
+                        {value: 'general-cargo', text: 'General Cargo'},
+                        {value: 'vehicles', text: 'Vehicles'}
+                    ];
+                    break;
+                default:
+                    options = [
+                        {value: 'general-cargo', text: 'General Cargo'},
+                        {value: 'containers', text: 'Containers'},
+                        {value: 'bulk-materials', text: 'Bulk Materials'},
+                        {value: 'heavy-equipment', text: 'Heavy Equipment'},
+                        {value: 'perishables', text: 'Perishables'},
+                        {value: 'hazardous', text: 'Hazardous Materials'},
+                        {value: 'vehicles', text: 'Vehicles'}
+                    ];
+            }
+            
+            // Add options to select
+            options.forEach(option => {
+                const optionElement = document.createElement('option');
+                optionElement.value = option.value;
+                optionElement.textContent = option.text;
+                cargoTypeSelect.appendChild(optionElement);
+            });
+        });
+
+        // Auto-calculate estimated delivery date based on origin and destination
+        function updateEstimatedDelivery() {
+            const origin = document.getElementById('origin').value.toLowerCase();
+            const destination = document.getElementById('destination').value.toLowerCase();
+            const pickupDate = document.getElementById('pickupDate').value;
+            
+            if (pickupDate && origin && destination) {
+                let transitDays = 5; // Default
+                
+                // Estimate based on common routes
+                if (origin.includes('mombasa') && destination.includes('nairobi')) {
+                    transitDays = 2;
+                } else if (origin.includes('mombasa') && destination.includes('kampala')) {
+                    transitDays = 4;
+                } else if (origin.includes('mombasa') && destination.includes('kigali')) {
+                    transitDays = 5;
+                } else if (destination.includes('drc') || destination.includes('butembo')) {
+                    transitDays = 7;
+                }
+                
+                const pickup = new Date(pickupDate);
+                const delivery = new Date(pickup);
+                delivery.setDate(delivery.getDate() + transitDays);
+                
+                // Display estimated delivery (you could add a field for this)
+                console.log(`Estimated delivery: ${delivery.toDateString()}`);
+            }
+        }
+
+        document.getElementById('origin').addEventListener('change', updateEstimatedDelivery);
+        document.getElementById('destination').addEventListener('change', updateEstimatedDelivery);
+        document.getElementById('pickupDate').addEventListener('change', updateEstimatedDelivery);
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    </body>
+</body>
 
 </html>

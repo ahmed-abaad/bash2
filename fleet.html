@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Fleet - Bash Hauliers Ltd | 300+ Modern Trucks & Advanced Logistics Fleet</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="bash hauliers fleet, modern trucks, Mercedes Actros, Volvo trucks, container trucks, bulk cargo tippers, logistics fleet, East Africa transport fleet, GPS tracking fleet" name="keywords">
+    <meta content="Explore Bash Hauliers' impressive fleet of 300+ modern trucks including Mercedes, Volvo, and specialized vehicles equipped with advanced technology for reliable transport across East Africa." name="description">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Fleet - Bash Hauliers Ltd",
+        "description": "Modern fleet of 300+ trucks for transport and logistics services",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Bash Hauliers Ltd",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Fleet Services",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Product",
+                            "name": "Container Transit Trucks",
+                            "description": "200+ modern trucks for container transportation"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Product",
+                            "name": "Bulk Cargo Tippers",
+                            "description": "100+ specialized tippers for bulk cargo"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    </script>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary: #fec107;
+            --dark: #3949ab;
+            --primary-light: #fff3d7;
+            --dark-light: #eaeaf5;
+            --primary-dark: #e0a800;
+            --dark-dark: #303178;
+        }
+
+        /* Override Bootstrap classes */
+        .text-primary { color: var(--primary) !important; }
+        .text-dark { color: var(--dark) !important; }
+        .bg-primary { background-color: var(--primary) !important; }
+        .bg-dark { background-color: var(--dark) !important; }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--dark) !important;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: var(--dark) !important;
+        }
+        
+        .btn-dark {
+            background-color: var(--dark);
+            border-color: var(--dark);
+            color: white !important;
+        }
+        
+        .btn-dark:hover {
+            background-color: var(--dark-dark);
+            border-color: var(--dark-dark);
+        }
+
+        /* Hero Section */
+        .fleet-hero {
+            background: 
+                linear-gradient(rgba(57, 73, 171, 0.8), rgba(57, 73, 171, 0.8)),
+                url('img/blog-3.jpg') center/cover no-repeat;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .fleet-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .fleet-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .fleet-hero {
+                min-height: 50vh;
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .fleet-hero {
+                min-height: 40vh;
+                padding: 60px 0;
+                text-align: center;
+            }
+            .fleet-hero .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .fleet-hero .me-3 {
+                margin-right: 0 !important;
+            }
+        }
+
+        /* Fleet Statistics Cards */
+        .fleet-stat-card {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fleet-stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(254, 193, 7, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .fleet-stat-card:hover::before {
+            opacity: 1;
+            animation: shimmer 1.5s ease-in-out;
+        }
+
+        .fleet-stat-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .fleet-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Vehicle Cards */
+        .vehicle-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .vehicle-image {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .vehicle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .vehicle-card:hover .vehicle-image img {
+            transform: scale(1.1);
+        }
+
+        .vehicle-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .vehicle-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+            transform: translateY(100%);
+            transition: all 0.4s ease;
+        }
+
+        .vehicle-card:hover .vehicle-overlay {
+            transform: translateY(0);
+        }
+
+        /* Fleet Categories */
+        .fleet-category {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .fleet-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .category-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary);
+            font-size: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .fleet-category:hover .category-icon {
+            background: var(--primary);
+            color: var(--dark);
+            transform: scale(1.1);
+        }
+
+        /* Technology Features */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-item {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+
+        .tech-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-top-color: var(--dark);
+        }
+
+        .tech-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--dark);
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover .tech-icon {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            color: var(--primary);
+            transform: scale(1.1);
+        }
+
+        /* Specifications Table */
+        .spec-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .spec-table th {
+            background: var(--dark);
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .spec-table td {
+            padding: 1rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .spec-table tr:hover td {
+            background: var(--primary-light);
+            transform: scale(1.02);
+        }
+
+        /* Maintenance Section */
+        .maintenance-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .maintenance-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .maintenance-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-size: 1.8rem;
+        }
+
+        /* Driver Section */
+        .driver-feature {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .driver-feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .driver-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--dark);
+            font-size: 2rem;
+        }
+        
+        /* Enhanced Navbar */
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        /* Enhanced Back to Top Button */
+        .back-to-top {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--dark);
+            color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .fleet-hero { min-height: 40vh; }
+            .fleet-number { font-size: 3rem; }
+            .tech-grid { grid-template-columns: 1fr; }
+            .vehicle-image { height: 200px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 d-none d-lg-block">
+        <div class="container px-0">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="https://g.co/kgs/9BRL3cs" class="text-white me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Mombasa, Kenya</a>
+                        <a href="tel:+254723339000" class="text-white me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+254 723 339 000</a>
+                        <a href="mailto:info@bashhauliers.co.ke" class="text-white me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bashhauliers.co.ke</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+        <div class="container px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img class="brand-image" src="img/bashlogo.png" alt="Bash Hauliers Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About Us</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="fleet.html" class="nav-item nav-link active">Fleet</a>
+                        <a href="coverage.html" class="nav-item nav-link">Coverage</a>
+                        <a href="clients.html" class="nav-item nav-link">Clients</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                        <a href="contact.html#quote" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Request Quote</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <div class="fleet-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-3 text-white mb-4 animate__animated animate__fadeInUp">Our Fleet</h1>
+                    <p class="fs-5 text-white mb-4 animate__animated animate__fadeInUp" data-wow-delay="0.2s">Discover our impressive fleet of 300+ modern trucks equipped with cutting-edge technology, operated by skilled professionals, and maintained to the highest standards for reliable transport across East and Central Africa.</p>
+                    <div class="animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <a href="#fleet-overview" class="btn btn-primary rounded-pill py-3 px-5 me-3">Explore Fleet</a>
+                        <a href="#specifications" class="btn btn-outline-light rounded-pill py-3 px-5">View Specs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+    <!-- Fleet Overview Start -->
+    <div class="container-fluid py-5" id="fleet-overview">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Fleet Overview</h4>
+                <h1 class="display-4">300+ Modern Vehicles Strong</h1>
+                <p>Our diverse fleet is strategically designed to handle every transportation need, from container transit to bulk cargo and local operations, ensuring optimal performance and reliability.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fleet-stat-card">
+                        <span class="fleet-number">200</span>
+                        <h4 class="text-primary mb-2">Container Transit Trucks</h4>
+                        <p class="mb-3">Mercedes & Volvo premium trucks for secure container transportation</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="me-3">
+                                <i class="fas fa-shipping-fast text-primary"></i>
+                                <small class="d-block">Long Haul</small>
+                            </div>
+                            <div class="me-3">
+                                <i class="fas fa-satellite text-primary"></i>
+                                <small class="d-block">GPS Tracked</small>
+                            </div>
+                            <div>
+                                <i class="fas fa-shield-alt text-primary"></i>
+                                <small class="d-block">Insured</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fleet-stat-card">
+                        <span class="fleet-number">100</span>
+                        <h4 class="text-primary mb-2">Bulk Cargo Tippers</h4>
+                        <p class="mb-3">High-capacity tippers for construction and mining materials</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="me-3">
+                                <i class="fas fa-truck text-primary"></i>
+                                <small class="d-block">Heavy Duty</small>
+                            </div>
+                            <div class="me-3">
+                                <i class="fas fa-cogs text-primary"></i>
+                                <small class="d-block">Specialized</small>
+                            </div>
+                            <div>
+                                <i class="fas fa-tools text-primary"></i>
+                                <small class="d-block">Versatile</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fleet-stat-card">
+                        <span class="fleet-number">40</span>
+                        <h4 class="text-primary mb-2">Local Shunting Trucks</h4>
+                        <p class="mb-3">Rapid response vehicles for port and CFS operations</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="me-3">
+                                <i class="fas fa-clock text-primary"></i>
+                                <small class="d-block">Fast Response</small>
+                            </div>
+                            <div class="me-3">
+                                <i class="fas fa-warehouse text-primary"></i>
+                                <small class="d-block">Port Ready</small>
+                            </div>
+                            <div>
+                                <i class="fas fa-sync text-primary"></i>
+                                <small class="d-block">24/7 Available</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fleet Overview End -->
+
+    <!-- Fleet Categories Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Fleet Categories</h4>
+                <h1 class="display-4">Specialized Vehicle Categories</h1>
+                <p>Each category is specifically designed and equipped to excel in its designated role, ensuring optimal performance and efficiency.</p>
+            </div>
+            
+            <!-- Container Transit Fleet -->
+            <div class="fleet-category wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 text-center">
+                        <div class="category-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3 class="text-dark">Container Transit Fleet</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h5 class="text-primary mb-3">Premium Brands</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-star text-primary me-2"></i>Mercedes-Benz Actros</li>
+                                    <li class="mb-2"><i class="fas fa-star text-primary me-2"></i>Volvo FH Series</li>
+                                    <li class="mb-2"><i class="fas fa-star text-primary me-2"></i>Scania R-Series</li>
+                                    <li class="mb-0"><i class="fas fa-star text-primary me-2"></i>MAN TGX</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-primary mb-3">Key Features</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Euro 5/6 Emission Standards</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Advanced Safety Systems</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Fuel Efficient Engines</li>
+                                    <li class="mb-0"><i class="fas fa-check text-primary me-2"></i>Driver Comfort Features</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bulk Cargo Fleet -->
+            <div class="fleet-category wow fadeInUp" data-wow-delay="0.3s">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 text-center">
+                        <div class="category-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="text-dark">Bulk Cargo Fleet</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h5 class="text-primary mb-3">Specialized Equipment</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-cog text-primary me-2"></i>High-Capacity Tippers</li>
+                                    <li class="mb-2"><i class="fas fa-cog text-primary me-2"></i>Hydraulic Systems</li>
+                                    <li class="mb-2"><i class="fas fa-cog text-primary me-2"></i>Reinforced Bodies</li>
+                                    <li class="mb-0"><i class="fas fa-cog text-primary me-2"></i>Load Monitoring</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-primary mb-3">Applications</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Construction Materials</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Mining Operations</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Agricultural Products</li>
+                                    <li class="mb-0"><i class="fas fa-check text-primary me-2"></i>Industrial Raw Materials</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Local Shunting Fleet -->
+            <div class="fleet-category wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 text-center">
+                        <div class="category-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h3 class="text-dark">Shunting Fleet</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h5 class="text-primary mb-3">Rapid Response</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-bolt text-primary me-2"></i>Quick Deployment</li>
+                                    <li class="mb-2"><i class="fas fa-bolt text-primary me-2"></i>Maneuverable Design</li>
+                                    <li class="mb-2"><i class="fas fa-bolt text-primary me-2"></i>Port Optimized</li>
+                                    <li class="mb-0"><i class="fas fa-bolt text-primary me-2"></i>24/7 Availability</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-primary mb-3">Operations</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>CFS to Yard Transfers</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Container Repositioning</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Emergency Movements</li>
+                                    <li class="mb-0"><i class="fas fa-check text-primary me-2"></i>Port Coordination</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fleet Categories End -->
+
+    <!-- Featured Vehicles Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Featured Vehicles</h4>
+                <h1 class="display-4">Premium Fleet Showcase</h1>
+                <p>Explore some of our flagship vehicles that represent the quality, technology, and reliability of our entire fleet.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img src="img/actros.jpeg" alt="Mercedes Actros">
+                            <div class="vehicle-badge">Premium</div>
+                            <div class="vehicle-overlay">
+                                <h5 class="text-white mb-2">Mercedes-Benz Actros</h5>
+                                <p class="text-white mb-0">Euro 6 engine, advanced safety systems, and superior fuel efficiency for long-haul operations.</p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="mb-3">Mercedes-Benz Actros 2545</h5>
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <small class="text-muted">Engine Power</small>
+                                    <p class="mb-0 fw-bold">450 HP</p>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Payload</small>
+                                    <p class="mb-0 fw-bold">26 Tons</p>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Fuel Tank</small>
+                                    <p class="mb-0 fw-bold">400L</p>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Transmission</small>
+                                    <p class="mb-0 fw-bold">12-Speed Auto</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Container Transit</span>
+                                <a href="#specifications" class="btn btn-outline-primary btn-sm">View Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img src="img/axor.jpeg" alt="Mercedes Axor">
+                            <div class="vehicle-badge">Reliable</div>
+                            <div class="vehicle-overlay">
+                                <h5 class="text-white mb-2">Mercedes-Benz Axor</h5>
+                                <p class="text-white mb-0">Robust construction truck designed for heavy-duty operations and challenging terrains.</p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="mb-3">Mercedes-Benz Axor 2533</h5>
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <small class="text-muted">Engine Power</small>
+                                    <p class="mb-0 fw-bold">330 HP</p>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Payload</small>
+                                    <p class="mb-0 fw-bold">20 Tons</p>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Fuel Tank</small>
+                                    <p class="mb-0 fw-bold">350L</p>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Transmission</small>
+                                    <p class="mb-0 fw-bold">9-Speed Manual</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">Bulk Cargo</span>
+                                <a href="#specifications" class="btn btn-outline-primary btn-sm">View Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">
+                            <img src="img/truck2.jpg" alt="Volvo FH">
+                            <div class="vehicle-badge">Advanced</div>
+                            <div class="vehicle-overlay">
+                                <h5 class="text-white mb-2">Volvo FH Series</h5>
+                                <p class="text-white mb-0">State-of-the-art technology with I-Shift transmission and advanced driver assistance systems.</p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="mb-3">Volvo FH 460</h5>
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <small class="text-muted">Engine Power</small>
+                                    <p class="mb-0 fw-bold">460 HP</p>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Payload</small>
+                                    <p class="mb-0 fw-bold">28 Tons</p>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Fuel Tank</small>
+                                    <p class="mb-0 fw-bold">450L</p>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Transmission</small>
+                                    <p class="mb-0 fw-bold">I-Shift Auto</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Container Transit</span>
+                                <a href="#specifications" class="btn btn-outline-primary btn-sm">View Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured Vehicles End -->
+
+    <!-- Technology Integration Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Fleet Technology</h4>
+                <h1 class="display-4">Advanced Technology Integration</h1>
+                <p>Our fleet is equipped with cutting-edge technology to ensure optimal performance, safety, and efficiency across all operations.</p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-item wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="tech-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h5 class="mb-3">GPS Tracking System</h5>
+                    <p class="mb-0">Real-time location tracking with geofencing, route optimization, and comprehensive reporting for complete visibility.</p>
+                </div>
+                
+                <div class="tech-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="tech-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h5 class="mb-3">Fleet Management</h5>
+                    <p class="mb-0">Advanced telematics monitoring fuel consumption, driver behavior, vehicle performance, and maintenance schedules.</p>
+                </div>
+                
+                <div class="tech-item wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5 class="mb-3">Security Systems</h5>
+                    <p class="mb-0">Multi-layered security with immobilizers, panic buttons, CCTV monitoring, and 24/7 security response teams.</p>
+                </div>
+                
+                <div class="tech-item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="tech-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h5 class="mb-3">Mobile Integration</h5>
+                    <p class="mb-0">Driver mobile apps for job management, communication, and real-time updates with customer notification systems.</p>
+                </div>
+                
+                <div class="tech-item wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="tech-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h5 class="mb-3">Predictive Maintenance</h5>
+                    <p class="mb-0">AI-powered maintenance scheduling based on usage patterns, preventing breakdowns and optimizing vehicle uptime.</p>
+                </div>
+                
+                <div class="tech-item wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="tech-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5 class="mb-3">Performance Analytics</h5>
+                    <p class="mb-0">Comprehensive analytics dashboard providing insights on efficiency, costs, and performance optimization opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Technology Integration End -->
+
+    <!-- Fleet Specifications Start -->
+    <div class="container-fluid py-5" id="specifications">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Technical Specifications</h4>
+                <h1 class="display-4">Fleet Specifications Comparison</h1>
+                <p>Detailed technical specifications of our main vehicle categories to help you understand our capabilities.</p>
+            </div>
+            
+            <div class="wow fadeInUp" data-wow-delay="0.3s">
+                <div class="spec-table">
+                    <table class="table table-responsive mb-0">
+                        <thead>
+                            <tr>
+                                <th>Specification</th>
+                                <th>Container Transit</th>
+                                <th>Bulk Cargo Tippers</th>
+                                <th>Local Shunting</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Engine Power</strong></td>
+                                <td>400-500 HP</td>
+                                <td>300-400 HP</td>
+                                <td>250-350 HP</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Payload Capacity</strong></td>
+                                <td>26-30 Tons</td>
+                                <td>20-25 Tons</td>
+                                <td>20-26 Tons</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fuel Tank</strong></td>
+                                <td>400-500L</td>
+                                <td>300-400L</td>
+                                <td>250-350L</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transmission</strong></td>
+                                <td>Automatic/Manual</td>
+                                <td>Manual/Semi-Auto</td>
+                                <td>Manual/Automatic</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Emission Standard</strong></td>
+                                <td>Euro 5/6</td>
+                                <td>Euro 4/5</td>
+                                <td>Euro 4/5</td>
+                            </tr>
+                            <tr>
+                                <td><strong>GPS Tracking</strong></td>
+                                <td>✓ Advanced</td>
+                                <td>✓ Standard</td>
+                                <td>✓ Real-time</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Safety Features</strong></td>
+                                <td>ABS, ESP, ADAS</td>
+                                <td>ABS, ESP</td>
+                                <td>ABS, ESP</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Average Age</strong></td>
+                                <td>3-5 Years</td>
+                                <td>4-6 Years</td>
+                                <td>2-4 Years</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fleet Specifications End -->
+
+    <!-- Maintenance & Safety Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Maintenance & Safety</h4>
+                <h1 class="display-4">World-Class Maintenance Standards</h1>
+                <p>Our comprehensive maintenance program ensures maximum uptime, safety, and reliability across our entire fleet.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="maintenance-card">
+                        <div class="maintenance-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h5 class="mb-3">Preventive Maintenance</h5>
+                        <p class="mb-3">Scheduled maintenance every 10,000km or monthly intervals, whichever comes first, ensuring optimal performance.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-1"><i class="fas fa-check text-primary me-2"></i>Engine diagnostics</li>
+                            <li class="mb-1"><i class="fas fa-check text-primary me-2"></i>Brake system checks</li>
+                            <li class="mb-1"><i class="fas fa-check text-primary me-2"></i>Tire inspections</li>
+                            <li class="mb-0"><i class="fas fa-check text-primary me-2"></i>Fluid level monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="maintenance-card">
+                        <div class="maintenance-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h5 class="mb-3">Modern Workshop</h5>
+                        <p class="mb-3">State-of-the-art maintenance facility with certified technicians and genuine spare parts inventory.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-1"><i class="fas fa-check text-primary me-2"></i>Certified technicians</li>
+                            <li class="mb-1"><i class="fas fa-check text-primary me-2"></i>Genuine spare parts</li>
+                            <li class="mb-1"><i class="fas fa-check text-primary me-2"></i>Advanced diagnostics</li>
+                            <li class="mb-0"><i class="fas fa-check text-primary me-2"></i>24/7 breakdown support</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="maintenance-card">
+                        <div class="maintenance-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5 class="mb-3">Safety Compliance</h5>
+                        <p class="mb-3">Strict adherence to international safety standards with regular inspections and certifications.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-1"><i class="fas fa-check text-primary me-2"></i>NTSA compliance</li>
+                            <li class="mb-1"><i class="fas fa-check text-primary me-2"></i>Insurance coverage</li>
+                            <li class="mb-1"><i class="fas fa-check text-primary me-2"></i>Safety audits</li>
+                            <li class="mb-0"><i class="fas fa-check text-primary me-2"></i>Driver training</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Maintenance & Safety End -->
+
+    <!-- Driver Excellence Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Driver Excellence</h4>
+                <h1 class="display-4">Skilled Professional Drivers</h1>
+                <p>Our fleet is operated by highly trained, experienced drivers who are committed to safety, efficiency, and customer satisfaction.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="driver-feature">
+                        <div class="driver-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5 class="text-primary mb-3">Professional Training</h5>
+                        <p class="mb-0">Comprehensive training programs covering defensive driving, cargo handling, and customer service.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="driver-feature">
+                        <div class="driver-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h5 class="text-primary mb-3">Licensed & Certified</h5>
+                        <p class="mb-0">All drivers hold valid commercial licenses with additional certifications for specialized cargo handling.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="driver-feature">
+                        <div class="driver-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h5 class="text-primary mb-3">Route Expertise</h5>
+                        <p class="mb-0">Extensive knowledge of regional routes, border procedures, and local regulations across all destinations.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="driver-feature">
+                        <div class="driver-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h5 class="text-primary mb-3">24/7 Communication</h5>
+                        <p class="mb-0">Constant communication with dispatch and customers through mobile devices and tracking systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Driver Excellence End -->
+
+    <!-- Fleet Expansion Start -->
+    <div class="container-fluid bg-primary py-5">
+        <div class="container py-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8 wow fadeInLeft" data-wow-delay="0.1s">
+                    <h2 class="text-white mb-3">Continuous Fleet Expansion</h2>
+                    <p class="text-white mb-4 fs-5">We continuously invest in expanding and modernizing our fleet to meet growing demand and maintain our position as East Africa's leading logistics provider.</p>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center text-white mb-3">
+                                <i class="fas fa-plus-circle me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">50+ New Vehicles Annually</h6>
+                                    <small>Continuous fleet expansion</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center text-white mb-3">
+                                <i class="fas fa-sync-alt me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">Fleet Modernization</h6>
+                                    <small>Regular vehicle upgrades</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center text-white mb-3">
+                                <i class="fas fa-leaf me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">Eco-Friendly Vehicles</h6>
+                                    <small>Environmental sustainability</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center text-white mb-3">
+                                <i class="fas fa-cogs me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">Advanced Technology</h6>
+                                    <small>Latest fleet management systems</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 text-center wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="bg-white rounded p-4">
+                        <h3 class="text-primary mb-3">Fleet Growth Target</h3>
+                        <div class="display-4 text-dark fw-bold mb-2">400+</div>
+                        <p class="text-muted mb-3">Vehicles by 2025</p>
+                        <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fleet Expansion End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="mb-4">
+                            <img src="img/bashlogo.png" alt="Bash Hauliers Logo" style="max-height: 60px;">
+                        </div>
+                        <p class="text-white mb-3">Your trusted partner in transport and logistics across East and Central Africa since 2002.</p>
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <a class="text-white mb-2" href="https://g.co/kgs/9BRL3cs"><i class="fa fa-map-marker-alt me-2"></i>P.O. Box 83658, Mombasa, Kenya</a>
+                        <a class="text-white mb-2" href="mailto:info@bashhauliers.co.ke"><i class="fas fa-envelope me-2"></i>info@bashhauliers.co.ke</a>
+                        <a class="text-white mb-3" href="tel:+254723339000"><i class="fas fa-phone me-2"></i>+254 723 339 000</a>
+                        <div class="d-flex align-items-center">
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-light btn-md-square me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a class="text-white" href="index.html"><i class="fas fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white" href="about.html"><i class="fas fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white" href="services.html"><i class="fas fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-white" href="fleet.html"><i class="fas fa-angle-right me-2"></i>Our Fleet</a>
+                        <a class="text-white" href="coverage.html"><i class="fas fa-angle-right me-2"></i>Coverage Area</a>
+                        <a class="text-white" href="contact.html"><i class="fas fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Fleet Categories</h4>
+                        <a class="text-white" href="#fleet-overview"><i class="fas fa-angle-right me-2"></i>Container Transit Trucks</a>
+                        <a class="text-white" href="#fleet-overview"><i class="fas fa-angle-right me-2"></i>Bulk Cargo Tippers</a>
+                        <a class="text-white" href="#fleet-overview"><i class="fas fa-angle-right me-2"></i>Local Shunting Trucks</a>
+                        <a class="text-white" href="#specifications"><i class="fas fa-angle-right me-2"></i>Technical Specifications</a>
+                        <a class="text-white" href="contact.html#quote"><i class="fas fa-angle-right me-2"></i>Request Quote</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Coverage Areas</h4>
+                        <a class="text-white" href="coverage.html"><i class="fas fa-angle-right me-2"></i>Kenya - All Destinations</a>
+                        <a class="text-white" href="coverage.html"><i class="fas fa-angle-right me-2"></i>Uganda - All Destinations</a>
+                        <a class="text-white" href="coverage.html"><i class="fas fa-angle-right me-2"></i>Rwanda - All Destinations</a>
+                        <a class="text-white" href="coverage.html"><i class="fas fa-angle-right me-2"></i>Tanzania - All Destinations</a>
+                        <a class="text-white" href="coverage.html"><i class="fas fa-angle-right me-2"></i>DRC - Butembo, Beni, Bunia</a>
+                        <a class="text-white" href="coverage.html"><i class="fas fa-angle-right me-2"></i>South Sudan - Juba</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white">
+                        <a href="#" class="border-bottom text-primary">
+                            <i class="fas fa-copyright text-light me-1"></i>Bash Hauliers Ltd
+                        </a>, All rights reserved.
+                    </span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    <span>Member of Kenya Transport Association & Kenya Shippers Council</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize WOW.js
+        new WOW().init();
+
+        // Fleet Statistics Animation
+        $(document).ready(function() {
+            $('.fleet-number').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        });
+
+        // Vehicle Card Hover Effects
+        document.querySelectorAll('.vehicle-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Fleet Category Hover Effects
+        document.querySelectorAll('.fleet-category').forEach(category => {
+            category.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            category.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Spinner Hide
+        $(window).on('load', function() {
+            $('#spinner').removeClass('show');
+        });
+
+        // Fleet Statistics Counter Animation on Scroll
+        function animateCounters() {
+            $('.fleet-stat-card').each(function() {
+                const $this = $(this);
+                const $counter = $this.find('.fleet-number');
+                const countTo = $counter.attr('data-count') || $counter.text();
+                
+                if ($this.hasClass('animated')) return;
+                
+                $counter.prop('Counter', 0).animate({
+                    Counter: countTo
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function(now) {
+                        $counter.text(Math.ceil(now));
+                    },
+                    complete: function() {
+                        $this.addClass('animated');
+                    }
+                });
+            });
+        }
+
+        // Trigger counter animation when section is visible
+        $(window).scroll(function() {
+            const scrollTop = $(window).scrollTop();
+            const windowHeight = $(window).height();
+            
+            $('.fleet-stat-card').each(function() {
+                const elementTop = $(this).offset().top;
+                if (scrollTop + windowHeight > elementTop + 100) {
+                    if (!$(this).hasClass('animated')) {
+                        animateCounters();
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

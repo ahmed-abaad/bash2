@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Coverage Area - Bash Hauliers Ltd | East & Central Africa Transport Network</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="East Africa transport, Kenya Uganda Rwanda transport, cross-border logistics, DRC transport, South Sudan logistics, Tanzania transport, Burundi shipping, regional transport network" name="keywords">
+    <meta content="Explore Bash Hauliers' extensive coverage across 6 countries in East and Central Africa. Reliable transport services from Kenya to Uganda, Rwanda, Burundi, Tanzania, DRC, and South Sudan." name="description">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "provider": {
+            "@type": "Organization",
+            "name": "Bash Hauliers Ltd",
+            "url": "https://www.bashhauliers.co.ke"
+        },
+        "serviceType": "Regional Transport and Logistics",
+        "areaServed": [
+            {
+                "@type": "Country",
+                "name": "Kenya"
+            },
+            {
+                "@type": "Country", 
+                "name": "Uganda"
+            },
+            {
+                "@type": "Country",
+                "name": "Rwanda"
+            },
+            {
+                "@type": "Country",
+                "name": "Burundi"
+            },
+            {
+                "@type": "Country",
+                "name": "Tanzania"
+            },
+            {
+                "@type": "Country",
+                "name": "Democratic Republic of Congo"
+            },
+            {
+                "@type": "Country",
+                "name": "South Sudan"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap-custom.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary: #fec107;
+            --dark: #3949ab;
+            --primary-light: #fff3d7;
+            --dark-light: #eaeaf5;
+            --primary-dark: #e0a800;
+            --dark-dark: #303178;
+        }
+
+        /* Override Bootstrap classes */
+        .text-primary { color: var(--primary) !important; }
+        .text-dark { color: var(--dark) !important; }
+        .bg-primary { background-color: var(--primary) !important; }
+        .bg-dark { background-color: var(--dark) !important; }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--dark) !important;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: var(--dark) !important;
+        }
+        
+        .btn-dark {
+            background-color: var(--dark);
+            border-color: var(--dark);
+            color: white !important;
+        }
+        
+        .btn-dark:hover {
+            background-color: var(--dark-dark);
+            border-color: var(--dark-dark);
+        }
+
+        /* Hero Section */
+        .coverage-hero {
+            background: 
+                linear-gradient(rgba(57, 73, 171, 0.8), rgba(57, 73, 171, 0.8)),
+                url('img/blog-1.jpg') center/cover no-repeat;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .coverage-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .coverage-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .coverage-hero {
+                min-height: 50vh;
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .coverage-hero {
+                min-height: 40vh;
+                padding: 60px 0;
+                text-align: center;
+            }
+            .coverage-hero .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .coverage-hero .me-3 {
+                margin-right: 0 !important;
+            }
+        }
+
+        /* Coverage Map */
+        .coverage-map {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .map-point {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: var(--primary);
+            border: 3px solid var(--dark);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .map-point:hover {
+            transform: scale(1.5);
+            background: var(--dark);
+            border-color: var(--primary);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(254, 193, 7, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(254, 193, 7, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(254, 193, 7, 0); }
+        }
+
+        /* Country Cards */
+        .country-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .country-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--dark) 100%);
+        }
+
+        .country-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .country-flag {
+            width: 80px;
+            height: 60px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 2px solid var(--primary);
+        }
+
+        .country-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: var(--primary-light);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--dark);
+            margin-top: 0.25rem;
+        }
+
+        /* Route Cards */
+        .route-card {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .route-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .route-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-size: 1.8rem;
+        }
+
+        .route-time {
+            background: var(--primary);
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        /* Border Crossing */
+        .border-feature {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .border-feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .border-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--dark);
+            font-size: 2rem;
+        }
+
+        /* Transit Times Table */
+        .transit-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .transit-table th {
+            background: var(--dark);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .transit-table td {
+            padding: 1rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .transit-table tr:hover td {
+            background: var(--primary-light);
+            transform: scale(1.02);
+        }
+
+        .time-badge {
+            background: var(--primary);
+            color: var(--dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Economic Corridors */
+        .corridor-card {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            height: 100%;
+            border-left: 5px solid var(--primary);
+        }
+
+        .corridor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-left-color: var(--dark);
+        }
+
+        .corridor-title {
+            color: var(--dark);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Success Stories */
+        .success-story {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .success-story:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .story-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+
+        /* Enhanced Navbar */
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        /* Enhanced Back to Top Button */
+        .back-to-top {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--dark);
+            color: white;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .coverage-hero { min-height: 40vh; }
+            .country-stats { grid-template-columns: 1fr; }
+            .coverage-map { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar px-0 d-none d-lg-block">
+        <div class="container px-0">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="https://g.co/kgs/9BRL3cs" class="text-white me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Mombasa, Kenya</a>
+                        <a href="tel:+254723339000" class="text-white me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+254 723 339 000</a>
+                        <a href="mailto:info@bashhauliers.co.ke" class="text-white me-0"><i class="fas fa-envelope text-primary me-2"></i>info@bashhauliers.co.ke</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-twitter text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-instagram text-white"></i></a>
+                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+        <div class="container px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img class="brand-image" src="img/bashlogo.png" alt="Bash Hauliers Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="services.html" class="nav-item nav-link">Services</a>
+                        <a href="fleet.html" class="nav-item nav-link">Fleet</a>
+                        <a href="coverage.html" class="nav-item nav-link active">Coverage</a>
+                        <a href="clients.html" class="nav-item nav-link">Clients</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                        <a href="contact.html#quote" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Request Quote</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <div class="coverage-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-3 text-white mb-4 animate__animated animate__fadeInUp">Coverage Area</h1>
+                    <p class="fs-5 text-white mb-4 animate__animated animate__fadeInUp" data-wow-delay="0.2s">Connecting East and Central Africa through our extensive transport network spanning 6 countries. From major economic hubs to remote destinations, we deliver everywhere you need to go.</p>
+                    <div class="animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <a href="#coverage-map" class="btn btn-primary rounded-pill py-3 px-5 me-3">Explore Coverage</a>
+                        <a href="#transit-times" class="btn btn-outline-light rounded-pill py-3 px-5">Transit Times</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+    <!-- Coverage Overview Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Regional Network</h4>
+                <h1 class="display-4">6 Countries, Unlimited Possibilities</h1>
+                <p>Our comprehensive coverage across East and Central Africa ensures your cargo reaches any destination efficiently and securely.</p>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-primary rounded p-4">
+                        <h3 class="text-white mb-2">6</h3>
+                        <p class="text-white mb-0">Countries Served</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="bg-dark rounded p-4">
+                        <h3 class="text-primary mb-2">50+</h3>
+                        <p class="text-white mb-0">Major Cities</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-primary rounded p-4">
+                        <h3 class="text-white mb-2">15</h3>
+                        <p class="text-white mb-0">Border Crossings</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="bg-dark rounded p-4">
+                        <h3 class="text-primary mb-2">2-7</h3>
+                        <p class="text-white mb-0">Days Transit</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-primary rounded p-4">
+                        <h3 class="text-white mb-2">24/7</h3>
+                        <p class="text-white mb-0">Operations</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="bg-dark rounded p-4">
+                        <h3 class="text-primary mb-2">99.5%</h3>
+                        <p class="text-white mb-0">On-Time Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Coverage Overview End -->
+
+    <!-- Coverage Map Start -->
+    <div class="container-fluid bg-light py-5" id="coverage-map">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Interactive Coverage Map</h4>
+                <h1 class="display-4">Our Regional Network</h1>
+                <p>Explore our extensive coverage across East and Central Africa. Click on any location to learn more about our services in that region.</p>
+            </div>
+            
+            <div class="coverage-map wow fadeInUp" data-wow-delay="0.3s">
+                <div class="text-center mb-4">
+                    <h3 class="text-dark">East & Central Africa Transport Network</h3>
+                    <p class="text-muted">Connecting major economic hubs and destinations across the region</p>
+                </div>
+                
+                <div class="map-container">
+                    <img src="img/AFRICA.png" alt="East Africa Map" class="img-fluid">
+                    <!-- Interactive map points would be positioned absolutely here -->
+                    <div class="map-point" style="top: 53%; left: 71%;" data-bs-toggle="tooltip" title="Mombasa - Our Headquarters"></div>
+                    <div class="map-point" style="top: 48%; left: 68%;" data-bs-toggle="tooltip" title="Nairobi - Major Hub"></div>
+                    <div class="map-point" style="top: 46%; left: 62%;" data-bs-toggle="tooltip" title="Kampala - Uganda"></div>
+                    <div class="map-point" style="top: 51%; left: 60%;" data-bs-toggle="tooltip" title="Kigali - Rwanda"></div>
+                    <div class="map-point" style="top: 54%; left: 59%;" data-bs-toggle="tooltip" title="Bujumbura - Burundi"></div>
+                    <div class="map-point" style="top: 59%; left: 70%;" data-bs-toggle="tooltip" title="Dar es Salaam - Tanzania"></div>
+                    <div class="map-point" style="top: 48%; left: 58%;" data-bs-toggle="tooltip" title="Butembo - DRC"></div>
+                    <div class="map-point" style="top: 38%; left: 58%;" data-bs-toggle="tooltip" title="Juba - South Sudan"></div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-lg-12 text-center">
+                        <div class="d-flex justify-content-center flex-wrap gap-3">
+                            <span class="badge bg-primary fs-6 py-2 px-3">
+                                <img src="https://flagcdn.com/20x15/ke.png" alt="Kenya" style="height: 1em;"> Kenya
+                            </span>
+                            <span class="badge bg-dark fs-6 py-2 px-3">
+                                <img src="https://flagcdn.com/20x15/ug.png" alt="Uganda" style="height: 1em;"> Uganda
+                            </span>
+                            <span class="badge bg-primary fs-6 py-2 px-3">
+                                <img src="https://flagcdn.com/20x15/rw.png" alt="Rwanda" style="height: 1em;"> Rwanda
+                            </span>
+                            <span class="badge bg-dark fs-6 py-2 px-3">
+                                <img src="https://flagcdn.com/20x15/bi.png" alt="Burundi" style="height: 1em;"> Burundi
+                            </span>
+                            <span class="badge bg-primary fs-6 py-2 px-3">
+                                <img src="https://flagcdn.com/20x15/tz.png" alt="Tanzania" style="height: 1em;"> Tanzania
+                            </span>
+                            <span class="badge bg-dark fs-6 py-2 px-3">
+                                <img src="https://flagcdn.com/20x15/cd.png" alt="DRC" style="height: 1em;"> DRC
+                            </span>
+                            <span class="badge bg-primary fs-6 py-2 px-3">
+                                <img src="https://flagcdn.com/20x15/ss.png" alt="South Sudan" style="height: 1em;"> South Sudan
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Coverage Map End -->
+
+    <!-- Countries Coverage Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Countries We Serve</h4>
+                <h1 class="display-4">Comprehensive Regional Coverage</h1>
+                <p>Detailed breakdown of our services and destinations in each country across our network.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Kenya -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="country-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://flagcdn.com/ke.svg" width="30" alt="Kenya Flag" class="country-flag me-3">
+                            <div>
+                                <h4 class="mb-1">Kenya</h4>
+                                <p class="text-muted mb-0">Our home base and primary hub</p>
+                            </div>
+                        </div>
+                        
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">25+</span>
+                                <div class="stat-label">Major Cities</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1-2</span>
+                                <div class="stat-label">Days Transit</div>
+                            </div>
+                        </div>
+                        
+                        <h6 class="text-primary mb-2">Key Destinations:</h6>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6"><small>• Nairobi</small></div>
+                            <div class="col-6"><small>• Mombasa</small></div>
+                            <div class="col-6"><small>• Kisumu</small></div>
+                            <div class="col-6"><small>• Nakuru</small></div>
+                            <div class="col-6"><small>• Eldoret</small></div>
+                            <div class="col-6"><small>• Meru</small></div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Full Coverage</span>
+                            <a href="#transit-times" class="btn btn-outline-primary btn-sm">View Routes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Uganda -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="country-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://flagcdn.com/ug.svg" width="30" alt="Uganda Flag" class="country-flag me-3">
+                            <div>
+                                <h4 class="mb-1">Uganda</h4>
+                                <p class="text-muted mb-0">Major regional partner</p>
+                            </div>
+                        </div>
+                        
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <div class="stat-label">Major Cities</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3-4</span>
+                                <div class="stat-label">Days Transit</div>
+                            </div>
+                        </div>
+                        
+                        <h6 class="text-primary mb-2">Key Destinations:</h6>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6"><small>• Kampala</small></div>
+                            <div class="col-6"><small>• Entebbe</small></div>
+                            <div class="col-6"><small>• Jinja</small></div>
+                            <div class="col-6"><small>• Mbale</small></div>
+                            <div class="col-6"><small>• Gulu</small></div>
+                            <div class="col-6"><small>• Mbarara</small></div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Full Coverage</span>
+                            <a href="#transit-times" class="btn btn-outline-primary btn-sm">View Routes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rwanda -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="country-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://flagcdn.com/rw.svg" width="30" alt="Rwanda Flag" class="country-flag me-3">
+                            <div>
+                                <h4 class="mb-1">Rwanda</h4>
+                                <p class="text-muted mb-0">Growing economic hub</p>
+                            </div>
+                        </div>
+                        
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">8+</span>
+                                <div class="stat-label">Major Cities</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4-5</span>
+                                <div class="stat-label">Days Transit</div>
+                            </div>
+                        </div>
+                        
+                        <h6 class="text-primary mb-2">Key Destinations:</h6>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6"><small>• Kigali</small></div>
+                            <div class="col-6"><small>• Butare</small></div>
+                            <div class="col-6"><small>• Gisenyi</small></div>
+                            <div class="col-6"><small>• Ruhengeri</small></div>
+                            <div class="col-6"><small>• Gitarama</small></div>
+                            <div class="col-6"><small>• Cyangugu</small></div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Full Coverage</span>
+                            <a href="#transit-times" class="btn btn-outline-primary btn-sm">View Routes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Burundi -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="country-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://flagcdn.com/bi.svg" width="30" alt="Burundi Flag" class="country-flag me-3">
+                            <div>
+                                <h4 class="mb-1">Burundi</h4>
+                                <p class="text-muted mb-0">Strategic location</p>
+                            </div>
+                        </div>
+                        
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">6+</span>
+                                <div class="stat-label">Major Cities</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5-6</span>
+                                <div class="stat-label">Days Transit</div>
+                            </div>
+                        </div>
+                        
+                        <h6 class="text-primary mb-2">Key Destinations:</h6>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6"><small>• Bujumbura</small></div>
+                            <div class="col-6"><small>• Gitega</small></div>
+                            <div class="col-6"><small>• Ngozi</small></div>
+                            <div class="col-6"><small>• Muyinga</small></div>
+                            <div class="col-6"><small>• Bururi</small></div>
+                            <div class="col-6"><small>• Cibitoke</small></div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Full Coverage</span>
+                            <a href="#transit-times" class="btn btn-outline-primary btn-sm">View Routes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tanzania -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="country-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://flagcdn.com/tz.svg" width="30" alt="Tanzania Flag" class="country-flag me-3">
+                            <div>
+                                <h4 class="mb-1">Tanzania</h4>
+                                <p class="text-muted mb-0">Major economic partner</p>
+                            </div>
+                        </div>
+                        
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">12+</span>
+                                <div class="stat-label">Major Cities</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3-5</span>
+                                <div class="stat-label">Days Transit</div>
+                            </div>
+                        </div>
+                        
+                        <h6 class="text-primary mb-2">Key Destinations:</h6>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6"><small>• Dar es Salaam</small></div>
+                            <div class="col-6"><small>• Arusha</small></div>
+                            <div class="col-6"><small>• Mwanza</small></div>
+                            <div class="col-6"><small>• Dodoma</small></div>
+                            <div class="col-6"><small>• Mbeya</small></div>
+                            <div class="col-6"><small>• Tanga</small></div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Full Coverage</span>
+                            <a href="#transit-times" class="btn btn-outline-primary btn-sm">View Routes</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DRC -->
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="country-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://flagcdn.com/cd.svg" width="30" alt="DRC Flag" class="country-flag me-3">
+                            <div>
+                                <h4 class="mb-1">Democratic Republic of Congo</h4>
+                                <p class="text-muted mb-0">Specialized routes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">4</span>
+                                <div class="stat-label">Key Cities</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">6-7</span>
+                                <div class="stat-label">Days Transit</div>
+                            </div>
+                        </div>
+                        
+                        <h6 class="text-primary mb-2">Key Destinations:</h6>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6"><small>• Butembo</small></div>
+                            <div class="col-6"><small>• Beni</small></div>
+                            <div class="col-6"><small>• Bunia</small></div>
+                            <div class="col-6"><small>• Kibali</small></div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning text-dark">Specialized Routes</span>
+                            <a href="#transit-times" class="btn btn-outline-primary btn-sm">View Routes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- South Sudan Special Section -->
+            <div class="row mt-4">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="country-card">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center">
+                                <img src="https://flagcdn.com/ss.svg" width="30" alt="South Sudan Flag" class="country-flag mb-3">
+                                <h4>South Sudan</h4>
+                                <p class="text-muted">Emerging market</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-primary mb-3">Special Route to Juba</h6>
+                                <p class="mb-3">We provide specialized transport services to Juba, the capital of South Sudan, supporting the growing economic activities in this emerging market.</p>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <small><i class="fas fa-map-marker-alt text-primary me-2"></i>Primary Destination: Juba</small>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <small><i class="fas fa-clock text-primary me-2"></i>Transit Time: 5-7 Days</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="stat-item">
+                                    <span class="stat-number">1</span>
+                                    <div class="stat-label">Major City</div>
+                                </div>
+                                <span class="badge bg-info text-white mt-2">Specialized Service</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Countries Coverage End -->
+
+    <!-- Transit Times Start -->
+    <div class="container-fluid bg-light py-5" id="transit-times">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Transit Times</h4>
+                <h1 class="display-4">Delivery Schedules & Routes</h1>
+                <p>Comprehensive transit times from our Mombasa hub to major destinations across our network.</p>
+            </div>
+            
+            <div class="wow fadeInUp" data-wow-delay="0.3s">
+                <div class="transit-table">
+                    <table class="table table-responsive mb-0">
+                        <thead>
+                            <tr>
+                                <th>Destination</th>
+                                <th>Country</th>
+                                <th>Distance (KM)</th>
+                                <th>Transit Time</th>
+                                <th>Service Frequency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Nairobi</strong></td>
+                                <td>🇰🇪 Kenya</td>
+                                <td>485 km</td>
+                                <td><span class="time-badge">1-2 Days</span></td>
+                                <td>Daily</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kampala</strong></td>
+                                <td>🇺🇬 Uganda</td>
+                                <td>1,200 km</td>
+                                <td><span class="time-badge">3-4 Days</span></td>
+                                <td>3x Weekly</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kigali</strong></td>
+                                <td>🇷🇼 Rwanda</td>
+                                <td>1,450 km</td>
+                                <td><span class="time-badge">4-5 Days</span></td>
+                                <td>2x Weekly</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bujumbura</strong></td>
+                                <td>🇧🇮 Burundi</td>
+                                <td>1,650 km</td>
+                                <td><span class="time-badge">5-6 Days</span></td>
+                                <td>2x Weekly</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dar es Salaam</strong></td>
+                                <td>🇹🇿 Tanzania</td>
+                                <td>650 km</td>
+                                <td><span class="time-badge">2-3 Days</span></td>
+                                <td>Daily</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Arusha</strong></td>
+                                <td>🇹🇿 Tanzania</td>
+                                <td>850 km</td>
+                                <td><span class="time-badge">3-4 Days</span></td>
+                                <td>3x Weekly</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Butembo</strong></td>
+                                <td>🇨🇩 DRC</td>
+                                <td>1,800 km</td>
+                                <td><span class="time-badge">6-7 Days</span></td>
+                                <td>Weekly</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Juba</strong></td>
+                                <td>🇸🇸 South Sudan</td>
+                                <td>1,950 km</td>
+                                <td><span class="time-badge">5-7 Days</span></td>
+                                <td>Bi-weekly</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="bg-white rounded p-4 shadow-sm">
+                        <h5 class="text-primary mb-3">Transit Time Factors</h5>
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-road text-primary me-2"></i>
+                                    <small>Road Conditions</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-passport text-primary me-2"></i>
+                                    <small>Border Processing</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-cloud-rain text-primary me-2"></i>
+                                    <small>Weather Conditions</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-boxes text-primary me-2"></i>
+                                    <small>Cargo Type</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Transit Times End -->
+
+    <!-- Border Crossing Expertise Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Border Crossing Expertise</h4>
+                <h1 class="display-4">Seamless Cross-Border Operations</h1>
+                <p>Our extensive experience and strategic partnerships ensure smooth border crossings and efficient customs clearance across all destinations.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="border-feature">
+                        <div class="border-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <h5 class="mb-3">Documentation Expertise</h5>
+                        <p class="mb-0">Complete handling of all cross-border documentation, customs declarations, and regulatory compliance requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="border-feature">
+                        <div class="border-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="mb-3">Strategic Partnerships</h5>
+                        <p class="mb-0">Strong relationships with customs authorities, clearing agents, and border officials across all countries we serve.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="border-feature">
+                        <div class="border-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h5 class="mb-3">Fast Processing</h5>
+                        <p class="mb-0">Expedited border crossing procedures through pre-clearance arrangements and priority processing agreements.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="border-feature">
+                        <div class="border-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5 class="mb-3">Cargo Security</h5>
+                        <p class="mb-0">Enhanced security protocols and tracking systems ensure cargo safety throughout cross-border transit.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="border-feature">
+                        <div class="border-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5 class="mb-3">Local Expertise</h5>
+                        <p class="mb-0">Local agents and representatives at major border points providing on-ground support and assistance.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1.1s">
+                    <div class="border-feature">
+                        <div class="border-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5 class="mb-3">Real-Time Updates</h5>
+                        <p class="mb-0">Continuous communication and updates on border crossing status and any potential delays or issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Border Crossing Expertise End -->
+
+    <!-- Economic Corridors Start -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Economic Corridors</h4>
+                <h1 class="display-4">Strategic Trade Routes</h1>
+                <p>We operate along major economic corridors that drive regional trade and economic development across East and Central Africa.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="corridor-card">
+                        <h5 class="corridor-title">Northern Corridor</h5>
+                        <p class="mb-3">The primary trade route connecting the Port of Mombasa to landlocked countries in the region.</p>
+                        <div class="row g-2 mb-3">
+                            <div class="col-12"><strong>Route:</strong> Mombasa → Nairobi → Kampala → Kigali</div>
+                            <div class="col-6"><strong>Length:</strong> 1,450 km</div>
+                            <div class="col-6"><strong>Countries:</strong> Kenya, Uganda, Rwanda</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-primary">Primary Route</span>
+                            <small class="text-muted">70% of our traffic</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="corridor-card">
+                        <h5 class="corridor-title">Central Corridor</h5>
+                        <p class="mb-3">Alternative route through Tanzania providing access to central African markets.</p>
+                        <div class="row g-2 mb-3">
+                            <div class="col-12"><strong>Route:</strong> Dar es Salaam → Dodoma → Mwanza → Kampala</div>
+                            <div class="col-6"><strong>Length:</strong> 1,200 km</div>
+                            <div class="col-6"><strong>Countries:</strong> Tanzania, Uganda</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-success">Alternative Route</span>
+                            <small class="text-muted">20% of our traffic</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="corridor-card">
+                        <h5 class="corridor-title">Great Lakes Corridor</h5>
+                        <p class="mb-3">Specialized route serving the Great Lakes region including DRC and Burundi.</p>
+                        <div class="row g-2 mb-3">
+                            <div class="col-12"><strong>Route:</strong> Mombasa → Kampala → Bujumbura → Butembo</div>
+                            <div class="col-6"><strong>Length:</strong> 1,800 km</div>
+                            <div class="col-6"><strong>Countries:</strong> Kenya, Uganda, Burundi, DRC</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning text-dark">Specialized</span>
+                            <small class="text-muted">10% of our traffic</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="corridor-card">
+                        <h5 class="corridor-title">South Sudan Corridor</h5>
+                        <p class="mb-3">Emerging route to South Sudan supporting reconstruction and development efforts.</p>
+                        <div class="row g-2 mb-3">
+                            <div class="col-12"><strong>Route:</strong> Mombasa → Nairobi → Kampala → Juba</div>
+                            <div class="col-6"><strong>Length:</strong> 1,950 km</div>
+                            <div class="col-6"><strong>Countries:</strong> Kenya, Uganda, South Sudan</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-info text-white">Emerging</span>
+                            <small class="text-muted">Growing market</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Economic Corridors End -->
+
+    <!-- Success Stories Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Success Stories</h4>
+                <h1 class="display-4">Regional Impact & Achievements</h1>
+                <p>Real examples of how our extensive coverage has supported businesses and communities across East and Central Africa.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="success-story">
+                        <div class="story-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h5 class="mb-3">Mining Equipment to DRC</h5>
+                        <p class="mb-3">Successfully transported heavy mining equipment from Mombasa to Butembo, supporting major mining operations in Eastern DRC.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">2023 Project</small>
+                            <span class="badge bg-success">Completed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="success-story">
+                        <div class="story-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h5 class="mb-3">Agricultural Exports</h5>
+                        <p class="mb-3">Facilitated the export of Rwandan coffee and tea to international markets through our efficient Kigali-Mombasa route.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Ongoing</small>
+                            <span class="badge bg-primary">Active</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="success-story">
+                        <div class="story-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h5 class="mb-3">Humanitarian Aid</h5>
+                        <p class="mb-3">Delivered critical humanitarian supplies to South Sudan during emergency situations, demonstrating our commitment to regional support.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">2022-2023</small>
+                            <span class="badge bg-info text-white">Impact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Success Stories End -->
+
+    <!-- Coverage Expansion Start -->
+    <div class="container-fluid bg-primary py-5">
+        <div class="container py-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8 wow fadeInLeft" data-wow-delay="0.1s">
+                    <h2 class="text-white mb-3">Expanding Our Reach</h2>
+                    <p class="text-white mb-4 fs-5">We continuously expand our coverage to serve new destinations and improve connectivity across East and Central Africa.</p>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center text-white mb-3">
+                                <i class="fas fa-map-marked-alt me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">New Route Development</h6>
+                                    <small>Exploring additional destinations</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center text-white mb-3">
+                                <i class="fas fa-road me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">Infrastructure Investment</h6>
+                                    <small>Supporting regional development</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center text-white mb-3">
+                                <i class="fas fa-handshake me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">Strategic Partnerships</h6>
+                                    <small>Expanding through collaboration</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center text-white mb-3">
+                                <i class="fas fa-chart-line me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">Market Growth</h6>
+                                    <small>Meeting increasing demand</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 text-center wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="bg-white rounded p-4">
+                        <h3 class="text-primary mb-3">Future Coverage</h3>
+                        <div class="display-4 text-dark fw-bold mb-2">8+</div>
+                        <p class="text-muted mb-3">Countries by 2026</p>
+                        <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Coverage Expansion End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <div class="mb-4">
+                            <img src="img/bashlogo.png" alt="Bash Hauliers Logo" style="max-height: 60px;">
+                        </div>
+                        <p class="text-white mb-3">Your trusted partner in transport and logistics across East and Central Africa since 2002.</p>
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <a class="text-white mb-2" href="https://g.co/kgs/9BRL3cs"><i class="fa fa-map-marker-alt me-2"></i>P.O. Box 83658, Mombasa, Kenya</a>
+                        <a class="text-white mb-2" href="mailto:info@bashhauliers.co.ke"><i class="fas fa-envelope me-2"></i>info@bashhauliers.co.ke</a>
+                        <a class="text-white mb-3" href="tel:+254723339000"><i class="fas fa-phone me-2"></i>+254 723 339 000</a>
+                        <div class="d-flex align-items-center">
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-light btn-md-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-light btn-md-square me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a class="text-white" href="index.html"><i class="fas fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white" href="about.html"><i class="fas fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white" href="services.html"><i class="fas fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-white" href="fleet.html"><i class="fas fa-angle-right me-2"></i>Our Fleet</a>
+                        <a class="text-white" href="coverage.html"><i class="fas fa-angle-right me-2"></i>Coverage Area</a>
+                        <a class="text-white" href="contact.html"><i class="fas fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Coverage Areas</h4>
+                        <a class="text-white" href="#coverage-map"><i class="fas fa-angle-right me-2"></i>Kenya - All Destinations</a>
+                        <a class="text-white" href="#coverage-map"><i class="fas fa-angle-right me-2"></i>Uganda - All Destinations</a>
+                        <a class="text-white" href="#coverage-map"><i class="fas fa-angle-right me-2"></i>Rwanda - All Destinations</a>
+                        <a class="text-white" href="#coverage-map"><i class="fas fa-angle-right me-2"></i>Tanzania - All Destinations</a>
+                        <a class="text-white" href="#coverage-map"><i class="fas fa-angle-right me-2"></i>DRC - Butembo, Beni, Bunia</a>
+                        <a class="text-white" href="#coverage-map"><i class="fas fa-angle-right me-2"></i>South Sudan - Juba</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-white mb-4">Economic Corridors</h4>
+                        <a class="text-white" href="#transit-times"><i class="fas fa-angle-right me-2"></i>Northern Corridor</a>
+                        <a class="text-white" href="#transit-times"><i class="fas fa-angle-right me-2"></i>Central Corridor</a>
+                        <a class="text-white" href="#transit-times"><i class="fas fa-angle-right me-2"></i>Great Lakes Corridor</a>
+                        <a class="text-white" href="#transit-times"><i class="fas fa-angle-right me-2"></i>South Sudan Corridor</a>
+                        <a class="text-white" href="contact.html#quote"><i class="fas fa-angle-right me-2"></i>Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white">
+                        <a href="#" class="border-bottom text-primary">
+                            <i class="fas fa-copyright text-light me-1"></i>Bash Hauliers Ltd
+                        </a>, All rights reserved.
+                    </span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    <span>Member of Kenya Transport Association & Kenya Shippers Council</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize WOW.js
+        new WOW().init();
+
+        // Initialize tooltips for map points
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+        // Map point interactions
+        document.querySelectorAll('.map-point').forEach(point => {
+            point.addEventListener('click', function() {
+                const title = this.getAttribute('data-bs-original-title') || this.getAttribute('title');
+                alert('Route information for: ' + title + '\n\nFor detailed route information and quotes, please contact us at +254 723 339 000');
+            });
+        });
+
+        // Country card hover effects
+        document.querySelectorAll('.country-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Route card hover effects
+        document.querySelectorAll('.route-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Spinner Hide
+        $(window).on('load', function() {
+            $('#spinner').removeClass('show');
+        });
+
+        
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
