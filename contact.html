@@ -824,6 +824,10 @@
                                     <label for="specialRequirements" class="form-label">Special Requirements</label>
                                     <textarea class="form-control" id="specialRequirements" rows="4" placeholder="Please describe any special handling requirements, delivery instructions, or additional information..."></textarea>
                                 </div>
+
+                                <div class="col-12 text-center mb-4">
+                                    <div class="g-recaptcha d-inline-block" data-sitekey="YOUR_SITE_KEY"></div>
+                                </div>
                                 
                                 <div class="col-12 text-center">
                                     <button type="submit" class="btn btn-primary rounded-pill py-3 px-5 me-3">
@@ -1054,7 +1058,7 @@
                             </div>
                             <div id="faq2" class="collapse">
                                 <div class="faq-content">
-                                    We provide transport services across 6 countries: Kenya, Uganda, Rwanda, Burundi, Tanzania, Democratic Republic of Congo (DRC), and South Sudan. Our extensive network covers all major cities and destinations in these regions.
+                                    We provide transport services across 6 countries: Kenya, Uganda, Rwanda, Tanzania, Democratic Republic of Congo (DRC), and South Sudan. Our extensive network covers all major cities and destinations in these regions.
                                 </div>
                             </div>
                         </div>
@@ -1202,6 +1206,75 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate reCAPTCHA
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                alert('Please verify you are not a robot');
+                return;
+            }
+            
+            // Collect form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                serviceType: document.getElementById('serviceType').value,
+                cargoType: document.getElementById('cargoType').value,
+                origin: document.getElementById('origin').value,
+                destination: document.getElementById('destination').value,
+                weight: document.getElementById('weight').value,
+                volume: document.getElementById('volume').value,
+                pieces: document.getElementById('pieces').value,
+                pickupDate: document.getElementById('pickupDate').value,
+                urgency: document.getElementById('urgency').value,
+                insurance: document.getElementById('insurance').checked,
+                tracking: document.getElementById('tracking').checked,
+                packaging: document.getElementById('packaging').checked,
+                customs: document.getElementById('customs').checked,
+                storage: document.getElementById('storage').checked,
+                loading: document.getElementById('loading').checked,
+                specialRequirements: document.getElementById('specialRequirements').value,
+                'g-recaptcha-response': recaptchaResponse
+            };
+            
+            // Send to your backend
+            submitQuoteForm(formData);
+        });
+
+        async function submitQuoteForm(formData) {
+            try {
+                const response = await fetch('your-api-endpoint.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Show success message
+                    alert('Quote request submitted successfully! We will contact you within 2 hours.');
+                    document.getElementById('quoteForm').reset();
+                    grecaptcha.reset(); // Reset reCAPTCHA
+                } else {
+                    alert('Error: ' + (result.message || 'Failed to submit request'));
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting your request. Please try again.');
+            }
+        }
+    </script>
+
+    
 
     <!-- Custom JavaScript -->
     <script>
