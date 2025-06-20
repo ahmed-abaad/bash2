@@ -663,182 +663,160 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="quote-form wow fadeInUp" data-wow-delay="0.3s">
-                        <form id="quoteForm">
+                        <form action="https://formspree.io/f/xyzjdjlv" method="POST">
                             <div class="row g-4">
-                                <!-- Personal Information -->
-                                <div class="col-12">
-                                    <h5 class="text-primary mb-3">Contact Information</h5>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="fullName" class="form-label">Full Name *</label>
-                                    <input type="text" class="form-control" id="fullName" required>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="company" class="form-label">Company Name</label>
-                                    <input type="text" class="form-control" id="company">
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label">Email Address *</label>
-                                    <input type="email" class="form-control" id="email" required>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="phone" class="form-label">Phone Number *</label>
-                                    <input type="tel" class="form-control" id="phone" required>
-                                </div>
-                                
-                                <!-- Shipment Details -->
-                                <div class="col-12 mt-4">
-                                    <h5 class="text-primary mb-3">Shipment Details</h5>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="serviceType" class="form-label">Service Type *</label>
-                                    <select class="form-select" id="serviceType" required>
-                                        <option value="">Select Service</option>
-                                        <option value="container-transit">Container Transit</option>
-                                        <option value="bulk-cargo">Bulk Cargo Transport</option>
-                                        <option value="local-shunting">Local Shunting</option>
-                                        <option value="cross-border">Cross-Border Transport</option>
-                                        <option value="project-logistics">Project Logistics</option>
-                                        <option value="warehousing">Warehousing & Distribution</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="cargoType" class="form-label">Cargo Type *</label>
-                                    <select class="form-select" id="cargoType" required>
-                                        <option value="">Select Cargo Type</option>
-                                        <option value="general-cargo">General Cargo</option>
-                                        <option value="containers">Containers (20ft/40ft)</option>
-                                        <option value="bulk-materials">Bulk Materials</option>
-                                        <option value="heavy-equipment">Heavy Equipment</option>
-                                        <option value="perishables">Perishables</option>
-                                        <option value="hazardous">Hazardous Materials</option>
-                                        <option value="vehicles">Vehicles</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="origin" class="form-label">Origin *</label>
-                                    <input type="text" class="form-control" id="origin" placeholder="Pickup location" required>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="destination" class="form-label">Destination *</label>
-                                    <input type="text" class="form-control" id="destination" placeholder="Delivery location" required>
-                                </div>
-                                
-                                <div class="col-md-4">
-                                    <label for="weight" class="form-label">Weight (Tons)</label>
-                                    <input type="number" class="form-control" id="weight" step="0.1" min="0">
-                                </div>
-                                
-                                <div class="col-md-4">
-                                    <label for="volume" class="form-label">Volume (CBM)</label>
-                                    <input type="number" class="form-control" id="volume" step="0.1" min="0">
-                                </div>
-                                
-                                <div class="col-md-4">
-                                    <label for="pieces" class="form-label">Number of Pieces</label>
-                                    <input type="number" class="form-control" id="pieces" min="1">
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="pickupDate" class="form-label">Preferred Pickup Date</label>
-                                    <input type="date" class="form-control" id="pickupDate">
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="urgency" class="form-label">Urgency Level</label>
-                                    <select class="form-select" id="urgency">
-                                        <option value="standard">Standard (5-7 days)</option>
-                                        <option value="express">Express (2-3 days)</option>
-                                        <option value="urgent">Urgent (Next day)</option>
-                                        <option value="emergency">Emergency (Same day)</option>
-                                    </select>
-                                </div>
-                                
-                                <!-- Additional Services -->
-                                <div class="col-12 mt-4">
-                                    <h5 class="text-primary mb-3">Additional Services</h5>
-                                </div>
-                                
-                                <div class="col-12">
-                                    <div class="row g-3">
-                                        <div class="col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="insurance">
-                                                <label class="form-check-label" for="insurance">
-                                                    Cargo Insurance
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="tracking">
-                                                <label class="form-check-label" for="tracking">
-                                                    GPS Tracking
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="packaging">
-                                                <label class="form-check-label" for="packaging">
-                                                    Packaging Services
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="customs">
-                                                <label class="form-check-label" for="customs">
-                                                    Customs Clearance
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="storage">
-                                                <label class="form-check-label" for="storage">
-                                                    Temporary Storage
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="loading">
-                                                <label class="form-check-label" for="loading">
-                                                    Loading/Unloading
-                                                </label>
-                                            </div>
-                                        </div>
+                          
+                              <!-- Contact Information -->
+                              <div class="col-12">
+                                <h5 class="text-primary mb-3">Contact Information</h5>
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" name="fullName" required>
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-control" name="company">
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" name="email" required>
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" name="phone" required>
+                              </div>
+                          
+                              <!-- Shipment Details -->
+                              <div class="col-12 mt-4">
+                                <h5 class="text-primary mb-3">Shipment Details</h5>
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Service Type *</label>
+                                <select class="form-select" name="serviceType" required>
+                                  <option value="">Select Service</option>
+                                  <option value="container-transit">Container Transit</option>
+                                  <option value="bulk-cargo">Bulk Cargo Transport</option>
+                                  <option value="local-shunting">Local Shunting</option>
+                                  <option value="cross-border">Cross-Border Transport</option>
+                                  <option value="project-logistics">Project Logistics</option>
+                                  <option value="warehousing">Warehousing & Distribution</option>
+                                </select>
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Cargo Type *</label>
+                                <select class="form-select" name="cargoType" required>
+                                  <option value="">Select Cargo Type</option>
+                                  <option value="general-cargo">General Cargo</option>
+                                  <option value="containers">Containers (20ft/40ft)</option>
+                                  <option value="bulk-materials">Bulk Materials</option>
+                                  <option value="heavy-equipment">Heavy Equipment</option>
+                                  <option value="perishables">Perishables</option>
+                                  <option value="hazardous">Hazardous Materials</option>
+                                  <option value="vehicles">Vehicles</option>
+                                </select>
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Origin *</label>
+                                <input type="text" class="form-control" name="origin" placeholder="Pickup location" required>
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Destination *</label>
+                                <input type="text" class="form-control" name="destination" placeholder="Delivery location" required>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label">Weight (Tons)</label>
+                                <input type="number" class="form-control" name="weight" step="0.1" min="0">
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label">Volume (CBM)</label>
+                                <input type="number" class="form-control" name="volume" step="0.1" min="0">
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label">Number of Pieces</label>
+                                <input type="number" class="form-control" name="pieces" min="1">
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Preferred Pickup Date</label>
+                                <input type="date" class="form-control" name="pickupDate">
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label">Urgency Level</label>
+                                <select class="form-select" name="urgency">
+                                  <option value="standard">Standard (5-7 days)</option>
+                                  <option value="express">Express (2-3 days)</option>
+                                  <option value="urgent">Urgent (Next day)</option>
+                                  <option value="emergency">Emergency (Same day)</option>
+                                </select>
+                              </div>
+                          
+                              <!-- Additional Services -->
+                              <div class="col-12 mt-4">
+                                <h5 class="text-primary mb-3">Additional Services</h5>
+                              </div>
+                              <div class="col-12">
+                                <div class="row g-3">
+                                  <div class="col-md-4">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" name="services[]" value="insurance">
+                                      <label class="form-check-label">Cargo Insurance</label>
                                     </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" name="services[]" value="tracking">
+                                      <label class="form-check-label">GPS Tracking</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" name="services[]" value="packaging">
+                                      <label class="form-check-label">Packaging Services</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" name="services[]" value="customs">
+                                      <label class="form-check-label">Customs Clearance</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" name="services[]" value="storage">
+                                      <label class="form-check-label">Temporary Storage</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" name="services[]" value="loading">
+                                      <label class="form-check-label">Loading/Unloading</label>
+                                    </div>
+                                  </div>
                                 </div>
-                                
-                                <div class="col-12">
-                                    <label for="specialRequirements" class="form-label">Special Requirements</label>
-                                    <textarea class="form-control" id="specialRequirements" rows="4" placeholder="Please describe any special handling requirements, delivery instructions, or additional information..."></textarea>
-                                </div>
-
-                                <div class="col-12 text-center mb-4">
-                                    <div class="g-recaptcha d-inline-block" data-sitekey="YOUR_SITE_KEY"></div>
-                                </div>
-                                
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary rounded-pill py-3 px-5 me-3">
-                                        <i class="fas fa-paper-plane me-2"></i>Request Quote
-                                    </button>
-                                    <button type="reset" class="btn btn-outline-secondary rounded-pill py-3 px-5">
-                                        <i class="fas fa-redo me-2"></i>Reset Form
-                                    </button>
-                                </div>
+                              </div>
+                          
+                              <div class="col-12">
+                                <label class="form-label">Special Requirements</label>
+                                <textarea class="form-control" name="specialRequirements" rows="4" placeholder="Describe any special handling or instructions..."></textarea>
+                              </div>
+                          
+                              <!-- reCAPTCHA -->
+                              <div class="col-12 text-center mb-4">
+                                <div class="g-recaptcha d-inline-block" data-sitekey="6LftcGQrAAAAAMB4AaRJwgLYN9OOkr1TJUp8LyO9"></div>
+                              </div>
+                          
+                              <!-- Submit -->
+                              <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary rounded-pill py-3 px-5 me-3">
+                                  <i class="fas fa-paper-plane me-2"></i>Request Quote
+                                </button>
+                                <button type="reset" class="btn btn-outline-secondary rounded-pill py-3 px-5">
+                                  <i class="fas fa-redo me-2"></i>Reset Form
+                                </button>
+                              </div>
+                          
                             </div>
-                        </form>
+                          </form>
                     </div>
                 </div>
             </div>
@@ -1196,71 +1174,24 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validate reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse();
-            if (!recaptchaResponse) {
-                alert('Please verify you are not a robot');
-                return;
-            }
-            
-            // Collect form data
-            const formData = {
-                fullName: document.getElementById('fullName').value,
-                company: document.getElementById('company').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                serviceType: document.getElementById('serviceType').value,
-                cargoType: document.getElementById('cargoType').value,
-                origin: document.getElementById('origin').value,
-                destination: document.getElementById('destination').value,
-                weight: document.getElementById('weight').value,
-                volume: document.getElementById('volume').value,
-                pieces: document.getElementById('pieces').value,
-                pickupDate: document.getElementById('pickupDate').value,
-                urgency: document.getElementById('urgency').value,
-                insurance: document.getElementById('insurance').checked,
-                tracking: document.getElementById('tracking').checked,
-                packaging: document.getElementById('packaging').checked,
-                customs: document.getElementById('customs').checked,
-                storage: document.getElementById('storage').checked,
-                loading: document.getElementById('loading').checked,
-                specialRequirements: document.getElementById('specialRequirements').value,
-                'g-recaptcha-response': recaptchaResponse
-            };
-            
-            // Send to your backend
-            submitQuoteForm(formData);
-        });
-
-        async function submitQuoteForm(formData) {
-            try {
-                const response = await fetch('your-api-endpoint.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                const result = await response.json();
-                
-                if (result.success) {
-                    // Show success message
-                    alert('Quote request submitted successfully! We will contact you within 2 hours.');
-                    document.getElementById('quoteForm').reset();
-                    grecaptcha.reset(); // Reset reCAPTCHA
-                } else {
-                    alert('Error: ' + (result.message || 'Failed to submit request'));
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred while submitting your request. Please try again.');
-            }
+        window.onload = function () {
+          var el = document.getElementById('g-recaptcha-response');
+          if (el) {
+            el.setAttribute('required', 'required');
+          }
+        };
+      </script>
+      
+      <!-- Optional CSS to force validation -->
+      <style>
+        #g-recaptcha-response {
+          display: block !important;
+          position: absolute;
+          margin: -50px 0 0 0 !important;
+          z-index: -999999;
+          opacity: 0;
         }
-    </script>
+      </style>
 
     
 
