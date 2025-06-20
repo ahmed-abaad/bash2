@@ -663,37 +663,31 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="quote-form wow fadeInUp" data-wow-delay="0.3s">
-                        <form action="https://formspree.io/f/xyzjdjlv" method="POST">
+                        <form id="quoteForm" method="POST">
                             <div class="row g-4">
-                          
-                              <!-- Contact Information -->
+                              <!-- Contact Info -->
                               <div class="col-12">
                                 <h5 class="text-primary mb-3">Contact Information</h5>
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Full Name *</label>
-                                <input type="text" class="form-control" name="fullName" required>
+                                <input type="text" name="fullName" class="form-control" placeholder="Full Name *" required>
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Company Name</label>
-                                <input type="text" class="form-control" name="company">
+                                <input type="text" name="company" class="form-control" placeholder="Company Name">
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Email Address *</label>
-                                <input type="email" class="form-control" name="email" required>
+                                <input type="email" name="email" class="form-control" placeholder="Email Address *" required>
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Phone Number *</label>
-                                <input type="tel" class="form-control" name="phone" required>
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone Number *" required>
                               </div>
                           
-                              <!-- Shipment Details -->
+                              <!-- Shipment Info -->
                               <div class="col-12 mt-4">
                                 <h5 class="text-primary mb-3">Shipment Details</h5>
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Service Type *</label>
-                                <select class="form-select" name="serviceType" required>
+                                <select name="serviceType" class="form-select" required>
                                   <option value="">Select Service</option>
                                   <option value="container-transit">Container Transit</option>
                                   <option value="bulk-cargo">Bulk Cargo Transport</option>
@@ -704,8 +698,7 @@
                                 </select>
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Cargo Type *</label>
-                                <select class="form-select" name="cargoType" required>
+                                <select name="cargoType" class="form-select" required>
                                   <option value="">Select Cargo Type</option>
                                   <option value="general-cargo">General Cargo</option>
                                   <option value="containers">Containers (20ft/40ft)</option>
@@ -717,32 +710,25 @@
                                 </select>
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Origin *</label>
-                                <input type="text" class="form-control" name="origin" placeholder="Pickup location" required>
+                                <input type="text" name="origin" class="form-control" placeholder="Origin *" required>
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Destination *</label>
-                                <input type="text" class="form-control" name="destination" placeholder="Delivery location" required>
+                                <input type="text" name="destination" class="form-control" placeholder="Destination *" required>
                               </div>
                               <div class="col-md-4">
-                                <label class="form-label">Weight (Tons)</label>
-                                <input type="number" class="form-control" name="weight" step="0.1" min="0">
+                                <input type="number" name="weight" class="form-control" placeholder="Weight (Tons)" step="0.1" min="0">
                               </div>
                               <div class="col-md-4">
-                                <label class="form-label">Volume (CBM)</label>
-                                <input type="number" class="form-control" name="volume" step="0.1" min="0">
+                                <input type="number" name="volume" class="form-control" placeholder="Volume (CBM)" step="0.1" min="0">
                               </div>
                               <div class="col-md-4">
-                                <label class="form-label">Number of Pieces</label>
-                                <input type="number" class="form-control" name="pieces" min="1">
+                                <input type="number" name="pieces" class="form-control" placeholder="Number of Pieces" min="1">
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Preferred Pickup Date</label>
-                                <input type="date" class="form-control" name="pickupDate">
+                                <input type="date" name="pickupDate" class="form-control">
                               </div>
                               <div class="col-md-6">
-                                <label class="form-label">Urgency Level</label>
-                                <select class="form-select" name="urgency">
+                                <select name="urgency" class="form-select">
                                   <option value="standard">Standard (5-7 days)</option>
                                   <option value="express">Express (2-3 days)</option>
                                   <option value="urgent">Urgent (Next day)</option>
@@ -754,67 +740,37 @@
                               <div class="col-12 mt-4">
                                 <h5 class="text-primary mb-3">Additional Services</h5>
                               </div>
-                              <div class="col-12">
-                                <div class="row g-3">
-                                  <div class="col-md-4">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" name="services[]" value="insurance">
-                                      <label class="form-check-label">Cargo Insurance</label>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" name="services[]" value="tracking">
-                                      <label class="form-check-label">GPS Tracking</label>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" name="services[]" value="packaging">
-                                      <label class="form-check-label">Packaging Services</label>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" name="services[]" value="customs">
-                                      <label class="form-check-label">Customs Clearance</label>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" name="services[]" value="storage">
-                                      <label class="form-check-label">Temporary Storage</label>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4">
-                                    <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" name="services[]" value="loading">
-                                      <label class="form-check-label">Loading/Unloading</label>
-                                    </div>
-                                  </div>
-                                </div>
+                              <div class="col-md-4">
+                                <input class="form-check-input" type="checkbox" name="insurance" value="true"> Cargo Insurance
+                              </div>
+                              <div class="col-md-4">
+                                <input class="form-check-input" type="checkbox" name="tracking" value="true"> GPS Tracking
+                              </div>
+                              <div class="col-md-4">
+                                <input class="form-check-input" type="checkbox" name="packaging" value="true"> Packaging Services
+                              </div>
+                              <div class="col-md-4">
+                                <input class="form-check-input" type="checkbox" name="customs" value="true"> Customs Clearance
+                              </div>
+                              <div class="col-md-4">
+                                <input class="form-check-input" type="checkbox" name="storage" value="true"> Temporary Storage
+                              </div>
+                              <div class="col-md-4">
+                                <input class="form-check-input" type="checkbox" name="loading" value="true"> Loading/Unloading
                               </div>
                           
+                              <!-- Notes -->
                               <div class="col-12">
-                                <label class="form-label">Special Requirements</label>
-                                <textarea class="form-control" name="specialRequirements" rows="4" placeholder="Describe any special handling or instructions..."></textarea>
+                                <textarea name="specialRequirements" class="form-control" rows="4" placeholder="Special Requirements"></textarea>
                               </div>
                           
-                              <!-- reCAPTCHA -->
-                              <div class="col-12 text-center mb-4">
-                                <div class="g-recaptcha d-inline-block" data-sitekey="6LftcGQrAAAAAMB4AaRJwgLYN9OOkr1TJUp8LyO9"></div>
-                              </div>
+                              <!-- Hidden current year -->
+                              <input type="hidden" name="year" value="">
                           
                               <!-- Submit -->
                               <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-primary rounded-pill py-3 px-5 me-3">
-                                  <i class="fas fa-paper-plane me-2"></i>Request Quote
-                                </button>
-                                <button type="reset" class="btn btn-outline-secondary rounded-pill py-3 px-5">
-                                  <i class="fas fa-redo me-2"></i>Reset Form
-                                </button>
+                                <button type="submit" class="btn btn-primary">Submit Quote</button>
                               </div>
-                          
                             </div>
                           </form>
                     </div>
@@ -1172,27 +1128,62 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        window.onload = function () {
-          var el = document.getElementById('g-recaptcha-response');
-          if (el) {
-            el.setAttribute('required', 'required');
-          }
-        };
-      </script>
-      
-      <!-- Optional CSS to force validation -->
-      <style>
-        #g-recaptcha-response {
-          display: block !important;
-          position: absolute;
-          margin: -50px 0 0 0 !important;
-          z-index: -999999;
-          opacity: 0;
-        }
-      </style>
 
+    <!-- EmailJS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('80VPsd8KOekxeIEgy');
+    
+        document.getElementById('quoteForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // This stops the normal form submission
+            
+            const now = new Date();
+            const timeString = now.toLocaleString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+    
+            const formData = {
+                fullName: this.fullName.value,
+                company: this.company.value || "Not provided",
+                email: this.email.value,
+                phone: this.phone.value,
+                serviceType: this.serviceType.options[this.serviceType.selectedIndex].text,
+                cargoType: this.cargoType.options[this.cargoType.selectedIndex].text,
+                origin: this.origin.value,
+                destination: this.destination.value,
+                weight: this.weight.value ? `${this.weight.value} tons` : "Not specified",
+                volume: this.volume.value ? `${this.volume.value} CBM` : "Not specified",
+                pieces: this.pieces.value || "Not specified",
+                pickupDate: this.pickupDate.value || "Not specified",
+                urgency: this.urgency.options[this.urgency.selectedIndex].text,
+                insurance: this.insurance.checked,
+                tracking: this.tracking.checked,
+                packaging: this.packaging.checked,
+                customs: this.customs.checked,
+                storage: this.storage.checked,
+                loading: this.loading.checked,
+                specialRequirements: this.specialRequirements.value || "None",
+                time: timeString,
+                year: now.getFullYear()
+            };
+    
+            emailjs.send('service_me0zax5', 'template_bfh7y6k', formData)
+                .then(() => {
+                    alert('Request sent successfully!');
+                    this.reset();
+                    // Optional: Redirect or show confirmation
+                    // window.location.href = 'thank-you.html';
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Failed to send. Please try again.');
+                });
+        });
+    </script>
     
 
     <!-- Custom JavaScript -->
@@ -1222,20 +1213,7 @@
             });
         });
 
-        // Quote form submission
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Show success message (in real implementation, this would send to server)
-            alert('Thank you for your quote request! We will respond within 2 hours during business hours.');
-            
-            // Reset form
-            this.reset();
-        });
+        /
 
         // FAQ accordion functionality
         document.querySelectorAll('.faq-header').forEach(header => {
