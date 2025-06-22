@@ -66,6 +66,9 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
     <!-- Custom Styles -->
     <style>
         :root {
@@ -543,7 +546,7 @@
                         <a href="fleet.html" class="nav-item nav-link">Fleet</a>
                         <a href="coverage.html" class="nav-item nav-link">Coverage</a>
                         <a href="clients.html" class="nav-item nav-link">Clients</a>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                     </div>
                     <div class="d-flex align-items-center flex-nowrap pt-xl-0">
                         <a href="#quote" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Request Quote</a>
@@ -660,33 +663,39 @@
                 <p>Fill out the form below and receive a detailed quote within 2 hours. Our experts will analyze your requirements and provide the best solution for your needs.</p>
             </div>
             
-            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s" id="quote">
+            <div class="col-lg-12 wow fadeInRight" data-wow-delay="0.3s" id="quote">
                 <div class="bg-white rounded p-4 shadow-sm">
-                    <h3 class="mb-4">Request a Quote</h3>
-                    <form>
+                    <h3 class="mb-4">Quatation Form</h3>
+                    <form id="quoteForm">
                         <div class="row g-3">
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                                     <label for="name">Your Name *</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                    <input type="text" class="form-control" id="company" name="company" placeholder="Company Name" required>
+                                    <label for="company">Company Name *</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                                     <label for="email">Your Email *</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required>
                                     <label for="phone">Your Phone *</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <select class="form-select" id="service" aria-label="Select a service" required>
-                                        <option selected disabled>Select a service</option>
+                                    <select class="form-select" id="service" name="service" aria-label="Select a service" required>
+                                        <option selected disabled value="">Select a service</option>
                                         <option value="Dry Container Transit">Dry Container Transit</option>
                                         <option value="Bulk Cargo Tippers">Bulk Cargo Tippers</option>
                                         <option value="Local Shunting Operations">Local Shunting Operations</option>
@@ -697,24 +706,28 @@
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="pickup" placeholder="Pickup Location">
+                                    <input type="text" class="form-control" id="pickup" name="pickup" placeholder="Pickup Location">
                                     <label for="pickup">Pickup Location</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="destination" placeholder="Destination">
+                                    <input type="text" class="form-control" id="destination" name="destination" placeholder="Destination">
                                     <label for="destination">Destination</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Describe your cargo and requirements" id="message" style="height: 120px"></textarea>
+                                    <textarea class="form-control" placeholder="Describe your cargo and requirements" id="message" name="message" style="height: 120px"></textarea>
                                     <label for="message">Cargo Details & Special Requirements</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Request Quote</button>
+                                <!-- reCAPTCHA Widget -->
+                                <div class="g-recaptcha" data-sitekey="6LftcGQrAAAAAMB4AaRJwgLYN9OOkr1TJUp8LyO9"></div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">Request Quote</button>
                             </div>
                         </div>
                     </form>
@@ -1051,6 +1064,10 @@
                             <i class="fas fa-copyright text-light me-1"></i>2025 Bash Hauliers Ltd
                         </a>, All rights reserved.
                     </span>
+                    <br>
+                    <span class="text-white" style="font-size: 0.8rem;">
+                        Designed by <a href="https://ahmed-abaad.github.io/Portfolio/" target="_blank" class="text-primary">Ahmed Abaad</a>
+                    </span>
                 </div>
                 <div class="col-md-6 text-center text-md-end text-white">
                     <span>Member of Kenya Transport Association & Kenya Shippers Council</span>
@@ -1072,65 +1089,144 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <!-- EmailJS Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        emailjs.init('80VPsd8KOekxeIEgy');
     
-        document.getElementById('quoteForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // This stops the normal form submission
+    <style>
+        .form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        .btn-primary {
+            background-color: #3949ab;
+            border-color: #3949ab;
+        }
+        .btn-primary:hover {
+            background-color: #2c3e8f;
+            border-color: #2c3e8f;
+        }
+        .form-floating label::after {
+            background-color: transparent !important;
+        }
+        .g-recaptcha {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize EmailJS 
+        emailjs.init('80VPsd8KOekxeIEgy');
+        
+        // Form Submission
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            const now = new Date();
-            const timeString = now.toLocaleString('en-US', {
-                month: 'short',
+            // Verify reCAPTCHA first
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Verification Required',
+                    text: 'Please complete the reCAPTCHA verification',
+                    confirmButtonColor: '#3949ab'
+                });
+                return;
+            }
+            
+            // Get current date in a nice format
+            const today = new Date();
+            const dateString = today.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
                 day: 'numeric',
-                year: 'numeric',
                 hour: '2-digit',
                 minute: '2-digit'
             });
-    
-            const formData = {
-                fullName: this.fullName.value,
-                company: this.company.value || "Not provided",
-                email: this.email.value,
-                phone: this.phone.value,
-                serviceType: this.serviceType.options[this.serviceType.selectedIndex].text,
-                cargoType: this.cargoType.options[this.cargoType.selectedIndex].text,
-                origin: this.origin.value,
-                destination: this.destination.value,
-                weight: this.weight.value ? `${this.weight.value} tons` : "Not specified",
-                volume: this.volume.value ? `${this.volume.value} CBM` : "Not specified",
-                pieces: this.pieces.value || "Not specified",
-                pickupDate: this.pickupDate.value || "Not specified",
-                urgency: this.urgency.options[this.urgency.selectedIndex].text,
-                insurance: this.insurance.checked,
-                tracking: this.tracking.checked,
-                packaging: this.packaging.checked,
-                customs: this.customs.checked,
-                storage: this.storage.checked,
-                loading: this.loading.checked,
-                specialRequirements: this.specialRequirements.value || "None",
-                time: timeString,
-                year: now.getFullYear()
+            
+            // Get form values and handle empty fields
+            const getValue = (id) => {
+                const value = document.getElementById(id).value.trim();
+                return value || "Not specified";
             };
-    
+            
+            const formData = {
+                name: getValue('name'),
+                company: getValue('company'),
+                email: getValue('email'),
+                phone: getValue('phone'),
+                service: getValue('service'),
+                pickup: getValue('pickup'),
+                destination: getValue('destination'),
+                message: getValue('message'),
+                date: dateString,
+                year: today.getFullYear(),
+                'g-recaptcha-response': recaptchaResponse
+            };
+            
+            // Validate required fields
+            if (formData.name === "Not specified" || 
+                formData.company === "Not specified" || 
+                formData.email === "Not specified" || 
+                formData.phone === "Not specified" || 
+                formData.service === "Not specified") {
+                
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Missing Information',
+                    text: 'Please fill in all required fields marked with *',
+                    confirmButtonColor: '#3949ab'
+                });
+                return;
+            }
+            
+            // Change button text to show loading state
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+            
+            // Send email using EmailJS
             emailjs.send('service_me0zax5', 'template_bfh7y6k', formData)
-                .then(() => {
-                    alert('Request sent successfully!');
-                    this.reset();
-                    // Optional: Redirect or show confirmation
-                    // window.location.href = 'thank-you.html';
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    alert('Failed to send. Please try again.');
+                .then(function(response) {
+                    // Show success message
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Request Submitted!',
+                        html: 'Thank you for your quote request! Our team will contact you within 24 hours.<br><br>For immediate assistance:<br>Call: +254 723 339 000<br>WhatsApp: +254 723 339 000',
+                        confirmButtonColor: '#3949ab',
+                        confirmButtonText: 'OK'
+                    });
+                    
+                    // Reset form and reCAPTCHA
+                    document.getElementById('quoteForm').reset();
+                    grecaptcha.reset();
+                    
+                    // Reset button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Request Quote';
+                }, function(error) {
+                    // Show error message
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Submission Failed',
+                        html: 'Failed to send your request. Please try again or contact us directly:<br><br>Call: +254 723 339 000<br>WhatsApp: +254 723 339 000',
+                        confirmButtonColor: '#3949ab'
+                    });
+                    
+                    console.error('EmailJS Error:', error);
+                    
+                    // Reset button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Request Quote';
                 });
         });
     </script>
-    
-
-    <!-- Custom JavaScript -->
     <script>
         // Initialize WOW.js
         new WOW().init();
