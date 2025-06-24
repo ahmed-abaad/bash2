@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Bash Hauliers Ltd - Your Trusted Partner in Transport and Logistics</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="transport, logistics, container haulage, East Africa, Kenya, Uganda, Rwanda, Tanzania, DRC, South Sudan, bulk cargo, dry container transit, shunting operations" name="keywords">
-    <meta content="Bash Hauliers Ltd - Leading transport and logistics company in East Africa since 2002. Specializing in dry container transit, bulk cargo tippers, and local shunting operations with 300+ modern trucks." name="description">
+    <meta content="transport, logistics, container haulage, East Africa, Kenya, Uganda, Rwanda, Tanzania, DRC, South Sudan, bulk cargo, dry container transit, shunting operations, heavy machinery hire, earth moving equipment, construction machinery, rollers, dozers, graders" name="keywords">
+    <meta content="Bash Hauliers Ltd - Leading transport and logistics company in East Africa since 2002. Specializing in dry container transit, bulk cargo tippers, and local shunting operations with 300+ modern trucks. Sister company Bash Contractors Ltd provides heavy machinery hire across Kenya." name="description">
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -33,7 +33,13 @@
         "sameAs": [
             "https://www.facebook.com/bashhauliers",
             "https://www.linkedin.com/company/bashhauliers"
-        ]
+        ],
+        "subsidiary": {
+            "@type": "Organization",
+            "name": "Bash Contractors Ltd",
+            "description": "Proudly Kenyan-owned heavy machinery hire company specializing in earth-moving equipment rental across Kenya",
+            "slogan": "Powering Progress with Heavy Machinery Solutions"
+        }
     }
     </script>
 
@@ -72,6 +78,10 @@
             --dark-light: #eaeaf5;
             --primary-dark: #e0a800;
             --dark-dark: #303178;
+            --contractors-primary: #ff6b35;
+            --contractors-secondary: #2c5530;
+            --contractors-light: #fff5f2;
+            --contractors-dark: #d4541f;
         }
 
         /* Override Bootstrap classes */
@@ -113,6 +123,340 @@
         .btn-dark:hover {
             background-color: var(--dark-dark);
             border-color: var(--dark-dark);
+        }
+
+        /* Contractors Carousel Slide Styles */
+        .btn-contractors-carousel {
+            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-contractors-carousel:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+            color: white;
+        }
+
+        /* Sister Company Highlight in About Section */
+        .sister-company-highlight {
+            background: linear-gradient(135deg, var(--contractors-light) 0%, #ffffff 100%);
+            border-left: 5px solid var(--contractors-primary);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .sister-company-highlight:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.1);
+        }
+
+        .sister-company-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--contractors-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        /* Sister Company Section Styles */
+        .bash-contractors-section {
+            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bash-contractors-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="construction" patternUnits="userSpaceOnUse" width="30" height="30"><rect width="30" height="30" fill="none"/><path d="M0 30L30 0M-7.5 7.5L7.5 -7.5M22.5 37.5L37.5 22.5" stroke="rgba(255,255,255,0.08)" stroke-width="2"/><circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23construction)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .contractors-hero-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contractors-hero-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+        }
+
+        .contractors-logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: white;
+            font-size: 3rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+        }
+
+        .contractors-hero-card:hover .contractors-logo {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        .contractors-tagline {
+            background: linear-gradient(135deg, var(--contractors-light), var(--contractors-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .equipment-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .equipment-card {
+            background: linear-gradient(135deg, var(--contractors-light) 0%, #ffffff 100%);
+            border-radius: 15px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .equipment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .equipment-card:hover::before {
+            left: 100%;
+        }
+
+        .equipment-card:hover {
+            border-color: var(--contractors-primary);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
+        }
+
+        .equipment-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .equipment-card:hover .equipment-icon {
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .industry-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            border-left: 5px solid var(--contractors-primary);
+            backdrop-filter: blur(5px);
+        }
+
+        .industry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-left-width: 8px;
+        }
+
+        .industry-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--contractors-secondary) 0%, #1e3a21 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .advantage-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .advantage-item:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .advantage-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--contractors-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1.5rem;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .btn-contractors {
+            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-contractors::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-contractors:hover::before {
+            left: 100%;
+        }
+
+        .btn-contractors:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+
+        .btn-contractors-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-contractors-outline:hover {
+            background: white;
+            color: var(--contractors-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--contractors-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 4rem;
+            backdrop-filter: blur(10px);
         }
         
         /* Enhanced Fleet Statistics */
@@ -452,6 +796,25 @@
             border-color: var(--primary);
             box-shadow: 0 0 0 0.25rem rgba(254, 193, 7, 0.25);
         }
+
+        /* Responsive adjustments for sister company section */
+        @media (max-width: 768px) {
+            .equipment-showcase {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .industries-grid {
+                grid-template-columns: 1fr;
+            }
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+            .contractors-hero-card {
+                padding: 2rem;
+            }
+            .sister-company-highlight {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -560,6 +923,55 @@
                 </div>
             </div>
         </div>
+        <!-- NEW: Bash Contractors Carousel Slide -->
+        <div class="header-carousel-item">
+            <div class="header-carousel-item-img-4">
+                <img src="img/grader2.jpg" class="img-fluid carousel-img w-100" alt="Bash Contractors Heavy Machinery" style="filter: brightness(0.7);">
+            </div>
+            <div class="carousel-caption">
+                <div class="carousel-caption-inner text-start p-3">
+                    <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated">
+                        <span style="color: #ff6b35;">Bash Contractors Ltd</span><br>
+                        Powering Progress with Heavy Machinery
+                    </h1>
+                    <p class="mb-5 fs-5 fadeInUp animate__animated">Our sister company provides reliable heavy machinery hire across Kenya. From rollers to graders, we have the equipment and expertise to transform terrain into progress.</p>
+                    <div class="fadeInUp animate__animated">
+                        <a class="btn-contractors-carousel me-4 mb-4" href="#bash-contractors">
+                            <i class="fas fa-hard-hat me-2"></i>Explore Equipment
+                        </a>
+                        <a class="btn btn-outline-light rounded-pill py-3 px-5 mb-4" href="contact.html">
+                            <i class="fas fa-phone me-2"></i>Hire Machinery
+                        </a>
+                    </div>
+                    <div class="row g-3 mt-3 fadeInUp animate__animated" data-wow-delay="0.8s">
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <div class="text-white fs-3 fw-bold">7+</div>
+                                <small class="text-light">Machine Types</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <div class="text-white fs-3 fw-bold">100%</div>
+                                <small class="text-light">Kenyan Owned</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <div class="text-white fs-3 fw-bold">47</div>
+                                <small class="text-light">Counties Served</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <div class="text-white fs-3 fw-bold">24/7</div>
+                                <small class="text-light">Support</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Carousel End -->
 
@@ -619,13 +1031,26 @@
                 <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="about-img">
                         <img src="img/actros.jpeg" class="img-fluid w-100 rounded-top bg-white" alt="Bash Hauliers Mercedes Actros Truck">
-                        <img src="img/bg1.jpg" class="img-fluid w-100 rounded-bottom" alt="Bash Contractors Grader Equipment">
+                        <img src="img/dozzer.jpg" class="img-fluid w-100 rounded-bottom" alt="Bash Contractors Grader Equipment">
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
                     <h4 class="text-primary">About Bash Hauliers</h4>
                     <h1 class="display-5 mb-4">East Africa's Leading Transport & Logistics Partner Since 2002</h1>
                     <p class="ps-4 mb-4">From our humble beginnings as a family-owned business, Bash Hauliers has evolved into a regional powerhouse in transport and logistics. We specialize in comprehensive cargo transportation solutions across East and Central Africa, operating a modern fleet of 300+ trucks with unwavering commitment to reliability, efficiency, and customer satisfaction.</p>
+                    
+                    <!-- Sister Company Highlight -->
+                    <div class="sister-company-highlight wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="d-flex align-items-center">
+                            <div class="sister-company-icon">
+                                <i class="fas fa-hard-hat"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1" style="color: var(--contractors-primary);">Our Sister Company - Bash Contractors Ltd</h6>
+                                <p class="mb-0 text-muted">Expanding our commitment to Kenya's infrastructure development, Bash Contractors Ltd provides reliable heavy machinery hire services across all 47 counties. From road construction to site preparation, we power progress with professional equipment solutions.</p>
+                            </div>
+                        </div>
+                    </div>
                     
                     <!-- Vision & Mission -->
                     <div class="mb-4">
@@ -705,7 +1130,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-white rounded shadow-sm h-100">
                         <div class="service-img">
-                            <img src="https://onbiovc.com/wp-content/uploads/2019/07/images1492-5d2d5effaae18.jpg" class="img-fluid w-100 rounded-top" alt="Bulk Cargo Tippers">
+                            <img src="img/tipper.JPG" class="img-fluid w-100 rounded-top" alt="Bulk Cargo Tippers">
                         </div>
                         <div class="service-content text-center p-4">
                             <div class="service-icon">
@@ -748,6 +1173,230 @@
         </div>
     </div>
     <!-- Services End -->
+
+    <!-- Bash Contractors Section Start -->
+    <div class="container-fluid bash-contractors-section py-5" id="bash-contractors">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 1000px;">
+                <h4 class="text-white mb-3">Our Sister Company</h4>
+                <h1 class="display-3 text-white mb-4">Bash Contractors Ltd</h1>
+                <div class="contractors-tagline">Powering Progress with Heavy Machinery Solutions</div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="contractors-hero-card wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="contractors-logo">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        
+                        <div class="text-center mb-4">
+                            <h2 class="mb-3" style="color: var(--contractors-primary);">Proudly Kenyan-Owned Heavy Machinery Solutions</h2>
+                            <p class="fs-5 text-muted">Bash Contractors Ltd is a sister company to Bash Hauliers Ltd, established to meet the growing demand for reliable, efficient, and professional heavy machinery hire services across Kenya. With a reputation rooted in trust and excellence, we provide high-performance equipment to support Kenya's construction, infrastructure, and development sectors.</p>
+                        </div>
+
+                        <!-- Equipment Showcase -->
+                        <div class="equipment-showcase">
+                            <div class="equipment-card">
+                                <div class="equipment-icon">
+                                    <i class="fas fa-road"></i>
+                                </div>
+                                <h5 class="mb-2">Rollers</h5>
+                                <p class="text-muted mb-0">Smooth Drum & Padfoot</p>
+                            </div>
+                            
+                            <div class="equipment-card">
+                                <div class="equipment-icon">
+                                    <i class="fas fa-tractor"></i>
+                                </div>
+                                <h5 class="mb-2">Dozers</h5>
+                                <p class="text-muted mb-0">Heavy-duty bulldozers</p>
+                            </div>
+                            
+                            <div class="equipment-card">
+                                <div class="equipment-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <h5 class="mb-2">Dumpers</h5>
+                                <p class="text-muted mb-0">High-capacity dumpers</p>
+                            </div>
+                            
+                            <div class="equipment-card">
+                                <div class="equipment-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h5 class="mb-2">Truck Shovels</h5>
+                                <p class="text-muted mb-0">Excavation specialists</p>
+                            </div>
+                            
+                            <div class="equipment-card">
+                                <div class="equipment-icon">
+                                    <i class="fas fa-level-up-alt"></i>
+                                </div>
+                                <h5 class="mb-2">Motor Graders</h5>
+                                <p class="text-muted mb-0">Precision grading</p>
+                            </div>
+                            
+                            <div class="equipment-card">
+                                <div class="equipment-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h5 class="mb-2">Military Rollers</h5>
+                                <p class="text-muted mb-0">Heavy-duty compaction</p>
+                            </div>
+                            
+                            <div class="equipment-card">
+                                <div class="equipment-icon">
+                                    <i class="fas fa-walking"></i>
+                                </div>
+                                <h5 class="mb-2">Pedestrian Rollers</h5>
+                                <p class="text-muted mb-0">Compact operations</p>
+                            </div>
+                        </div>
+
+                        <!-- Industries We Serve -->
+                        <div class="text-center mb-4">
+                            <h3 style="color: var(--contractors-primary);">Industries We Serve</h3>
+                        </div>
+                        
+                        <div class="industries-grid">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-road"></i>
+                                </div>
+                                <h5 class="mb-3">Road & Highway Construction</h5>
+                                <p class="text-muted mb-0">Supporting major infrastructure projects with reliable machinery for road construction, highway development, and transportation network expansion across Kenya.</p>
+                            </div>
+                            
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-drafting-compass"></i>
+                                </div>
+                                <h5 class="mb-3">Civil Engineering & Earthworks</h5>
+                                <p class="text-muted mb-0">Providing specialized equipment for complex civil engineering projects, earthmoving operations, and large-scale construction developments.</p>
+                            </div>
+                            
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h5 class="mb-3">Real Estate & Commercial Developments</h5>
+                                <p class="text-muted mb-0">Supporting residential and commercial property development with comprehensive machinery solutions for site preparation and construction.</p>
+                            </div>
+                            
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-landmark"></i>
+                                </div>
+                                <h5 class="mb-3">Municipal and Government Projects</h5>
+                                <p class="text-muted mb-0">Partnering with government agencies and municipalities on public infrastructure projects, urban development, and community construction initiatives.</p>
+                            </div>
+                        </div>
+
+                        <!-- Why Choose Bash Contractors -->
+                        <div class="text-center mb-4">
+                            <h3 style="color: var(--contractors-primary);">Why Choose Bash Contractors?</h3>
+                        </div>
+                        
+                        <div class="advantages-grid">
+                            <div class="advantage-item">
+                                <div class="advantage-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Nationwide Coverage</h6>
+                                    <small class="text-muted">We serve clients across Kenya, from urban construction zones to remote infrastructure projects.</small>
+                                </div>
+                            </div>
+                            
+                            <div class="advantage-item">
+                                <div class="advantage-icon">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Reliable Machinery</h6>
+                                    <small class="text-muted">Our fleet is modern, regularly serviced, and performance-tested to meet demanding worksite conditions.</small>
+                                </div>
+                            </div>
+                            
+                            <div class="advantage-item">
+                                <div class="advantage-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Skilled Operators</h6>
+                                    <small class="text-muted">Our team of experienced machine operators ensures each job is completed efficiently and safely.</small>
+                                </div>
+                            </div>
+                            
+                            <div class="advantage-item">
+                                <div class="advantage-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Flexible Hire Terms</h6>
+                                    <small class="text-muted">We offer both short-term and long-term hire options tailored to your project needs and budget.</small>
+                                </div>
+                            </div>
+                            
+                            <div class="advantage-item">
+                                <div class="advantage-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Backed by Bash Hauliers</h6>
+                                    <small class="text-muted">Our strong logistics backbone allows us to mobilize equipment quickly and support complex operations.</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats Row -->
+                        <div class="stats-row">
+                            <div class="stat-card">
+                                <span class="stat-number">100%</span>
+                                <h6>Kenyan Owned</h6>
+                                <small class="text-muted">Proudly local</small>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <span class="stat-number">24/7</span>
+                                <h6>Support</h6>
+                                <small class="text-muted">Round the clock</small>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <span class="stat-number">47</span>
+                                <h6>Counties</h6>
+                                <small class="text-muted">Nationwide reach</small>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <span class="stat-number">15+</span>
+                                <h6>Machine Types</h6>
+                                <small class="text-muted">Diverse fleet</small>
+                            </div>
+                        </div>
+
+                        <!-- Call to Action -->
+                        <div class="cta-section">
+                            <h3 class="mb-3" style="color: var(--contractors-primary);">Let's Build Together</h3>
+                            <p class="fs-5 mb-4">From groundwork to grading, Bash Contractors Ltd is your dependable partner in transforming terrain into progress. Contact us today to request a machine or learn more about our services.</p>
+                            
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="contact.html" class="btn-contractors">
+                                    <i class="fas fa-cogs me-2"></i>Request Equipment
+                                </a>
+                                <a href="tel:+254723339000" class="btn-contractors">
+                                    <i class="fas fa-phone me-2"></i>Call +254 723 339 000
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bash Contractors Section End -->
 
     <!-- Regional Coverage Start -->
     <div class="container-fluid py-5 bg-light" id="coverage">
@@ -1158,6 +1807,7 @@
                                             <option value="Dry Container Transit">Dry Container Transit</option>
                                             <option value="Bulk Cargo Tippers">Bulk Cargo Tippers</option>
                                             <option value="Local Shunting Operations">Local Shunting Operations</option>
+                                            <option value="Heavy Machinery Hire">Heavy Machinery Hire</option>
                                             <option value="Multiple Services">Multiple Services</option>
                                         </select>
                                         <label for="service">Service Required *</label>
@@ -1227,6 +1877,7 @@
                         <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Our Services</a>
                         <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Coverage Area</a>
                         <a class="text-white" href="#contact"><i class="fas fa-angle-right me-2"></i>Contact Us</a>
+                        <a class="text-white" href="#bash-contractors"><i class="fas fa-angle-right me-2"></i>Bash Contractors</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
@@ -1235,6 +1886,7 @@
                         <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Dry Container Transit</a>
                         <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Bulk Cargo Tippers</a>
                         <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Local Shunting Operations</a>
+                        <a class="text-white" href="#bash-contractors"><i class="fas fa-angle-right me-2"></i>Heavy Machinery Hire</a>
                         <a class="text-white" href="#quote"><i class="fas fa-angle-right me-2"></i>Request Quote</a>
                     </div>
                 </div>
@@ -1425,6 +2077,72 @@
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Request Quote';
                 });
+        });
+
+        // Bash Contractors section hover effects
+        document.querySelectorAll('.contractors-hero-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Equipment card hover effects
+        document.querySelectorAll('.equipment-card').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Industry card hover effects
+        document.querySelectorAll('.industry-card').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Advantage item hover effects
+        document.querySelectorAll('.advantage-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(10px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+
+        // Stat card hover effects
+        document.querySelectorAll('.stat-card').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Sister company highlight hover effects
+        document.querySelectorAll('.sister-company-highlight').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(5px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
         });
     </script>
 
