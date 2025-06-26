@@ -139,3 +139,14 @@
 
 })(jQuery);
 
+
+// Simple version - just updates the year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+// OR more robust version that handles missing elements
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});

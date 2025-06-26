@@ -78,10 +78,10 @@
             --dark-light: #eaeaf5;
             --primary-dark: #e0a800;
             --dark-dark: #303178;
-            --contractors-primary: #ff6b35;
+            --contractors-primary: #fec107;
             --contractors-secondary: #2c5530;
-            --contractors-light: #fff5f2;
-            --contractors-dark: #d4541f;
+            --contractors-light: #fff3d7;
+            --contractors-dark: #e0a800;
         }
 
         /* Override Bootstrap classes */
@@ -815,6 +815,13 @@
                 padding: 1rem;
             }
         }
+
+        .carousel-subheading {
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
     </style>
 </head>
 
@@ -867,16 +874,36 @@
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About Us</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="fleet.html" class="nav-item nav-link">Fleet</a>
-                        <a href="coverage.html" class="nav-item nav-link">Coverage</a>
+                
+                        <!-- Grouped Dropdown for Services -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="service.html" class="dropdown-item">Services</a>
+                                <a href="fleet.html" class="dropdown-item">Fleet</a>
+                                <a href="coverage.html" class="dropdown-item">Coverage</a>
+                            </div>
+                        </div>
+                
                         <a href="clients.html" class="nav-item nav-link">Clients</a>
+                
+                        <!-- Bash Contractors Dropdown -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle text-danger" data-bs-toggle="dropdown">Our Sister Company</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="bash-contractors.html" class="dropdown-item">Overview</a>
+                                <a href="contractors-fleet.html" class="dropdown-item">Equipment Fleet</a>
+                                <a href="contact.html#quote" class="dropdown-item">Request a Machine</a>
+                            </div>
+                        </div>
+                
                         <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                     </div>
+                
                     <div class="d-flex align-items-center flex-nowrap pt-xl-0">
                         <a href="contact.html#quote" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Request Quote</a>
                     </div>
-                </div>
+                </div> 
             </nav>
         </div>
     </div>
@@ -931,8 +958,8 @@
             <div class="carousel-caption">
                 <div class="carousel-caption-inner text-start p-3">
                     <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated">
-                        <span style="color: #ff6b35;">Bash Contractors Ltd</span><br>
-                        Powering Progress with Heavy Machinery
+                        <span style="color: #fec107;">Bash Contractors Ltd</span><br>
+                        <h2 class="carousel-subheading">Powering Progress with Heavy Machinery</h2>
                     </h1>
                     <p class="mb-5 fs-5 fadeInUp animate__animated">Our sister company provides reliable heavy machinery hire across Kenya. From rollers to graders, we have the equipment and expertise to transform terrain into progress.</p>
                     <div class="fadeInUp animate__animated">
@@ -942,32 +969,6 @@
                         <a class="btn btn-outline-light rounded-pill py-3 px-5 mb-4" href="contact.html">
                             <i class="fas fa-phone me-2"></i>Hire Machinery
                         </a>
-                    </div>
-                    <div class="row g-3 mt-3 fadeInUp animate__animated" data-wow-delay="0.8s">
-                        <div class="col-md-3 col-6">
-                            <div class="text-center">
-                                <div class="text-white fs-3 fw-bold">7+</div>
-                                <small class="text-light">Machine Types</small>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <div class="text-center">
-                                <div class="text-white fs-3 fw-bold">100%</div>
-                                <small class="text-light">Kenyan Owned</small>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <div class="text-center">
-                                <div class="text-white fs-3 fw-bold">47</div>
-                                <small class="text-light">Counties Served</small>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <div class="text-center">
-                                <div class="text-white fs-3 fw-bold">24/7</div>
-                                <small class="text-light">Support</small>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1266,14 +1267,6 @@
                                 </div>
                                 <h5 class="mb-3">Road & Highway Construction</h5>
                                 <p class="text-muted mb-0">Supporting major infrastructure projects with reliable machinery for road construction, highway development, and transportation network expansion across Kenya.</p>
-                            </div>
-                            
-                            <div class="industry-card">
-                                <div class="industry-icon">
-                                    <i class="fas fa-drafting-compass"></i>
-                                </div>
-                                <h5 class="mb-3">Civil Engineering & Earthworks</h5>
-                                <p class="text-muted mb-0">Providing specialized equipment for complex civil engineering projects, earthmoving operations, and large-scale construction developments.</p>
                             </div>
                             
                             <div class="industry-card">
@@ -1848,7 +1841,7 @@
     <!-- Contact End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container-fluid footer wow fadeIn" data-wow-delay="0.2s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-md-6 col-lg-6 col-xl-3">
@@ -1913,7 +1906,8 @@
                 <div class="col-md-6 text-center text-md-start mb-md-0">
                     <span class="text-white">
                         <a href="#" class="border-bottom text-primary">
-                            <i class="fas fa-copyright text-light me-1"></i>2025 Bash Hauliers Ltd
+                            <i class="fas fa-copyright text-light"></i>
+                            <span id="currentYear"></span> Bash Hauliers Ltd
                         </a>, All rights reserved.
                     </span>
                     <br>
