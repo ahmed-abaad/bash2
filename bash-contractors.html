@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Bash Contractors Ltd - Heavy Machinery Hire Services Kenya</title>
@@ -56,10 +55,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap-custom.css" rel="stylesheet">
-
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
     <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
@@ -79,21 +76,10 @@
         }
 
         /* Override Bootstrap classes */
-        .text-primary {
-            color: var(--primary) !important;
-        }
-        
-        .text-dark {
-            color: var(--dark) !important;
-        }
-        
-        .bg-primary {
-            background-color: var(--primary) !important;
-        }
-        
-        .bg-dark {
-            background-color: var(--dark) !important;
-        }
+        .text-primary { color: var(--primary) !important; }
+        .text-dark { color: var(--dark) !important; }
+        .bg-primary { background-color: var(--primary) !important; }
+        .bg-dark { background-color: var(--dark) !important; }
         
         .btn-primary {
             background-color: var(--primary);
@@ -119,25 +105,23 @@
             border-color: var(--dark-dark);
         }
 
-        /* Hero Section */
+        /* Professional Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 100px 0 80px;
             position: relative;
             overflow: hidden;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
         }
 
         .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
             right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="construction" patternUnits="userSpaceOnUse" width="30" height="30"><rect width="30" height="30" fill="none"/><path d="M0 30L30 0M-7.5 7.5L7.5 -7.5M22.5 37.5L37.5 22.5" stroke="rgba(255,255,255,0.08)" stroke-width="2"/><circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23construction)"/></svg>') repeat;
-            opacity: 0.3;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(254, 193, 7, 0.05) 0%, rgba(57, 73, 171, 0.03) 100%);
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
 
         .hero-content {
@@ -145,35 +129,427 @@
             z-index: 2;
         }
 
-        .hero-logo {
-            width: 150px;
-            height: 150px;
+        .hero-company-badge {
+            display: inline-flex;
+            align-items: center;
+            background: var(--contractors-primary);
+            color: var(--dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(254, 193, 7, 0.2);
+        }
+
+        .hero-company-badge i {
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .hero-main-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--contractors-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #6c757d;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            max-width: 90%;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero-primary {
+            background: var(--contractors-primary);
+            border: 2px solid var(--contractors-primary);
+            color: var(--dark);
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .btn-hero-primary:hover {
+            background: var(--dark);
+            border-color: var(--dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(57, 73, 171, 0.3);
+        }
+
+        .btn-hero-secondary {
+            background: transparent;
+            border: 2px solid var(--dark);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .btn-hero-secondary:hover {
+            background: var(--dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(57, 73, 171, 0.2);
+        }
+
+        .hero-credentials {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-credential {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .credential-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--contractors-primary), var(--contractors-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .credential-text {
+            color: var(--dark);
+        }
+
+        .credential-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .credential-subtitle {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .hero-image-section {
+            position: relative;
+        }
+
+        .hero-main-image {
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-image-overlay {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
             background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .overlay-title {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .overlay-text {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .hero-floating-card {
+            position: absolute;
+            top: 2rem;
+            right: -1rem;
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            max-width: 200px;
+            z-index: 3;
+        }
+
+        .floating-card-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--contractors-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .floating-card-title {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .floating-card-text {
+            color: #6c757d;
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        /* Enhanced Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 5rem 0;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(254, 193, 7, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(57, 73, 171, 0.05) 0%, transparent 50%);
+        }
+
+        .stats-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .stats-badge {
+            display: inline-block;
+            background: var(--contractors-primary);
+            color: var(--dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .stats-subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(254, 193, 7, 0.1);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--contractors-primary), var(--contractors-dark));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .stat-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--contractors-primary), var(--contractors-dark));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 2rem;
-            color: var(--contractors-primary);
-            font-size: 4rem;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-            animation: float 3s ease-in-out infinite;
+            margin: 0 auto 1.5rem;
+            color: var(--dark);
+            font-size: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        .stat-icon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid rgba(254, 193, 7, 0.3);
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.4s ease;
         }
 
-        .hero-tagline {
-            background: linear-gradient(135deg, #ffffff, #f8f9fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 2rem;
+        .stat-card:hover .stat-icon {
+            transform: scale(1.1);
+        }
+
+        .stat-card:hover .stat-icon::after {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--dark);
+            display: block;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-description {
+            font-size: 0.9rem;
+            color: #8a8a8a;
+            line-height: 1.4;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-main-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-credentials {
+                gap: 2rem;
+            }
+            
+            .hero-floating-card {
+                position: static;
+                margin-top: 2rem;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0 40px;
+            }
+            
+            .hero-main-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .hero-credentials {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .stats-title {
+                font-size: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-main-title {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Equipment Showcase */
@@ -444,48 +820,6 @@
             color: var(--dark);
         }
 
-        /* Stats Section */
-        .stats-section {
-            background: var(--contractors-primary);
-            padding: 4rem 0;
-            margin: 4rem 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            color: var(--dark);
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .equipment-grid {
-                grid-template-columns: 1fr;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .advantages-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero-logo {
-                width: 120px;
-                height: 120px;
-                font-size: 3rem;
-            }
-        }
-
         /* Enhanced Navbar */
         .navbar .nav-link:hover,
         .navbar .nav-link.active {
@@ -511,7 +845,6 @@
 </head>
 
 <body>
-
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -594,79 +927,148 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Hero Section Start -->
+    <!-- Professional Hero Section Start -->
     <div class="hero-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="hero-content text-white">
-                        <div class="hero-logo wow fadeInUp" data-wow-delay="0.1s">
-                            <i class="fas fa-hard-hat"></i>
+                    <div class="hero-content">
+                        <div class="hero-company-badge wow fadeInUp" data-wow-delay="0.1s">
+                            <i class="fas fa-award"></i>
+                            Sister Company of Bash Hauliers Ltd
                         </div>
-                        <h1 class="display-3 text-white mb-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <strong>Bash Contractors Ltd</strong>
+                        
+                        <h1 class="hero-main-title wow fadeInUp" data-wow-delay="0.3s">
+                            Bash Contractors Ltd
                         </h1>
-                        <div class="hero-tagline wow fadeInUp" data-wow-delay="0.5s">
-                            Powering Progress with Heavy Machinery Solutions
-                        </div>
-                        <p class="fs-5 text-white mb-4 wow fadeInUp" data-wow-delay="0.7s">
-                            Proudly Kenyan-owned heavy machinery hire company, sister to Bash Hauliers Ltd. 
-                            We provide reliable, efficient, and professional earth-moving equipment across Kenya.
+                        
+                        <h2 class="hero-subtitle wow fadeInUp" data-wow-delay="0.5s">
+                            Professional Heavy Machinery Hire Services
+                        </h2>
+                        
+                        <p class="hero-description wow fadeInUp" data-wow-delay="0.7s">
+                            Proudly Kenyan-owned heavy machinery hire company specializing in earth-moving equipment rental across Kenya. We provide reliable, efficient, and professional solutions for construction, infrastructure, and development projects with skilled operators and flexible terms.
                         </p>
-                        <div class="wow fadeInUp" data-wow-delay="0.9s">
-                            <a href="#equipment" class="btn-contractors me-3">
-                                <i class="fas fa-cogs me-2"></i>View Equipment
+                        
+                        <div class="hero-buttons wow fadeInUp" data-wow-delay="0.9s">
+                            <a href="#equipment" class="btn-hero-primary">
+                                <i class="fas fa-cogs"></i>
+                                View Equipment Fleet
                             </a>
-                            <a href="#contact" class="btn btn-outline-light rounded-pill py-3 px-4">
-                                <i class="fas fa-phone me-2"></i>Hire Now
+                            <a href="#contact" class="btn-hero-secondary">
+                                <i class="fas fa-phone"></i>
+                                Get Quote
                             </a>
+                        </div>
+                        
+                        <div class="hero-credentials wow fadeInUp" data-wow-delay="1.1s">
+                            <div class="hero-credential">
+                                <div class="credential-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div class="credential-text">
+                                    <div class="credential-title">47 Counties</div>
+                                    <div class="credential-subtitle">Nationwide Coverage</div>
+                                </div>
+                            </div>
+                            
+                            <div class="hero-credential">
+                                <div class="credential-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="credential-text">
+                                    <div class="credential-title">Licensed</div>
+                                    <div class="credential-subtitle">Certified Operators</div>
+                                </div>
+                            </div>
+                            
+                            <div class="hero-credential">
+                                <div class="credential-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="credential-text">
+                                    <div class="credential-title">24/7</div>
+                                    <div class="credential-subtitle">Support Available</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.5s">
-                    <div class="text-center">
-                        <img src="img/dozzer.jpg" class="img-fluid rounded-3 shadow-lg" alt="Bash Contractors Heavy Machinery" style="max-height: 500px;">
+                
+                <div class="col-lg-6">
+                    <div class="hero-image-section wow fadeInRight" data-wow-delay="0.5s">
+                        <img src="img/dozzer.jpg" class="hero-main-image" alt="Bash Contractors Heavy Machinery">
+                        
+                        <div class="hero-image-overlay">
+                            <div class="overlay-title">Modern Equipment Fleet</div>
+                            <p class="overlay-text">Industry-standard machinery maintained to the highest professional standards</p>
+                        </div>
+                        
+                        <div class="hero-floating-card wow fadeInUp" data-wow-delay="1.3s">
+                            <div class="floating-card-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="floating-card-title">15+ Machine Types</div>
+                            <p class="floating-card-text">Comprehensive fleet for all construction and earthmoving needs</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Hero Section End -->
+    <!-- Professional Hero Section End -->
 
-    <!-- Stats Section Start -->
+    <!-- Enhanced Stats Section Start -->
     <div class="stats-section">
-        <div class="container">
-            <div class="row g-4 text-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                        <span class="stat-number counter-value" data-toggle="counter-up">100</span>
-                        <span class="stat-number">%</span>
-                        <div class="stat-label">Kenyan Owned</div>
+        <div class="container stats-container">
+            <div class="stats-header wow fadeInUp" data-wow-delay="0.1s">
+                <div class="stats-badge">Our Impact</div>
+                <h2 class="stats-title">Driving Kenya's Progress</h2>
+                <p class="stats-subtitle">
+                    With modern equipment and skilled operators, we've become a trusted partner in Kenya's infrastructure development across multiple sectors.
+                </p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="stat-icon">
+                        <i class="fas fa-flag"></i>
                     </div>
+                    <div class="stat-number counter-value" data-toggle="counter-up">100</div>
+                    <div class="stat-label">% Kenyan Owned</div>
+                    <div class="stat-description">Proudly supporting local economy and employment</div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                        <span class="stat-number counter-value" data-toggle="counter-up">47</span>
-                        <div class="stat-label">Counties Served</div>
+                
+                <div class="stat-card wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
+                    <div class="stat-number counter-value" data-toggle="counter-up">47</div>
+                    <div class="stat-label">Counties Served</div>
+                    <div class="stat-description">Complete nationwide coverage from coast to highlands</div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                        <span class="stat-number counter-value" data-toggle="counter-up">15</span>
-                        <span class="stat-number">+</span>
-                        <div class="stat-label">Machine Types</div>
+                
+                <div class="stat-card wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="stat-icon">
+                        <i class="fas fa-tools"></i>
                     </div>
+                    <div class="stat-number counter-value" data-toggle="counter-up">15</div>
+                    <div class="stat-label">+ Machine Types</div>
+                    <div class="stat-description">Comprehensive fleet for all construction needs</div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                        <span class="stat-number">24/7</span>
-                        <div class="stat-label">Support</div>
+                
+                <div class="stat-card wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="stat-icon">
+                        <i class="fas fa-headset"></i>
                     </div>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                    <div class="stat-description">Round-the-clock assistance and emergency dispatch</div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Stats Section End -->
+    <!-- Enhanced Stats Section End -->
 
     <!-- About Section Start -->
     <div class="container-fluid py-5">
@@ -680,13 +1082,13 @@
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.3s">
                     <div class="row g-3">
                         <div class="col-6">
-                            <img src="img/dozer-action.jpg" class="img-fluid rounded shadow" alt="Dozer in Action">
+                            <img src="https://www.my-equipment.com/blog/wp-content/uploads/2019/12/D155AXi_8_action_1.551b11a564518.jpg" class="img-fluid rounded shadow" alt="Dozer in Action">
                         </div>
                         <div class="col-6">
-                            <img src="img/roller-work.jpg" class="img-fluid rounded shadow" alt="Roller at Work">
+                            <img src="https://www.equipmentjournal.com/wp-content/uploads/2023/05/Caterpillar-soil-compactor-scaled.jpg" class="img-fluid rounded shadow" alt="Roller at Work">
                         </div>
                         <div class="col-12">
-                            <img src="img/grader-road.jpg" class="img-fluid rounded shadow" alt="Grader Road Construction">
+                            <img src="https://img.constructionequipment.com/files/base/ebm/constructionequipment/image/2024/10/6720dc2f7698315ad038456a-cat140gcmotorgrader.png?auto=format,compress&fit=max&q=45&w=640&width=640" class="img-fluid rounded shadow" alt="Grader Road Construction">
                         </div>
                     </div>
                 </div>
@@ -760,7 +1162,7 @@
             <div class="equipment-grid">
                 <div class="equipment-item wow fadeInUp" data-wow-delay="0.1s">
                     <div class="equipment-image">
-                        <img src="img/smooth-roller.jpg" alt="Smooth Drum Roller">
+                        <img src="https://img.gxcontractor.com/files/base/ebm/gxc/image/2021/04/cat_compactor_CM20201211_7766d_836e6.6081f64e05242.png?auto=format,compress&fit=max&q=45&w=640&width=640" alt="Smooth Drum Roller">
                         <div class="equipment-overlay">
                             <i class="fas fa-road equipment-icon"></i>
                         </div>
@@ -778,7 +1180,7 @@
 
                 <div class="equipment-item wow fadeInUp" data-wow-delay="0.3s">
                     <div class="equipment-image">
-                        <img src="img/padfoot-roller.jpg" alt="Padfoot Roller">
+                        <img src="https://s7d2.scene7.com/is/image/Caterpillar/CM20240305-9837c-af4ca" alt="Padfoot Roller">
                         <div class="equipment-overlay">
                             <i class="fas fa-mountain equipment-icon"></i>
                         </div>
@@ -796,7 +1198,7 @@
 
                 <div class="equipment-item wow fadeInUp" data-wow-delay="0.5s">
                     <div class="equipment-image">
-                        <img src="img/bulldozer.jpg" alt="Bulldozer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/CatD9T.jpg" alt="Bulldozer">
                         <div class="equipment-overlay">
                             <i class="fas fa-tractor equipment-icon"></i>
                         </div>
@@ -814,7 +1216,7 @@
 
                 <div class="equipment-item wow fadeInUp" data-wow-delay="0.7s">
                     <div class="equipment-image">
-                        <img src="img/dumper-truck.jpg" alt="Dumper">
+                        <img src="https://www.shutterstock.com/image-photo/germany-spiekeroog-big-yellow-caterpillar-600nw-1167932725.jpg" alt="Dumper">
                         <div class="equipment-overlay">
                             <i class="fas fa-truck equipment-icon"></i>
                         </div>
@@ -832,7 +1234,7 @@
 
                 <div class="equipment-item wow fadeInUp" data-wow-delay="0.9s">
                     <div class="equipment-image">
-                        <img src="img/excavator.jpg" alt="Truck Shovel">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_SDSYRD-31ueimkTkWLEWCmiyi3hzYOwnA&s" alt="Truck Shovel">
                         <div class="equipment-overlay">
                             <i class="fas fa-tools equipment-icon"></i>
                         </div>
@@ -850,7 +1252,7 @@
 
                 <div class="equipment-item wow fadeInUp" data-wow-delay="1.1s">
                     <div class="equipment-image">
-                        <img src="img/motor-grader.jpg" alt="Motor Grader">
+                        <img src="https://www.agg-net.com/sites/default/files/styles/large_compact_teaser/public/images/news/cat_120_gc.jpg?h=73593356&itok=mxrxKWeY" alt="Motor Grader">
                         <div class="equipment-overlay">
                             <i class="fas fa-level-up-alt equipment-icon"></i>
                         </div>
@@ -1043,7 +1445,6 @@
                     <h4 class="mb-3">Nationwide Coverage</h4>
                     <p class="text-muted">We serve clients across all 47 counties in Kenya, from urban construction zones to remote infrastructure projects, ensuring reliable service wherever you need it.</p>
                 </div>
-
                 <div class="advantage-card wow fadeInUp" data-wow-delay="0.3s">
                     <div class="advantage-icon">
                         <i class="fas fa-wrench"></i>
@@ -1051,7 +1452,6 @@
                     <h4 class="mb-3">Modern, Reliable Equipment</h4>
                     <p class="text-muted">Our fleet consists of modern, regularly serviced machinery that's performance-tested to meet demanding worksite conditions and deliver consistent results.</p>
                 </div>
-
                 <div class="advantage-card wow fadeInUp" data-wow-delay="0.5s">
                     <div class="advantage-icon">
                         <i class="fas fa-user-tie"></i>
@@ -1059,7 +1459,6 @@
                     <h4 class="mb-3">Experienced Machine Operators</h4>
                     <p class="text-muted">Our team of skilled, licensed machine operators ensures each job is completed efficiently, safely, and to the highest professional standards.</p>
                 </div>
-
                 <div class="advantage-card wow fadeInUp" data-wow-delay="0.7s">
                     <div class="advantage-icon">
                         <i class="fas fa-handshake"></i>
@@ -1067,7 +1466,6 @@
                     <h4 class="mb-3">Flexible Hire Terms</h4>
                     <p class="text-muted">We offer both short-term and long-term hire options tailored to your project needs and budget, with competitive rates and transparent pricing.</p>
                 </div>
-
                 <div class="advantage-card wow fadeInUp" data-wow-delay="0.9s">
                     <div class="advantage-icon">
                         <i class="fas fa-shipping-fast"></i>
@@ -1075,7 +1473,6 @@
                     <h4 class="mb-3">Quick Mobilization</h4>
                     <p class="text-muted">Rapid deployment of machinery for urgent projects, with efficient logistics and transportation to get your project started without delays.</p>
                 </div>
-
                 <div class="advantage-card wow fadeInUp" data-wow-delay="1.1s">
                     <div class="advantage-icon">
                         <i class="fas fa-truck"></i>
@@ -1275,25 +1672,10 @@
         new WOW().init();
 
         // Counter animation
-        document.querySelectorAll('.counter-value').forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-toggle'));
-            const increment = target / 200;
-            let current = 0;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                counter.textContent = Math.floor(current);
-                
-                if (current >= target) {
-                    counter.textContent = target;
-                    clearInterval(timer);
-                }
-            }, 10);
-        });
+        
     </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
