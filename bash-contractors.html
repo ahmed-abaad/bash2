@@ -108,9 +108,12 @@
         /* Professional Hero Section */
         .hero-section {
             background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            padding: 100px 0 80px;
+            padding: 120px 0 100px;
             position: relative;
             overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
 
         .hero-section::before {
@@ -225,7 +228,7 @@
 
         .hero-credentials {
             display: flex;
-            gap: 3rem;
+            gap: 2.5rem;
             flex-wrap: wrap;
         }
 
@@ -263,8 +266,13 @@
             color: #6c757d;
         }
 
+        /* Improved Hero Image Section */
         .hero-image-section {
             position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .hero-main-image {
@@ -272,18 +280,21 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
             width: 100%;
             height: auto;
+            max-height: 500px;
+            object-fit: cover;
         }
 
         .hero-image-overlay {
             position: absolute;
-            bottom: 2rem;
-            left: 2rem;
-            right: 2rem;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 12px;
             padding: 1.5rem;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .overlay-title {
@@ -297,18 +308,20 @@
             color: #6c757d;
             font-size: 0.9rem;
             margin: 0;
+            line-height: 1.4;
         }
 
         .hero-floating-card {
             position: absolute;
-            top: 2rem;
+            top: 1.5rem;
             right: -1rem;
             background: white;
             border-radius: 12px;
             padding: 1.5rem;
             box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            max-width: 200px;
+            max-width: 220px;
             z-index: 3;
+            border: 1px solid rgba(254, 193, 7, 0.1);
         }
 
         .floating-card-icon {
@@ -327,14 +340,102 @@
         .floating-card-title {
             font-weight: 700;
             color: var(--dark);
-            font-size: 0.9rem;
+            font-size: 1rem;
             margin-bottom: 0.5rem;
         }
 
         .floating-card-text {
             color: #6c757d;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Quote Form Styles */
+        .quote-form-section {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(254, 193, 7, 0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .quote-form-title {
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .quote-form-subtitle {
+            color: #6c757d;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: var(--contractors-primary);
+            box-shadow: 0 0 0 0.2rem rgba(254, 193, 7, 0.25);
+            outline: none;
+        }
+
+        .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            background-color: white;
+        }
+
+        .form-select:focus {
+            border-color: var(--contractors-primary);
+            box-shadow: 0 0 0 0.2rem rgba(254, 193, 7, 0.25);
+            outline: none;
+        }
+
+        .btn-quote {
+            background: var(--contractors-primary);
+            border: none;
+            color: var(--dark);
+            font-weight: 700;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .btn-quote:hover {
+            background: var(--dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(57, 73, 171, 0.3);
         }
 
         /* Enhanced Stats Section */
@@ -494,7 +595,19 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-floating-card {
+                right: -0.5rem;
+                max-width: 200px;
+            }
+        }
+
         @media (max-width: 992px) {
+            .hero-section {
+                padding: 80px 0 60px;
+                min-height: auto;
+            }
+            
             .hero-main-title {
                 font-size: 2.8rem;
             }
@@ -507,6 +620,15 @@
                 position: static;
                 margin-top: 2rem;
                 max-width: 100%;
+                right: auto;
+            }
+            
+            .hero-image-overlay {
+                position: static;
+                margin-top: 1.5rem;
+                left: auto;
+                right: auto;
+                bottom: auto;
             }
         }
 
@@ -523,6 +645,11 @@
                 font-size: 1.2rem;
             }
             
+            .hero-description {
+                max-width: 100%;
+                font-size: 1rem;
+            }
+            
             .hero-buttons {
                 flex-direction: column;
                 align-items: stretch;
@@ -533,12 +660,31 @@
                 gap: 1.5rem;
             }
             
+            .credential-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+            
+            .credential-title {
+                font-size: 1rem;
+            }
+            
+            .credential-subtitle {
+                font-size: 0.85rem;
+            }
+            
             .stats-title {
                 font-size: 2rem;
             }
             
             .stat-number {
                 font-size: 2.5rem;
+            }
+            
+            .quote-form-section {
+                padding: 1.5rem;
+                margin-top: 2rem;
             }
         }
 
@@ -547,8 +693,27 @@
                 font-size: 1.8rem;
             }
             
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-company-badge {
+                font-size: 0.8rem;
+                padding: 0.6rem 1.2rem;
+            }
+            
             .stats-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .hero-credentials {
+                gap: 1rem;
+            }
+            
+            .credential-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
             }
         }
 
@@ -899,7 +1064,7 @@
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="service.html" class="dropdown-item">Services</a>
                                 <a href="fleet.html" class="dropdown-item">Fleet</a>
-                                <a href="coverage.html" class="dropdown-item">Coverage Area</a>
+                                <a href="coverage.html" class="dropdown-item">Coverage</a>
                             </div>
                         </div>
                 
@@ -909,9 +1074,7 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle text-primary active" data-bs-toggle="dropdown">Our Sister Company</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="bash-contractors.html" class="dropdown-item active">Overview</a>
-                                <a href="#equipment" class="dropdown-item">Equipment Fleet</a>
-                                <a href="#contact" class="dropdown-item">Request a Machine</a>
+                                <a href="bash-contractors.html" class="dropdown-item active">Bash Contractors Limited</a>
                             </div>
                         </div>
                 
@@ -919,7 +1082,7 @@
                     </div>
                 
                     <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-                        <a href="#contact" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Request Machine</a>
+                        <a href="#quote-form" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Get Quote</a>
                     </div>
                 </div>
             </nav>
@@ -943,21 +1106,21 @@
                         </h1>
                         
                         <h2 class="hero-subtitle wow fadeInUp" data-wow-delay="0.5s">
-                            Professional Heavy Machinery Hire Services
+                            Heavy Machinery Hire Specialists
                         </h2>
                         
                         <p class="hero-description wow fadeInUp" data-wow-delay="0.7s">
-                            Proudly Kenyan-owned heavy machinery hire company specializing in earth-moving equipment rental across Kenya. We provide reliable, efficient, and professional solutions for construction, infrastructure, and development projects with skilled operators and flexible terms.
+                            Kenya's trusted partner for earth-moving equipment rental. We deliver reliable machinery solutions with skilled operators for construction, infrastructure, and development projects nationwide.
                         </p>
                         
                         <div class="hero-buttons wow fadeInUp" data-wow-delay="0.9s">
                             <a href="#equipment" class="btn-hero-primary">
                                 <i class="fas fa-cogs"></i>
-                                View Equipment Fleet
+                                View Our Fleet
                             </a>
-                            <a href="#contact" class="btn-hero-secondary">
-                                <i class="fas fa-phone"></i>
-                                Get Quote
+                            <a href="#quote-form" class="btn-hero-secondary">
+                                <i class="fas fa-calculator"></i>
+                                Request Quote
                             </a>
                         </div>
                         
@@ -968,7 +1131,7 @@
                                 </div>
                                 <div class="credential-text">
                                     <div class="credential-title">47 Counties</div>
-                                    <div class="credential-subtitle">Nationwide Coverage</div>
+                                    <div class="credential-subtitle">Complete Coverage</div>
                                 </div>
                             </div>
                             
@@ -988,20 +1151,20 @@
                                 </div>
                                 <div class="credential-text">
                                     <div class="credential-title">24/7</div>
-                                    <div class="credential-subtitle">Support Available</div>
+                                    <div class="credential-subtitle">Emergency Support</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-lg-6">
+                <div class="col-lg-6 pt-4">
                     <div class="hero-image-section wow fadeInRight" data-wow-delay="0.5s">
                         <img src="img/dozzer.jpg" class="hero-main-image" alt="Bash Contractors Heavy Machinery">
                         
                         <div class="hero-image-overlay">
-                            <div class="overlay-title">Modern Equipment Fleet</div>
-                            <p class="overlay-text">Industry-standard machinery maintained to the highest professional standards</p>
+                            <div class="overlay-title">Premium Equipment Fleet</div>
+                            <p class="overlay-text">Industry-leading machinery maintained to the highest standards for optimal performance</p>
                         </div>
                         
                         <div class="hero-floating-card wow fadeInUp" data-wow-delay="1.3s">
@@ -1009,7 +1172,7 @@
                                 <i class="fas fa-tools"></i>
                             </div>
                             <div class="floating-card-title">15+ Machine Types</div>
-                            <p class="floating-card-text">Comprehensive fleet for all construction and earthmoving needs</p>
+                            <p class="floating-card-text">Complete range of earthmoving equipment for every project requirement</p>
                         </div>
                     </div>
                 </div>
@@ -1056,15 +1219,7 @@
                     <div class="stat-label">+ Machine Types</div>
                     <div class="stat-description">Comprehensive fleet for all construction needs</div>
                 </div>
-                
-                <div class="stat-card wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="stat-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Support Available</div>
-                    <div class="stat-description">Round-the-clock assistance and emergency dispatch</div>
-                </div>
+            
             </div>
         </div>
     </div>
@@ -1312,7 +1467,7 @@
 
                 <div class="service-card wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-icon">
-                        <i class="fas fa-user-hard-hat"></i>
+                        <i class="fas fa-user-cog"></i>
                     </div>
                     <h4 class="mb-3">Machine Hire with Operators</h4>
                     <p class="text-muted mb-3">Fully equipped machines with skilled, licensed operators for safe and efficient operations on your project site.</p>
@@ -1486,8 +1641,8 @@
     <!-- Why Choose Us Section End -->
 
     <!-- CTA Section Start -->
-    <div class="container-fluid py-5" id="contact">
-        <div class="container py-5">
+    <div class="container-fluid" id="contact">
+        <div class="container">
             <div class="cta-section wow fadeInUp" data-wow-delay="0.1s">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
@@ -1501,8 +1656,8 @@
                         <a href="mailto:info@bashhauliers.co.ke" class="btn-contractors">
                             <i class="fas fa-envelope me-2"></i>Email Us
                         </a>
-                        <a href="contact.html" class="btn-contractors">
-                            <i class="fas fa-cogs me-2"></i>Request Equipment
+                        <a href="#quote-form" class="btn-contractors">
+                            <i class="fas fa-calculator me-2"></i>Get Quote
                         </a>
                     </div>
                 </div>
@@ -1511,16 +1666,116 @@
     </div>
     <!-- CTA Section End -->
 
+    <!-- Quote Form Section Start -->
+    <div class="container-fluid py-5 bg-light" id="quote-form">
+        <div class="container py-5">
+            <div class="quote-form-section wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="quote-form-title">Request Equipment Quote</h3>
+                <p class="quote-form-subtitle">Get a customized quote for your heavy machinery needs. Our team will respond within 24 hours.</p>
+                
+                <form id="quoteForm" action="#" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" name="name" required placeholder="Enter your full name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-control" name="company" placeholder="Enter company name (optional)">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" name="phone" required placeholder="+254 XXX XXX XXX">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" name="email" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Equipment Type *</label>
+                                <select class="form-select" name="equipment" required>
+                                    <option value="">Select Equipment Type</option>
+                                    <option value="bulldozer">Bulldozer</option>
+                                    <option value="smooth-roller">Smooth Drum Roller</option>
+                                    <option value="padfoot-roller">Padfoot Roller</option>
+                                    <option value="motor-grader">Motor Grader</option>
+                                    <option value="dumper">Dumper</option>
+                                    <option value="truck-shovel">Truck Shovel</option>
+                                    <option value="multiple">Multiple Equipment Types</option>
+                                    <option value="other">Other (specify in message)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Project Location *</label>
+                                <input type="text" class="form-control" name="location" required placeholder="County/City where equipment is needed">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Rental Duration *</label>
+                                <select class="form-select" name="duration" required>
+                                    <option value="">Select Duration</option>
+                                    <option value="daily">Daily (1-7 days)</option>
+                                    <option value="weekly">Weekly (1-4 weeks)</option>
+                                    <option value="monthly">Monthly (1-6 months)</option>
+                                    <option value="long-term">Long-term (6+ months)</option>
+                                    <option value="emergency">Emergency/Urgent</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Start Date</label>
+                                <input type="date" class="form-control" name="start_date" min="<?php echo date('Y-m-d'); ?>">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Project Details & Requirements</label>
+                        <textarea class="form-control" name="message" rows="4" placeholder="Please describe your project, specific requirements, site conditions, and any additional services needed..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-quote">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        Submit Quote Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Quote Form Section End -->
+
     <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container-fluid footer wow fadeIn" data-wow-delay="0.2s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <div class="mb-4">
-                            <img src="img/bashlogo-white.png" alt="Bash Contractors Logo" style="max-height: 80px;">
+                            <img src="img/bashlogo-white.png" alt="Bash Hauliers Logo" style="max-height: 80px;">
                         </div>
-                        <p class="text-white mb-3">Proudly Kenyan-owned heavy machinery hire company, powering progress across Kenya since our establishment.</p>
+                        <p class="text-white mb-3">Your trusted partner in transport and logistics across East and Central Africa since 2002.</p>
                         <h4 class="text-white mb-4">Contact Info</h4>
                         <a class="text-white mb-2" href="https://g.co/kgs/9BRL3cs"><i class="fa fa-map-marker-alt me-2"></i>P.O. Box 83658, Mombasa, Kenya</a>
                         <a class="text-white mb-2" href="mailto:info@bashhauliers.co.ke"><i class="fas fa-envelope me-2"></i>info@bashhauliers.co.ke</a>
@@ -1535,35 +1790,34 @@
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
-                        <h4 class="text-white mb-4">Our Equipment</h4>
-                        <a class="text-white" href="#equipment"><i class="fas fa-angle-right me-2"></i>Smooth Drum Rollers</a>
-                        <a class="text-white" href="#equipment"><i class="fas fa-angle-right me-2"></i>Padfoot Rollers</a>
-                        <a class="text-white" href="#equipment"><i class="fas fa-angle-right me-2"></i>Bulldozers</a>
-                        <a class="text-white" href="#equipment"><i class="fas fa-angle-right me-2"></i>Dumpers</a>
-                        <a class="text-white" href="#equipment"><i class="fas fa-angle-right me-2"></i>Motor Graders</a>
-                        <a class="text-white" href="#equipment"><i class="fas fa-angle-right me-2"></i>Truck Shovels</a>
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Coverage Area</a>
+                        <a class="text-white" href="#contact"><i class="fas fa-angle-right me-2"></i>Contact Us</a>
+                        <a class="text-white" href="#bash-contractors"><i class="fas fa-angle-right me-2"></i>Bash Contractors</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="text-white mb-4">Our Services</h4>
-                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Road Construction Support</a>
-                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Earthworks & Site Preparation</a>
-                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Machine Hire with Operators</a>
-                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Bulk Material Handling</a>
-                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Compaction Services</a>
-                        <a class="text-white" href="#contact"><i class="fas fa-angle-right me-2"></i>Request Equipment</a>
+                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Dry Container Transit</a>
+                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Bulk Cargo Tippers</a>
+                        <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Local Shunting Operations</a>
+                        <a class="text-white" href="#bash-contractors"><i class="fas fa-angle-right me-2"></i>Heavy Machinery Hire</a>
+                        <a class="text-white" href="#quote"><i class="fas fa-angle-right me-2"></i>Request Quote</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
-                        <h4 class="text-white mb-4">Industries We Serve</h4>
-                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>Road & Highway Construction</a>
-                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>Real Estate Development</a>
-                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>Government Projects</a>
-                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>County Infrastructure</a>
-                        <a class="text-white" href="index.html"><i class="fas fa-angle-right me-2"></i>Bash Hauliers Ltd</a>
-                        <a class="text-white" href="contact.html"><i class="fas fa-angle-right me-2"></i>Contact Us</a>
+                        <h4 class="text-white mb-4">Coverage Areas</h4>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Kenya - All Destinations</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Uganda - All Destinations</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Rwanda - All Destinations</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Tanzania - All Destinations</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>DRC - Butembo, Beni, Bunia</a>
+                        <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>South Sudan - Juba</a>
                     </div>
                 </div>
             </div>
@@ -1578,16 +1832,17 @@
                 <div class="col-md-6 text-center text-md-start mb-md-0">
                     <span class="text-white">
                         <a href="#" class="border-bottom text-primary">
-                            <i class="fas fa-copyright text-light me-1"></i>2025 Bash Contractors Ltd
+                            <i class="fas fa-copyright text-light"></i>
+                            <span id="currentYear"></span> Bash Hauliers Ltd
                         </a>, All rights reserved.
                     </span>
                     <br>
                     <span class="text-white" style="font-size: 0.8rem;">
-                        Sister Company of <a href="index.html" class="text-primary">Bash Hauliers Ltd</a>
+                        Designed by <a href="https://ahmed-abaad.github.io/Portfolio/" target="_blank" class="text-primary">Ahmed Abaad</a>
                     </span>
                 </div>
                 <div class="col-md-6 text-center text-md-end text-white">
-                    <span>Proudly Kenyan-Owned • Powering Progress with Heavy Machinery</span>
+                    <span>Member of Kenya Transport Association & Kenya Shippers Council</span>
                 </div>
             </div>
         </div>
@@ -1622,6 +1877,23 @@
                     });
                 }
             });
+        });
+
+        // Quote Form Submission
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            Swal.fire({
+                title: 'Quote Request Submitted!',
+                text: 'Thank you for your interest. Our team will contact you within 24 hours with a detailed quote.',
+                icon: 'success',
+                confirmButtonText: 'Great!',
+                confirmButtonColor: '#fec107'
+            });
+            
+            // Reset form
+            this.reset();
         });
 
         // Equipment hover effects
@@ -1671,8 +1943,16 @@
         // Initialize WOW.js for animations
         new WOW().init();
 
-        // Counter animation
-        
+        // Form validation
+        document.querySelectorAll('.form-control, .form-select').forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.style.borderColor = '#dc3545';
+                } else {
+                    this.style.borderColor = '#e9ecef';
+                }
+            });
+        });
     </script>
 
     <!-- Template Javascript -->
