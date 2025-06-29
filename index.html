@@ -62,12 +62,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap-custom.css" rel="stylesheet">
-
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- SweetAlert2 CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
     <!-- Custom Styles for Enhanced Features -->
     <style>
@@ -125,25 +121,6 @@
             border-color: var(--dark-dark);
         }
 
-        /* Contractors Carousel Slide Styles */
-        .btn-contractors-carousel {
-            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
-            border: none;
-            color: white;
-            font-weight: 600;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-contractors-carousel:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
-            color: white;
-        }
-
         /* Sister Company Highlight in About Section */
         .sister-company-highlight {
             background: linear-gradient(135deg, var(--contractors-light) 0%, #ffffff 100%);
@@ -173,234 +150,41 @@
             flex-shrink: 0;
         }
 
-        /* Sister Company Section Styles */
-        .bash-contractors-section {
+        /* Simplified Sister Company Section */
+        .bash-contractors-teaser {
             background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            color: white;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .bash-contractors-section::before {
+        .bash-contractors-teaser::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="construction" patternUnits="userSpaceOnUse" width="30" height="30"><rect width="30" height="30" fill="none"/><path d="M0 30L30 0M-7.5 7.5L7.5 -7.5M22.5 37.5L37.5 22.5" stroke="rgba(255,255,255,0.08)" stroke-width="2"/><circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23construction)"/></svg>') repeat;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="30" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="70" r="1" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
             opacity: 0.3;
+            pointer-events: none;
         }
 
-        .contractors-hero-card {
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 25px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            transition: all 0.4s ease;
-            position: relative;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .contractors-hero-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.2);
-        }
-
-        .contractors-logo {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            color: white;
-            font-size: 3rem;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
-        }
-
-        .contractors-hero-card:hover .contractors-logo {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
-        }
-
-        .contractors-tagline {
-            background: linear-gradient(135deg, var(--contractors-light), var(--contractors-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-            font-size: 1.3rem;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .equipment-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .equipment-card {
-            background: linear-gradient(135deg, var(--contractors-light) 0%, #ffffff 100%);
-            border-radius: 15px;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .equipment-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .equipment-card:hover::before {
-            left: 100%;
-        }
-
-        .equipment-card:hover {
-            border-color: var(--contractors-primary);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
-        }
-
-        .equipment-icon {
+        .contractors-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
+            margin: 0 auto 1.5rem;
             color: white;
             font-size: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .equipment-card:hover .equipment-icon {
-            transform: scale(1.15);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
-        }
-
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .industry-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: all 0.4s ease;
-            border-left: 5px solid var(--contractors-primary);
-            backdrop-filter: blur(5px);
-        }
-
-        .industry-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            border-left-width: 8px;
-        }
-
-        .industry-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--contractors-secondary) 0%, #1e3a21 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: white;
-            font-size: 1.8rem;
-        }
-
-        .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .advantage-item {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            padding: 2rem;
-            display: flex;
-            align-items: center;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-
-        .advantage-item:hover {
-            background: rgba(255, 255, 255, 1);
-            transform: translateX(10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .advantage-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--contractors-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            margin-right: 1.5rem;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
-
-        .btn-contractors {
-            background: linear-gradient(135deg, var(--contractors-primary) 0%, var(--contractors-dark) 100%);
-            border: none;
-            color: white;
-            font-weight: 600;
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            transition: all 0.4s ease;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-contractors::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .btn-contractors:hover::before {
-            left: 100%;
-        }
-
-        .btn-contractors:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
-            color: white;
+            backdrop-filter: blur(10px);
         }
 
         .btn-contractors-outline {
@@ -422,43 +206,6 @@
             box-shadow: 0 8px 20px rgba(255,255,255,0.3);
         }
 
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--contractors-primary);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .cta-section {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 25px;
-            padding: 3rem;
-            text-align: center;
-            margin-top: 4rem;
-            backdrop-filter: blur(10px);
-        }
-        
         /* Enhanced Fleet Statistics */
         .fleet-stats {
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
@@ -486,39 +233,99 @@
             font-weight: 600;
             margin-top: 0.5rem;
         }
-        
 
-        /* Enhanced Regional Map */
-        .regional-map {
-            background: linear-gradient(135deg, var(--dark-light) 0%, #f8f9fa 100%);
+        /* Why Choose Us Section */
+        .why-choose-card {
+            background: white;
             border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary);
         }
-        
-        .regional-map .bg-primary {
-            background-color: var(--primary) !important;
+
+        .why-choose-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
-        
-        .regional-map .bg-success {
-            background-color: var(--dark) !important;
-        }
-        
-        /* Enhanced Tracking Section */
-        .tracking-section {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-dark) 100%);
-            border-radius: 15px;
-            padding: 2rem;
-            color: white;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .tracking-section .btn-light:hover {
-            background-color: var(--primary);
+
+        .why-choose-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
             color: var(--dark);
-            border-color: var(--primary);
+            font-size: 2rem;
+            transition: all 0.3s ease;
         }
-        
+
+        .why-choose-card:hover .why-choose-icon {
+            transform: scale(1.1);
+        }
+
+        /* Technology Section */
+        .tech-feature {
+            background: var(--dark-light);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .tech-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .tech-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        /* Certifications Section */
+        .certification-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+
+        .certification-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .cert-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+
         /*** Service Start ***/
         .service-item {
             position: relative;
@@ -538,7 +345,7 @@
             overflow: hidden;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
-            flex-shrink: 0; /* Prevent image from shrinking */
+            flex-shrink: 0;
         }
 
         .service-item .service-img img {
@@ -552,7 +359,7 @@
             position: relative;
             padding: 1.5rem;
             background: white;
-            flex-grow: 1; /* Make content area grow to fill space */
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
@@ -635,14 +442,12 @@
             border-color: var(--primary-light) !important;
         }
 
-        /* Fix for check icons in list items */
         .service-item:hover .service-content .fa-check {
             color: white !important;
         }
 
-        /* Ensure content stays properly aligned */
         .service-item .service-content .list-unstyled {
-            margin-bottom: auto; /* Push button to bottom */
+            margin-bottom: auto;
         }
         /*** Service End ***/
 
@@ -662,14 +467,14 @@
         .client-logo-track {
             display: flex;
             align-items: center;
-            gap: 80px; /* Increased gap */
+            gap: 80px;
             width: max-content;
             animation: scroll 25s linear infinite;
         }
 
         .client-logo-item {
             flex-shrink: 0;
-            height: 70px; /* Increased size */
+            height: 70px;
             display: flex;
             align-items: center;
             transition: all 0.3s ease;
@@ -678,7 +483,7 @@
         .client-logo-item img {
             height: 100%;
             width: auto;
-            max-width: 180px; /* Limit maximum width */
+            max-width: 180px;
             object-fit: contain;
             opacity: 0.7;
             transition: all 0.3s ease;
@@ -753,17 +558,6 @@
             color: var(--primary) !important;
         }
         
-        /* Enhanced Accordion */
-        .accordion-button:not(.collapsed) {
-            background-color: var(--primary-light);
-            color: var(--dark) !important;
-        }
-        
-        .accordion-button:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 0.25rem rgba(254, 193, 7, 0.25);
-        }
-        
         /* Enhanced Footer */
         .footer {
             background-color: var(--dark);
@@ -790,31 +584,6 @@
             background-color: var(--dark);
             color: white;
         }
-        
-        /* Enhanced Form Elements */
-        .form-control:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 0.25rem rgba(254, 193, 7, 0.25);
-        }
-
-        /* Responsive adjustments for sister company section */
-        @media (max-width: 768px) {
-            .equipment-showcase {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .industries-grid {
-                grid-template-columns: 1fr;
-            }
-            .advantages-grid {
-                grid-template-columns: 1fr;
-            }
-            .contractors-hero-card {
-                padding: 2rem;
-            }
-            .sister-company-highlight {
-                padding: 1rem;
-            }
-        }
 
         .carousel-subheading {
             color: #FFFFFF;
@@ -826,7 +595,6 @@
 </head>
 
 <body>
-
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -899,7 +667,7 @@
                     </div>
                 
                     <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-                        <a href="contact.html#quote" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Get Quote</a>
+                        <a href="contact.html" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Get Quote</a>
                     </div>
                 </div> 
             </nav>
@@ -917,19 +685,19 @@
                 <div class="carousel-caption-inner text-start p-3">
                     <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.3s">Your Trusted Partner in Transport & Logistics</h1>
                     <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s">Over 20 years of excellence in East African transport solutions with 300+ modern trucks serving 6 countries.</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated" href="#quote">Request Quote</a>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated" href="contact.html">Request Quote</a>
                     <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated" href="#fleetstats">Explore More</a>
                 </div>
             </div>
         </div>
         <div class="header-carousel-item mx-auto">
             <div class="header-carousel-item-img-2">
-                <img src="img/bg.jpg" class="img-fluid carousel-img w-100" alt="Bash Contractors Earth Moving Equipment">
+                <img src="img/bg.jpg" class="img-fluid carousel-img w-100" alt="Bash Hauliers Fleet">
             </div>
             <div class="carousel-caption">
                 <div class="carousel-caption-inner text-center p-3">
-                    <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated">200+ Dry Container Transit Trucks</h1>
-                    <p class="mb-5 fs-5 fadeInUp animate__animated">State-of-the-art fleet dedicated to secure and timely dry container transportation across East Africa.</p>
+                    <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated">300+ Modern Trucks Fleet</h1>
+                    <p class="mb-5 fs-5 fadeInUp animate__animated">State-of-the-art fleet dedicated to secure and timely transportation across East Africa.</p>
                     <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#services">Our Services</a>
                     <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="tel:+254723339000">Call Now</a>
                 </div>
@@ -944,30 +712,7 @@
                     <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated">Seamless Port-to-Destination Solutions</h1>
                     <p class="mb-5 fs-5 fadeInUp animate__animated">Connecting Mombasa Port to all major destinations across Kenya, Uganda, Rwanda, Tanzania, DRC, and South Sudan.</p>
                     <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" href="#coverage">View Coverage</a>
-                    <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="#contact">Talk to Our Team</a>
-                </div>
-            </div>
-        </div>
-        <!-- NEW: Bash Contractors Carousel Slide -->
-        <div class="header-carousel-item">
-            <div class="header-carousel-item-img-4">
-                <img src="img/grader2.jpg" class="img-fluid carousel-img w-100" alt="Bash Contractors Heavy Machinery" style="filter: brightness(0.7);">
-            </div>
-            <div class="carousel-caption">
-                <div class="carousel-caption-inner text-start p-3">
-                    <h1 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated">
-                        <span style="color: #fec107;">Bash Contractors Ltd</span><br>
-                        <h2 class="carousel-subheading">Powering Progress with Heavy Machinery</h2>
-                    </h1>
-                    <p class="mb-5 fs-5 fadeInUp animate__animated">Our sister company provides reliable heavy machinery hire across Kenya. From rollers to graders, we have the equipment and expertise to transform terrain into progress.</p>
-                    <div class="fadeInUp animate__animated">
-                        <a class="btn-contractors-carousel me-4 mb-4" href="#bash-contractors">
-                            <i class="fas fa-hard-hat me-2"></i>Explore Equipment
-                        </a>
-                        <a class="btn btn-outline-light rounded-pill py-3 px-5 mb-4" href="contact.html">
-                            <i class="fas fa-phone me-2"></i>Hire Machinery
-                        </a>
-                    </div>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="contact.html">Talk to Our Team</a>
                 </div>
             </div>
         </div>
@@ -1030,7 +775,7 @@
                 <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="about-img">
                         <img src="img/actros.jpeg" class="img-fluid w-100 rounded-top bg-white" alt="Bash Hauliers Mercedes Actros Truck">
-                        <img src="img/dozzer.jpg" class="img-fluid w-100 rounded-bottom" alt="Bash Contractors Grader Equipment">
+                        <img src="img/dozzer.jpg" class="img-fluid w-100 rounded-bottom" alt="Bash Contractors Equipment">
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
@@ -1046,36 +791,14 @@
                             </div>
                             <div>
                                 <h6 class="mb-1" style="color: var(--contractors-primary);">Our Sister Company - Bash Contractors Ltd</h6>
-                                <p class="mb-0 text-muted">Expanding our commitment to Kenya's infrastructure development, Bash Contractors Ltd provides reliable heavy machinery hire services across all 47 counties. From road construction to site preparation, we power progress with professional equipment solutions.</p>
+                                <p class="mb-0 text-muted">Expanding our services beyond transport, Bash Contractors Ltd provides heavy machinery hire across Kenya. From road construction to site preparation, we support infrastructure development with professional equipment solutions.</p>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Vision & Mission -->
-                    <div class="mb-4">
-                        <h5 class="text-primary mb-3">Our Vision & Mission</h5>
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <p class="text-dark mb-2"><i class="fas fa-eye text-primary me-2"></i><strong>Vision:</strong> To be the preferred and most reliable logistics partner in East and Central Africa.</p>
-                                <p class="text-dark"><i class="fas fa-bullseye text-primary me-2"></i><strong>Mission:</strong> To deliver efficient, secure, and timely transportation solutions leveraging our modern fleet and dedicated team.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row g-4 justify-content-between mb-4">
-                        <div class="col-lg-6 col-xl-5">
-                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> 24/7 Real-time Tracking</p>
-                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Guaranteed On-time Delivery</p>
-                        </div>
-                        <div class="col-lg-6 col-xl-7">
-                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Modern Fleet & Equipment</p>
-                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Comprehensive Coverage</p>
                         </div>
                     </div>
                     
                     <div class="row g-4 justify-content-between">
                         <div class="col-xl-5">
-                            <a href="#services" class="btn btn-primary rounded-pill py-3 px-5">Discover Our Services</a>
+                            <a href="about.html" class="btn btn-primary rounded-pill py-3 px-5">Discover More</a>
                         </div>
                         <div class="col-xl-7">
                             <div class="about-customer d-flex position-relative">
@@ -1122,7 +845,7 @@
                                 <li><i class="fas fa-check text-primary me-2"></i>24/7 monitoring</li>
                                 <li><i class="fas fa-check text-primary me-2"></i>Insurance coverage</li>
                             </ul>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#quote">Get Quote</a>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="contact.html">Get Quote</a>
                         </div>
                     </div>
                 </div>
@@ -1143,7 +866,7 @@
                                 <li><i class="fas fa-check text-primary me-2"></i>Experienced operators</li>
                                 <li><i class="fas fa-check text-primary me-2"></i>Flexible scheduling</li>
                             </ul>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#quote">Get Quote</a>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="contact.html">Get Quote</a>
                         </div>
                     </div>
                 </div>
@@ -1164,7 +887,7 @@
                                 <li><i class="fas fa-check text-primary me-2"></i>Secure handling</li>
                                 <li><i class="fas fa-check text-primary me-2"></i>Port coordination</li>
                             </ul>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#quote">Get Quote</a>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="contact.html">Get Quote</a>
                         </div>
                     </div>
                 </div>
@@ -1173,221 +896,112 @@
     </div>
     <!-- Services End -->
 
-    <!-- Bash Contractors Section Start -->
-    <div class="container-fluid bash-contractors-section py-5" id="bash-contractors">
+    <!-- Why Choose Us Start -->
+    <div class="container-fluid py-5 bg-light">
         <div class="container py-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 1000px;">
-                <h4 class="text-white mb-3">Our Sister Company</h4>
-                <h1 class="display-3 text-white mb-4">Bash Contractors Ltd</h1>
-                <div class="contractors-tagline">Powering Progress with Heavy Machinery Solutions</div>
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Why Choose Bash Hauliers</h4>
+                <h1 class="display-4">Your Trusted Logistics Partner</h1>
+                <p>Over two decades of excellence in transport and logistics, serving East and Central Africa with unmatched reliability and professionalism.</p>
             </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="contractors-hero-card wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="contractors-logo">
-                            <i class="fas fa-hard-hat"></i>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-clock"></i>
                         </div>
-                        
-                        <div class="text-center mb-4">
-                            <h2 class="mb-3" style="color: var(--contractors-primary);">Proudly Kenyan-Owned Heavy Machinery Solutions</h2>
-                            <p class="fs-5 text-muted">Bash Contractors Ltd is a sister company to Bash Hauliers Ltd, established to meet the growing demand for reliable, efficient, and professional heavy machinery hire services across Kenya. With a reputation rooted in trust and excellence, we provide high-performance equipment to support Kenya's construction, infrastructure, and development sectors.</p>
+                        <h4 class="mb-3">On-Time Delivery</h4>
+                        <p class="text-muted">We guarantee timely delivery with our efficient logistics network and experienced drivers. Your cargo arrives when promised, every time.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-
-                        <!-- Equipment Showcase -->
-                        <div class="equipment-showcase">
-                            <div class="equipment-card">
-                                <div class="equipment-icon">
-                                    <i class="fas fa-road"></i>
-                                </div>
-                                <h5 class="mb-2">Rollers</h5>
-                                <p class="text-muted mb-0">Smooth Drum & Padfoot</p>
-                            </div>
-                            
-                            <div class="equipment-card">
-                                <div class="equipment-icon">
-                                    <i class="fas fa-tractor"></i>
-                                </div>
-                                <h5 class="mb-2">Dozers</h5>
-                                <p class="text-muted mb-0">Heavy-duty bulldozers</p>
-                            </div>
-                            
-                            <div class="equipment-card">
-                                <div class="equipment-icon">
-                                    <i class="fas fa-truck"></i>
-                                </div>
-                                <h5 class="mb-2">Dumpers</h5>
-                                <p class="text-muted mb-0">High-capacity dumpers</p>
-                            </div>
-                            
-                            <div class="equipment-card">
-                                <div class="equipment-icon">
-                                    <i class="fas fa-tools"></i>
-                                </div>
-                                <h5 class="mb-2">Truck Shovels</h5>
-                                <p class="text-muted mb-0">Excavation specialists</p>
-                            </div>
-                            
-                            <div class="equipment-card">
-                                <div class="equipment-icon">
-                                    <i class="fas fa-level-up-alt"></i>
-                                </div>
-                                <h5 class="mb-2">Motor Graders</h5>
-                                <p class="text-muted mb-0">Precision grading</p>
-                            </div>
-                            
-                            <div class="equipment-card">
-                                <div class="equipment-icon">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <h5 class="mb-2">Military Rollers</h5>
-                                <p class="text-muted mb-0">Heavy-duty compaction</p>
-                            </div>
-                            
-                            <div class="equipment-card">
-                                <div class="equipment-icon">
-                                    <i class="fas fa-walking"></i>
-                                </div>
-                                <h5 class="mb-2">Pedestrian Rollers</h5>
-                                <p class="text-muted mb-0">Compact operations</p>
-                            </div>
+                        <h4 class="mb-3">Comprehensive Insurance</h4>
+                        <p class="text-muted">Full insurance coverage for all shipments, giving you peace of mind. We protect your cargo from pickup to final destination.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-satellite-dish"></i>
                         </div>
-
-                        <!-- Industries We Serve -->
-                        <div class="text-center mb-4">
-                            <h3 style="color: var(--contractors-primary);">Industries We Serve</h3>
+                        <h4 class="mb-3">Real-Time Tracking</h4>
+                        <p class="text-muted">Advanced GPS tracking system allows us to monitor your shipment 24/7. Know exactly where your cargo is at all times.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-users"></i>
                         </div>
-                        
-                        <div class="industries-grid">
-                            <div class="industry-card">
-                                <div class="industry-icon">
-                                    <i class="fas fa-road"></i>
-                                </div>
-                                <h5 class="mb-3">Road & Highway Construction</h5>
-                                <p class="text-muted mb-0">Supporting major infrastructure projects with reliable machinery for road construction, highway development, and transportation network expansion across Kenya.</p>
-                            </div>
-                            
-                            <div class="industry-card">
-                                <div class="industry-icon">
-                                    <i class="fas fa-building"></i>
-                                </div>
-                                <h5 class="mb-3">Real Estate & Commercial Developments</h5>
-                                <p class="text-muted mb-0">Supporting residential and commercial property development with comprehensive machinery solutions for site preparation and construction.</p>
-                            </div>
-                            
-                            <div class="industry-card">
-                                <div class="industry-icon">
-                                    <i class="fas fa-landmark"></i>
-                                </div>
-                                <h5 class="mb-3">Municipal and Government Projects</h5>
-                                <p class="text-muted mb-0">Partnering with government agencies and municipalities on public infrastructure projects, urban development, and community construction initiatives.</p>
-                            </div>
+                        <h4 class="mb-3">Expert Team</h4>
+                        <p class="text-muted">Highly trained and experienced drivers and logistics professionals ensure safe and efficient handling of your cargo.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-map-marked-alt"></i>
                         </div>
-
-                        <!-- Why Choose Bash Contractors -->
-                        <div class="text-center mb-4">
-                            <h3 style="color: var(--contractors-primary);">Why Choose Bash Contractors?</h3>
+                        <h4 class="mb-3">Regional Coverage</h4>
+                        <p class="text-muted">Extensive network covering 6 countries in East and Central Africa with local partnerships for seamless operations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1.1s">
+                    <div class="why-choose-card">
+                        <div class="why-choose-icon">
+                            <i class="fas fa-headset"></i>
                         </div>
-                        
-                        <div class="advantages-grid">
-                            <div class="advantage-item">
-                                <div class="advantage-icon">
-                                    <i class="fas fa-map-marked-alt"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1">Nationwide Coverage</h6>
-                                    <small class="text-muted">We serve clients across Kenya, from urban construction zones to remote infrastructure projects.</small>
-                                </div>
-                            </div>
-                            
-                            <div class="advantage-item">
-                                <div class="advantage-icon">
-                                    <i class="fas fa-wrench"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1">Reliable Machinery</h6>
-                                    <small class="text-muted">Our fleet is modern, regularly serviced, and performance-tested to meet demanding worksite conditions.</small>
-                                </div>
-                            </div>
-                            
-                            <div class="advantage-item">
-                                <div class="advantage-icon">
-                                    <i class="fas fa-user-tie"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1">Skilled Operators</h6>
-                                    <small class="text-muted">Our team of experienced machine operators ensures each job is completed efficiently and safely.</small>
-                                </div>
-                            </div>
-                            
-                            <div class="advantage-item">
-                                <div class="advantage-icon">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1">Flexible Hire Terms</h6>
-                                    <small class="text-muted">We offer both short-term and long-term hire options tailored to your project needs and budget.</small>
-                                </div>
-                            </div>
-                            
-                            <div class="advantage-item">
-                                <div class="advantage-icon">
-                                    <i class="fas fa-truck"></i>
-                                </div>
-                                <div>
-                                    <h6 class="mb-1">Backed by Bash Hauliers</h6>
-                                    <small class="text-muted">Our strong logistics backbone allows us to mobilize equipment quickly and support complex operations.</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Stats Row -->
-                        <div class="stats-row">
-                            <div class="stat-card">
-                                <span class="stat-number">100%</span>
-                                <h6>Kenyan Owned</h6>
-                                <small class="text-muted">Proudly local</small>
-                            </div>
-                            
-                            <div class="stat-card">
-                                <span class="stat-number">24/7</span>
-                                <h6>Support</h6>
-                                <small class="text-muted">Round the clock</small>
-                            </div>
-                            
-                            <div class="stat-card">
-                                <span class="stat-number">47</span>
-                                <h6>Counties</h6>
-                                <small class="text-muted">Nationwide reach</small>
-                            </div>
-                            
-                            <div class="stat-card">
-                                <span class="stat-number">15+</span>
-                                <h6>Machine Types</h6>
-                                <small class="text-muted">Diverse fleet</small>
-                            </div>
-                        </div>
-
-                        <!-- Call to Action -->
-                        <div class="cta-section">
-                            <h3 class="mb-3" style="color: var(--contractors-primary);">Let's Build Together</h3>
-                            <p class="fs-5 mb-4">From groundwork to grading, Bash Contractors Ltd is your dependable partner in transforming terrain into progress. Contact us today to request a machine or learn more about our services.</p>
-                            
-                            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                                <a href="contact.html" class="btn-contractors">
-                                    <i class="fas fa-cogs me-2"></i>Request Equipment
-                                </a>
-                                <a href="tel:+254723339000" class="btn-contractors">
-                                    <i class="fas fa-phone me-2"></i>Call +254 723 339 000
-                                </a>
-                            </div>
-                        </div>
+                        <h4 class="mb-3">24/7 Customer Support</h4>
+                        <p class="text-muted">Round-the-clock customer service team ready to assist you with any queries or concerns about your shipments.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Bash Contractors Section End -->
+    <!-- Why Choose Us End -->
+
+    <!-- Sister Company Teaser Start -->
+    <div class="container-fluid py-5" id="bash-contractors">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bash-contractors-teaser wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="contractors-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h2 class="mb-3">Bash Contractors Ltd</h2>
+                        <h4 class="mb-4">Heavy Machinery Hire Solutions</h4>
+                        <p class="fs-5 mb-4">Our sister company provides reliable heavy machinery hire services across Kenya. From road construction to site preparation, we power progress with professional equipment and skilled operators.</p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4 text-center">
+                                <h5 class="mb-1">15+ Equipment Types</h5>
+                                <small>Complete machinery fleet</small>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <h5 class="mb-1">47 Counties</h5>
+                                <small>Nationwide coverage</small>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <h5 class="mb-1">24/7 Support</h5>
+                                <small>Round-the-clock service</small>
+                            </div>
+                        </div>
+                        <a href="bash-contractors.html" class="btn-contractors-outline me-3">
+                            <i class="fas fa-cogs me-2"></i>Explore Equipment
+                        </a>
+                        <a href="bash-contractors.html#contact" class="btn-contractors-outline pt-2">
+                            <i class="fas fa-phone me-2"></i>Hire Machinery
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sister Company Teaser End -->
 
     <!-- Regional Coverage Start -->
     <div class="container-fluid py-5 bg-light" id="coverage">
@@ -1399,7 +1013,7 @@
             </div>
             <div class="row g-4">
                 <div class="col-lg-8">
-                    <div class="regional-map">
+                    <div class="bg-white rounded p-4 shadow-sm">
                         <h3 class="mb-4">Countries We Serve</h3>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -1457,15 +1071,15 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="mt-4">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-primary rounded-circle p-2 me-3">
-                                    <i class="fas fa-map-marker-alt text-white"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-1">South Sudan</h5>
-                                    <p class="mb-0 text-muted">Juba</p>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">South Sudan</h5>
+                                        <p class="mb-0 text-muted">Juba</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1509,7 +1123,6 @@
                 <h1 class="display-4">Trusted by Leading Companies</h1>
                 <p>We are proud to serve a diverse portfolio of reputable companies across East Africa, building strong partnerships based on trust and exceptional service delivery.</p>
             </div>
-
             <!-- Trusted Clients - Logo Carousel with Edge Fade -->
             <div class="client-carousel-wrapper">
                 <div class="client-carousel-container">
@@ -1556,7 +1169,6 @@
                 <div class="carousel-fade left"></div>
                 <div class="carousel-fade right"></div>
             </div>
-            
         </div>
     </div>
     <!-- Trusted Clients End -->
@@ -1570,7 +1182,7 @@
                         <h4 class="text-primary">Client Testimonials</h4>
                         <h1 class="display-4 mb-4">What Our Partners Say</h1>
                         <p class="mb-4">Over two decades of excellence has earned us the trust and loyalty of hundreds of satisfied clients across East and Central Africa. Here's what they say about our services.</p>
-                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#contact">Partner With Us <i class="fas fa-arrow-right ms-2"></i></a>
+                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="contact.html">Partner With Us <i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
                 <div class="col-xl-8">
@@ -1627,210 +1239,72 @@
     </div>
     <!-- Testimonial End -->
 
-    <!-- FAQ Start -->
-    <div class="container-fluid faq py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="pb-5">
-                        <h4 class="text-primary">Frequently Asked Questions</h4>
-                        <h1 class="display-4">Get Answers to Common Questions</h1>
-                        <p>Find quick answers to the most common questions about our transport and logistics services.</p>
-                    </div>
-                   <div class="accordion bg-light rounded p-4" id="accordionExample">
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    What services does Bash Hauliers offer?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>We offer three specialized transport services across East and Central Africa.</h5>
-                                    <p>Our services include: Dry Container Transit (200+ trucks), Bulk Cargo Tippers (100+ trucks), and Local Shunting Operations (40 trucks). We serve Kenya, Uganda, Rwanda, Tanzania, DRC, and South Sudan with our modern fleet of 300+ vehicles.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How can I track my shipment?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>We provide 24/7 real-time tracking for all shipments.</h5>
-                                    <p>You can track your shipment using our online tracking system by entering your tracking number. Our advanced GPS technology provides real-time updates on your cargo's location and estimated delivery time. You can also call our customer service team at +254 723 339 000 for assistance.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    What makes Bash Hauliers different from competitors?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Over 20 years of experience with guaranteed on-time delivery and modern fleet.</h5>
-                                    <p>Since 2002, we've built a reputation for reliability and excellence. Our advantages include: 300+ modern trucks, 24/7 tracking, comprehensive insurance coverage, experienced drivers, flexible payment options, and strong partnerships across the region. We guarantee on-time delivery and provide round-the-clock customer support.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    How do I request a quote for my shipment?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Getting a quote is quick and easy through multiple channels.</h5>
-                                    <p>You can request a quote by: filling out our online quote form, calling us at +254 723 339 000, emailing info@bashhauliers.co.ke, or using our WhatsApp service. Provide details about your cargo type, pickup location, destination, and preferred delivery date for an accurate quote.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 mb-4">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed text-dark fs-5 fw-bold rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Do you provide insurance coverage for shipments?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                <div class="accordion-body my-2">
-                                    <h5>Yes, all our shipments are covered by comprehensive insurance.</h5>
-                                    <p>We provide full insurance coverage for all cargo transported by our fleet. Our insurance covers damage, theft, and loss during transit. We also maintain strict safety protocols, regular vehicle maintenance, and employ experienced, trained drivers to minimize risks and ensure your cargo arrives safely.</p>
-                                </div>
-                            </div>
-                        </div>
-                   </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="faq-img RotateMoveRight rounded">
-                        <img src="img/faq-img.jpg" class="img-fluid rounded w-100" alt="Bash Hauliers FAQ">
-                        <a class="faq-btn btn btn-primary rounded-pill text-white py-3 px-5" href="#contact">Still Have Questions? <i class="fas fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- FAQ End -->
-
     <!-- Contact Start -->
-    <div class="container-fluid contact bg-light py-5" id="contact">
+    <div class="container-fluid contact py-5" id="contact">
         <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="contact-item">
-                        <div class="pb-5">
-                            <h4 class="text-primary">Get In Touch</h4>
-                            <h1 class="display-4 mb-4">Ready to Move Your Cargo?</h1>
-                            <p class="mb-4">Contact Bash Hauliers today for reliable, efficient, and professional transport solutions across East and Central Africa. Our team is ready to handle your logistics needs with the expertise and care you deserve.</p>
-                        </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-primary btn-lg-square rounded-circle p-4"><i class="fa fa-home text-white"></i></div>
-                            <div class="ms-4">
-                                <h4>Head Office</h4>
-                                <p class="mb-0">P.O. Box 83658, Mombasa, Kenya</p>
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h4 class="text-primary">Get In Touch</h4>
+                <h1 class="display-4 mb-4">Ready to Move Your Cargo?</h1>
+                <p class="mb-4">Contact Bash Hauliers today for reliable, efficient, and professional transport solutions across East and Central Africa. Our team is ready to handle your logistics needs with the expertise and care you deserve.</p>
+            </div>
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="contact-item d-flex align-items-center mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-4 me-4"><i class="fa fa-home text-white"></i></div>
+                                <div>
+                                    <h4>Head Office</h4>
+                                    <p class="mb-0">P.O. Box 83658, Mombasa, Kenya</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-phone-alt text-white"></i></div>
-                            <div class="ms-4">
-                                <h4>Call Us</h4>
-                                <p class="mb-0">+254 723 339 000</p>
+                        <div class="col-md-6">
+                            <div class="contact-item d-flex align-items-center mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-2 me-4"><i class="fa fa-phone-alt text-white"></i></div>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <p class="mb-0">+254 723 339 000</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fa fa-envelope-open text-white"></i></div>
-                            <div class="ms-4">
-                                <h4>Email Us</h4>
-                                <p class="mb-0">info@bashhauliers.co.ke</p>
+                        <div class="col-md-6">
+                            <div class="contact-item d-flex align-items-center mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-2 me-4"><i class="fa fa-envelope-open text-white"></i></div>
+                                <div>
+                                    <h4>Email Us</h4>
+                                    <p class="mb-0">info@bashhauliers.co.ke</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i class="fab fa-whatsapp text-white"></i></div>
-                            <div class="ms-4">
-                                <h4>WhatsApp</h4>
-                                <p class="mb-0">+254 723 339 000</p>
+                        <div class="col-md-6">
+                            <div class="contact-item d-flex align-items-center mb-4">
+                                <div class="bg-primary btn-lg-square rounded-circle p-2 me-4"><i class="fab fa-whatsapp text-white"></i></div>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p class="mb-0">+254 723 339 000</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="mt-4">
-                            <h5>Industry Associations</h5>
-                            <p class="mb-1"><i class="fas fa-check text-primary me-2"></i>Kenya Transport Association Member</p>
-                            <p class="mb-0"><i class="fas fa-check text-primary me-2"></i>Kenya Shippers Council Member</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s" id="quote">
-                    <div class="bg-white rounded p-4 shadow-sm">
-                        <h3 class="mb-4">Request a Quote</h3>
-                        <form id="quoteForm">
-                            <div class="row g-3">
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                                        <label for="name">Your Name *</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="company" name="company" placeholder="Company Name" required>
-                                        <label for="company">Company Name *</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-                                        <label for="email">Your Email *</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required>
-                                        <label for="phone">Your Phone *</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="service" name="service" aria-label="Select a service" required>
-                                            <option selected disabled value="">Select a service</option>
-                                            <option value="Dry Container Transit">Dry Container Transit</option>
-                                            <option value="Bulk Cargo Tippers">Bulk Cargo Tippers</option>
-                                            <option value="Local Shunting Operations">Local Shunting Operations</option>
-                                            <option value="Heavy Machinery Hire">Heavy Machinery Hire</option>
-                                            <option value="Multiple Services">Multiple Services</option>
-                                        </select>
-                                        <label for="service">Service Required *</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="pickup" name="pickup" placeholder="Pickup Location">
-                                        <label for="pickup">Pickup Location</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="destination" name="destination" placeholder="Destination">
-                                        <label for="destination">Destination</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Describe your cargo and requirements" id="message" name="message" style="height: 120px"></textarea>
-                                        <label for="message">Cargo Details & Special Requirements</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <!-- reCAPTCHA Widget -->
-                                    <div class="g-recaptcha" data-sitekey="6LftcGQrAAAAAMB4AaRJwgLYN9OOkr1TJUp8LyO9"></div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">Request Quote</button>
-                                </div>
+                    <div class="mt-5">
+                        <h5 class="text-primary mb-3">Industry Associations</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <p class="mb-1"><i class="fas fa-check text-primary me-2"></i>Kenya Transport Association Member</p>
                             </div>
-                        </form>
+                            <div class="col-md-6">
+                                <p class="mb-0"><i class="fas fa-check text-primary me-2"></i>Kenya Shippers Council Member</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <a href="contact.html" class="btn btn-primary rounded-pill py-3 px-5 me-3">
+                            <i class="fas fa-calculator me-2"></i>Request Quote
+                        </a>
+                        <a href="tel:+254723339000" class="btn btn-dark rounded-pill py-3 px-5">
+                            <i class="fas fa-phone me-2"></i>Call Now
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1863,12 +1337,12 @@
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="text-white mb-4">Quick Links</h4>
-                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>Home</a>
-                        <a class="text-white" href="#"><i class="fas fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white" href="index.html"><i class="fas fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white" href="about.html"><i class="fas fa-angle-right me-2"></i>About Us</a>
                         <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Our Services</a>
                         <a class="text-white" href="#coverage"><i class="fas fa-angle-right me-2"></i>Coverage Area</a>
-                        <a class="text-white" href="#contact"><i class="fas fa-angle-right me-2"></i>Contact Us</a>
-                        <a class="text-white" href="#bash-contractors"><i class="fas fa-angle-right me-2"></i>Bash Contractors</a>
+                        <a class="text-white" href="contact.html"><i class="fas fa-angle-right me-2"></i>Contact Us</a>
+                        <a class="text-white" href="bash-contractors.html"><i class="fas fa-angle-right me-2"></i>Bash Contractors</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
@@ -1877,8 +1351,8 @@
                         <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Dry Container Transit</a>
                         <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Bulk Cargo Tippers</a>
                         <a class="text-white" href="#services"><i class="fas fa-angle-right me-2"></i>Local Shunting Operations</a>
-                        <a class="text-white" href="#bash-contractors"><i class="fas fa-angle-right me-2"></i>Heavy Machinery Hire</a>
-                        <a class="text-white" href="#quote"><i class="fas fa-angle-right me-2"></i>Request Quote</a>
+                        <a class="text-white" href="bash-contractors.html"><i class="fas fa-angle-right me-2"></i>Heavy Machinery Hire</a>
+                        <a class="text-white" href="contact.html"><i class="fas fa-angle-right me-2"></i>Request Quote</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
@@ -1905,7 +1379,7 @@
                     <span class="text-white">
                         <a href="#" class="border-bottom text-primary">
                             <i class="fas fa-copyright text-light"></i>
-                            <span id="currentYear"></span> Bash Hauliers Ltd
+                            <span id="currentYear">2025</span> Bash Hauliers Ltd
                         </a>, All rights reserved.
                     </span>
                     <br>
@@ -1933,211 +1407,8 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-    
-    <style>
-        .form-container {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            padding: 30px;
-        }
-        .btn-primary {
-            background-color: #3949ab;
-            border-color: #3949ab;
-        }
-        .btn-primary:hover {
-            background-color: #2c3e8f;
-            border-color: #2c3e8f;
-        }
-        .form-floating label::after {
-            background-color: transparent !important;
-        }
-        .g-recaptcha {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-        }
-    </style>
 
     <!-- Custom JavaScript -->
-    <script>
-        // Initialize EmailJS 
-        emailjs.init('80VPsd8KOekxeIEgy');
-        
-        // Form Submission
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Verify reCAPTCHA first
-            const recaptchaResponse = grecaptcha.getResponse();
-            if (!recaptchaResponse) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Verification Required',
-                    text: 'Please complete the reCAPTCHA verification',
-                    confirmButtonColor: '#3949ab'
-                });
-                return;
-            }
-            
-            // Get current date in a nice format
-            const today = new Date();
-            const dateString = today.toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            });
-            
-            // Get form values and handle empty fields
-            const getValue = (id) => {
-                const value = document.getElementById(id).value.trim();
-                return value || "Not specified";
-            };
-            
-            const formData = {
-                name: getValue('name'),
-                company: getValue('company'),
-                email: getValue('email'),
-                phone: getValue('phone'),
-                service: getValue('service'),
-                pickup: getValue('pickup'),
-                destination: getValue('destination'),
-                message: getValue('message'),
-                date: dateString,
-                year: today.getFullYear(),
-                'g-recaptcha-response': recaptchaResponse
-            };
-            
-            // Validate required fields
-            if (formData.name === "Not specified" || 
-                formData.company === "Not specified" || 
-                formData.email === "Not specified" || 
-                formData.phone === "Not specified" || 
-                formData.service === "Not specified") {
-                
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Missing Information',
-                    text: 'Please fill in all required fields marked with *',
-                    confirmButtonColor: '#3949ab'
-                });
-                return;
-            }
-            
-            // Change button text to show loading state
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
-            
-            // Send email using EmailJS
-            emailjs.send('service_me0zax5', 'template_bfh7y6k', formData)
-                .then(function(response) {
-                    // Show success message
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Request Submitted!',
-                        html: 'Thank you for your quote request! Our team will contact you within 24 hours.<br><br>For immediate assistance:<br>Call: +254 723 339 000<br>WhatsApp: +254 723 339 000',
-                        confirmButtonColor: '#3949ab',
-                        confirmButtonText: 'OK'
-                    });
-                    
-                    // Reset form and reCAPTCHA
-                    document.getElementById('quoteForm').reset();
-                    grecaptcha.reset();
-                    
-                    // Reset button
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Request Quote';
-                }, function(error) {
-                    // Show error message
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Submission Failed',
-                        html: 'Failed to send your request. Please try again or contact us directly:<br><br>Call: +254 723 339 000<br>WhatsApp: +254 723 339 000',
-                        confirmButtonColor: '#3949ab'
-                    });
-                    
-                    console.error('EmailJS Error:', error);
-                    
-                    // Reset button
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Request Quote';
-                });
-        });
-
-        // Bash Contractors section hover effects
-        document.querySelectorAll('.contractors-hero-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Equipment card hover effects
-        document.querySelectorAll('.equipment-card').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Industry card hover effects
-        document.querySelectorAll('.industry-card').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Advantage item hover effects
-        document.querySelectorAll('.advantage-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(10px)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0)';
-            });
-        });
-
-        // Stat card hover effects
-        document.querySelectorAll('.stat-card').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Sister company highlight hover effects
-        document.querySelectorAll('.sister-company-highlight').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateX(5px)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateX(0)';
-            });
-        });
-    </script>
-
     <script>
         // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2152,10 +1423,56 @@
                 }
             });
         });
+
+        // Sister company highlight hover effects
+        document.querySelectorAll('.sister-company-highlight').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(5px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+
+        // Why choose us card hover effects
+        document.querySelectorAll('.why-choose-card').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Tech feature hover effects
+        document.querySelectorAll('.tech-feature').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Certification card hover effects
+        document.querySelectorAll('.certification-card').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(10px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
